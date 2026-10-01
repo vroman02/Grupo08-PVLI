@@ -1,7 +1,13 @@
-h1 {
-  color: blue;
+.negro {
+  color: black;
 }
 
-.clase {
+.rojo {
   color: red;
 }
+
+
+body {
+    text-align: center;
+}
+
