@@ -5,16 +5,17 @@
   <title>HTML</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css"> <!-- Esto cargaria un archivo de estilo, pero no es necesario en Fiddle porque lo hace automáticamente -->
-  <script src="script.js"></script> <!--Aquí podriamos cargar los scripts, también se puede en el <body>, y pasa lo mismo que con el css de antes, en verdad aquí no estamos cargando nada-->
+  <script src="./lib/phaser.js"></script> <!--Aquí podriamos cargar los scripts, también se puede en el <body>, y pasa lo mismo que con el css de antes, en verdad aquí no estamos cargando nada-->
 </head>
 
 <body>
-  <img src="vivo.png" alt="Descripción de la imagen" width="400"> 
-  <div>
+  <img src="./assets/web/vivo.png" alt="Descripción de la imagen" width="400"> 
+  <div id="game"></div>
+  <div class = "justificado">
     <h2 class=negro>Juego realizado por</h2>
-    <img src="logo.png" alt="Descripción de la imagen" width="300"> 
+    <img src="./assets/web/logo.png" alt="Descripción de la imagen" width="300"> 
      <h2 class=negro>Descripción del juego</h2>
-     <p class="justificado"> En VivO controlas a un personaje que debe recorrer<br>
+     <p> En VivO controlas a un personaje que debe recorrer<br>
        un tablero maldito dividido en múltiples casillas con <br>
        diversos minijuegos donde cada paso te costará años<br>
        de vida. Podrás apostar años de vida en juegos de azar<br>
@@ -23,7 +24,7 @@
     </p>
 
      <h2 class=negro>Integrantes</h2>
-     <p class="justificado"> Victor Román Román<br>
+     <p> Victor Román Román<br>
        Daniel García Andrés <br>
        Marcos Solano Pascual<br>
        Marcos Tedín Cueto<br>
@@ -32,6 +33,7 @@
    <a href="https://github.com/vroman02/Grupo08-PVLI.git" target="_blank">
       <img src="GitHub_Invertocat_Logo.svg" width="70">
   <div>
+    <script src="./src/game.js" type="module"></script>
 </body>
 <!--2023-2024-->
 </html>
