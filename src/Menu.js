@@ -1,3 +1,4 @@
+
 export default class Menu extends Phaser.Scene 
 {
     // Nombre de la escena para el SceneManager
@@ -12,8 +13,7 @@ export default class Menu extends Phaser.Scene
 
         //esto es para cargar imágenes y recursos
         this.load.video('logo-vivo3D','assets/menu/logo3D.webm');
-
-    
+        
     }
 
     loadFont(name, url) {
