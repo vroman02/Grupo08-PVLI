@@ -1,5 +1,6 @@
 import Menu from "./Menu.js";
 import EscenaPrueba from "./EscenaPrueba.js";
+import EscenaManolo from "./EscenaManolo.js";
 
 
 /**
@@ -15,7 +16,7 @@ let config = {
 	scale: {
 		autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
 	},
-	scene: [Menu, EscenaPrueba],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
+	scene: [Menu, EscenaPrueba, EscenaManolo],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
 	physics: { 
 		default: 'arcade', 
 		arcade: { 

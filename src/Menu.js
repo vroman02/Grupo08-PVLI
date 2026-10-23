@@ -2,11 +2,13 @@
 export default class Menu extends Phaser.Scene 
 {
     // Nombre de la escena para el SceneManager
-    constructor() {
+    constructor() 
+    {
             super({ key: 'menu-principal' });
         }
 
-    preload(){
+    preload()
+    {
 
             //fuente
         this.loadFont('Isometra', 'assets/fonts/Isometra-Regular.ttf');
@@ -16,7 +18,8 @@ export default class Menu extends Phaser.Scene
         
     }
 
-    loadFont(name, url) {
+    loadFont(name, url) 
+    {
         let newFont = new FontFace(name, `url(${url})`);
         newFont.load().then(function (loaded) {
             document.fonts.add(loaded);
@@ -25,7 +28,8 @@ export default class Menu extends Phaser.Scene
         });
     }
 
-    create(){
+    create()
+    {
 
 
         //fondo amarillo para que destaque
@@ -73,6 +77,7 @@ export default class Menu extends Phaser.Scene
 
         //esto es para cuando has pulsado, aqui teneis q vincular vuestras escenas @marcos @victor
         boton.on('pointerdown', () => {
+            this.scene.start('escena-manolo');
                 console.log('Has pulsado JUGAR');
             });
 

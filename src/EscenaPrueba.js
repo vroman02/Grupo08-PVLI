@@ -38,23 +38,24 @@ export default class EscenaPrueba extends Phaser.Scene
                     color: '#000000',
                     backgroundColor: '#ffffff'
                 });
-            });
+        });
 
         //esto es para cuando has pulsado, aqui teneis q vincular vuestras escenas @marcos @victor
         boton.on('pointerdown', () => {
                 //console.log('Has pulsado JUGAR');
                  this.scene.start('menu-principal');
-            });
+        });
 
+        this.dum = new Manolo(this, 200, 200);
+        this.add.existing(this.dum);
+    }
 
-
-
-
-
-
-
-
-
+    update(t, dt)
+    {
+        if (this.dum)
+        {
+            this.dum.update(t, dt);
+        }
     }
 
 
