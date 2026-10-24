@@ -46,17 +46,10 @@ export default class EscenaPrueba extends Phaser.Scene
                  this.scene.start('menu-principal');
         });
 
-        this.dum = new Manolo(this, 200, 200);
-        this.add.existing(this.dum);
+        
     }
 
-    update(t, dt)
-    {
-        if (this.dum)
-        {
-            this.dum.update(t, dt);
-        }
-    }
+   
 
 
 

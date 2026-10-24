@@ -18,7 +18,7 @@ export default class EscenaPrueba extends Phaser.Scene
         const fondo = this.add.image(960, 540, 'prao4k');
         fondo.setDisplaySize(1920, 1080);
 
-        let dum = new manolo(this, 900, 125)
+        this.dum = new manolo(this, 900, 125)
 
         //Botón volver
         let boton = this.add.text(1650, 650, 'VOLVER', {
@@ -53,5 +53,13 @@ export default class EscenaPrueba extends Phaser.Scene
                  this.scene.start('menu-principal');
         });
         
+    }
+
+    update(t, dt)
+    {
+        if (this.dum)
+        {
+            this.dum.update(t, dt);
+        }
     }
 }
