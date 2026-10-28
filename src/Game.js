@@ -10,8 +10,8 @@ import EscenaManolo from "./EscenaManolo.js";
 let config = {
 	type: Phaser.AUTO,
 	parent: "game",
-	width:  1920,
-	height: 1080,
+	width:  960,
+	height: 540,
 	pixelArt: true,
 	scale: {
 		autoCenter: Phaser.Scale.CENTER_HORIZONTALLY

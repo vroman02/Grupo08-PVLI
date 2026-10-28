@@ -15,14 +15,15 @@ export default class EscenaPrueba extends Phaser.Scene
 
     create()
     {
-        const fondo = this.add.image(960, 540, 'prao4k');
-        fondo.setDisplaySize(1920, 1080);
+        const fondo = this.add.image(480, 270, 'prao4k');
+        fondo.setDisplaySize(960, 540);
 
-        this.dum = new manolo(this, 900, 125)
+        this.dum = new manolo(this, 450, 67.5)
+        this.dum.setDisplaySize(360,450);
 
         //Botón volver
-        let boton = this.add.text(1650, 650, 'VOLVER', {
-        fontSize: '100px',
+        let boton = this.add.text(825, 325, 'VOLVER', {
+        fontSize: '50px',
         //esta fuente la he pillado de x ahí porque la default es horrible
         fontFamily: 'Isometra',
         color: '#90beff',

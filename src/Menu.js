@@ -5,7 +5,7 @@ export default class Menu extends Phaser.Scene
     constructor() 
     {
             super({ key: 'menu-principal' });
-        }
+    }
 
     preload()
     {
@@ -39,8 +39,8 @@ export default class Menu extends Phaser.Scene
 
         //logo del juego
         const logo = this.add.video(40, 40, 'logo-vivo3D');
-        logo.setDisplaySize(150,150);
-        logo.setPosition(500, 430);
+        logo.setDisplaySize(75,75);
+        logo.setPosition(250, 215);
         logo.play(true);
         //logo.setOrigin(0, 0);
 
@@ -48,10 +48,10 @@ export default class Menu extends Phaser.Scene
         //BOTONES////////////
 
         //Botón Jugar
-        let boton = this.add.text(1650, 650, 'JUGAR', {
-        fontSize: '100px',
-        //esta fuente la he pillado de x ahí porque la default es horrible
+        let boton = this.add.text(825, 320, 'JUGAR', {
         fontFamily: 'Isometra',
+        fontSize: '50px',
+        //esta fuente la he pillado de x ahí porque la default es horrible
         color: '#90beff',
         backgroundColor: '#ffffff',
         padding: { x: 30, y: 15 }
@@ -84,8 +84,8 @@ export default class Menu extends Phaser.Scene
         
         //BOTON DE OCPIONES////////////
 
-        let botonOpciones = this.add.text(1560, 800, 'OPCIONES', {
-        fontSize: '100px',
+        let botonOpciones = this.add.text(785, 400, 'OPCIONES', {
+        fontSize: '50px',
         fontFamily: 'Isometra',
         color: '#000000',
         backgroundColor: '#2274d7',
@@ -118,8 +118,8 @@ export default class Menu extends Phaser.Scene
         
         //BOTON DE SALIR////////////
 
-        let botonSalir = this.add.text(160, 1000, 'SALIR', {
-        fontSize: '60px',
+        let botonSalir = this.add.text(80, 450, 'SALIR', {
+        fontSize: '30px',
         fontFamily: 'Isometra',
         color: '#000000',
         backgroundColor: '#d722bc',
@@ -154,8 +154,8 @@ export default class Menu extends Phaser.Scene
         
         //BOTON DE CREDITOS////////////
 
-        let botonCredits = this.add.text(1560, 950, 'CREDITOS', {
-        fontSize: '100px',
+        let botonCredits = this.add.text(785, 480, 'CREDITOS', {
+        fontSize: '50px',
         fontFamily: 'Isometra',
         color: '#000000',
         backgroundColor: '#22bcd7',

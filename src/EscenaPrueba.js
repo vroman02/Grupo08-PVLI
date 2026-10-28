@@ -13,8 +13,8 @@ export default class EscenaPrueba extends Phaser.Scene
         this.cameras.main.setBackgroundColor('#3dd429');
 
         //Botón volver
-        let boton = this.add.text(1650, 650, 'VOLVER', {
-        fontSize: '100px',
+        let boton = this.add.text(800, 325, 'VOLVER', {
+        fontSize: '50px',
         //esta fuente la he pillado de x ahí porque la default es horrible
         fontFamily: 'Isometra',
         color: '#90beff',
