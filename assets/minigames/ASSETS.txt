@@ -1,0 +1,22 @@
+ASSETS:
+-MINIJUEGO PESCA:
+	-Fondo sacado de StockCake y retocado con ia (https://stockcake.com/es/i/pixel-lake-sunset_3160056_1667192)
+	-Caña de pescar sacada de itch.io, retocado con GIMP porque venía con
+	error(https://letsgetdevy.itch.io/fishing-rod-animation)
+	-Pez koi generado por ia
+-MINIJUEGO SHOOTER:
+	-Asset primera persona de pistola sacado de itch.io(https://dinok5.itch.io/first-person-pixelart-animations)
+	-Fondo de fábrica sacado de itch.io(https://oldmanburntree.itch.io/abandoned-warehouse)
+	-Enemigos son el doctor doom que ya estaba en el juego
+-MINIJUEGO BOMBA:
+	-Asset de bomba 2d generado con ia
+	-Mesa de herramientas sacada de Google(https://img.magnific.com/premium-photo/spanners-tools-dark-black-	background-top-view-with-copy-space_981948-17786.jpg) y pixelado con (https://www.color3arte.com/en/creador-de-	pixel-art/)
+-MINIJUEGO KENDAMA:
+	-Cacharro del kendama hecho por ia(de verdad que imposible encontrar este)
+	-Fondo sacado de itch.io(https://mtw1man2.itch.io/anime-2d-japanese-background) y pixelado 	con(https://www.color3arte.com/en/creador-de-pixel-art/)
+-LIMPIEZA:
+	-Asset de la esponja del minecraft (placeholder), sacado de la wiki de 	   	minecraft(https://pt.minecraft.wiki/w/Esponja)
+	-Asset de pared(https://st3.depositphotos.com/1340907/14598/v/450/depositphotos_145989369-stock-illustration-	pixel-brick-wall.jpg)
+	-Todos los assets de grafitis se han cogido de itch.io(https://nknw.itch.io/graffiti-	set/download/eyJpZCI6NTE5MTEyOSwiZXhwaXJlcyI6MTc5MzIzMDQ2MX0%3D.dIMD9eh%2Bo%2FyYb5%2FdiZsKzWRJ6aI%3D)
+-PROFESOR ENFADADO:
+	-Asset del profesor contento y enfadado sacados de fotos del señor Kaminari de Doraemon de 	Google(https://vignette.wikia.nocookie.net/doraemon/images/a/a1/Kaminari1979.png/revision/latest?cb=	20180212045458&path-prefix=en, https://cdn.myanimelist.net/images/characters/10/497794.jpg)

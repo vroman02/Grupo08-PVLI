@@ -185,7 +185,35 @@ export default class Menu extends Phaser.Scene
             });
 
 
+    //BOTON DE Selector de minijuegos////////////
+        let botonSelector = this.add.text(810, 60, 'MINIJUEGOS', {
+        fontSize: '30px',
+        fontFamily: 'Isometra',
+        color: '#000000',
+        backgroundColor: '#ffffff',
+        padding: { x: 20, y: 12 }
+        });
 
+        botonSelector.setOrigin(0.5);
+        botonSelector.setInteractive({ useHandCursor: true });
+
+        botonSelector.on('pointerover', () => {
+            botonSelector.setStyle({
+                color: '#ffffff',
+                backgroundColor: '#2274d7'
+            });
+        });
+
+        botonSelector.on('pointerout', () => {
+            botonSelector.setStyle({
+                color: '#000000',
+                backgroundColor: '#ffffff'
+            });
+        });
+
+        botonSelector.on('pointerdown', () => {
+            this.scene.start('selector-minigames');
+        });
 
     }
 

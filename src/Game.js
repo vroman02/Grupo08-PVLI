@@ -1,6 +1,13 @@
 import Menu from "./Menu.js";
 import EscenaPrueba from "./EscenaPrueba.js";
 import EscenaManolo from "./EscenaManolo.js";
+import Bomba_minijuego from "./Bomba_minijuego.js";
+import Selector from "./Selector.js";
+import Kendama_minijuego from "./Kendama_minijuego.js";
+import Limpieza_minijuego from "./Limpieza_minijuego.js";
+import Pesca_minijuego from "./Pesca_minijuego.js";
+import Profesor_minijuego from "./Profesor_minijuego.js";
+import Shooter_minijuego from "./Shooter_minijuego.js";
 
 
 /**
@@ -16,7 +23,7 @@ let config = {
 	scale: {
 		autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
 	},
-	scene: [Menu, EscenaPrueba, EscenaManolo],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
+	scene: [ Menu, EscenaManolo, EscenaPrueba, Selector , Bomba_minijuego, Kendama_minijuego, Limpieza_minijuego, Pesca_minijuego, Profesor_minijuego, Shooter_minijuego],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
 	physics: { 
 		default: 'arcade', 
 		arcade: { 
