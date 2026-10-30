@@ -1,4 +1,3 @@
-
 export default class Menu extends Phaser.Scene 
 {
     // Nombre de la escena para el SceneManager
@@ -15,6 +14,13 @@ export default class Menu extends Phaser.Scene
 
         //esto es para cargar imágenes y recursos
         this.load.video('logo-vivo3D','assets/menu/logo3D.webm');
+
+        //BACKGROUNDS (Tableros del Mario Party)
+        this.load.image('tablero-infierno', 'assets/backgrounds/TableroPlaceholderInfierno.jpeg');
+        this.load.image('tablero-normal', 'assets/backgrounds/TableroPlaceholderNormal.jpg');
+
+        //CHARACTERS (Goku en nube quedaba bonico)
+        this.load.image('personaje-principal', 'assets/characters/PlaceholderPersonajePrincipal.png');
         
     }
 
@@ -77,7 +83,7 @@ export default class Menu extends Phaser.Scene
 
         //esto es para cuando has pulsado, aqui teneis q vincular vuestras escenas @marcos @victor
         boton.on('pointerdown', () => {
-            this.scene.start('escena-manolo');
+            mostrarPanel(true);
                 console.log('Has pulsado JUGAR');
             });
 
@@ -214,6 +220,71 @@ export default class Menu extends Phaser.Scene
         botonSelector.on('pointerdown', () => {
             this.scene.start('selector-minigames');
         });
+
+
+        //PANEL DE JUGAR (selector de escenas)////////////
+        //Todo lo del panel va en este array para mostrarlo/ocultarlo de golpe
+        const panelObjs = [];
+
+        const mostrarPanel = (visible) => {
+            panelObjs.forEach(o => o.setVisible(visible));
+        };
+
+        //Fondo del panel (tambien bloquea los clics a los botones de debajo)
+        const fondoPanel = this.add.rectangle(480, 270, 960, 540, 0xfae06e);
+        fondoPanel.setInteractive();
+        panelObjs.push(fondoPanel);
+
+        const tituloPanel = this.add.text(480, 60, 'ELIGE ESCENA', {
+            fontFamily: 'Isometra',
+            fontSize: '40px',
+            color: '#000000'
+        }).setOrigin(0.5);
+        panelObjs.push(tituloPanel);
+
+        const crearBotonPanel = (x, y, texto, accion) => {
+            const b = this.add.text(x, y, texto, {
+                fontFamily: 'Isometra',
+                fontSize: '20px',
+                color: '#000000',
+                backgroundColor: '#ffffff',
+                padding: { x: 30, y: 15 }
+            });
+
+            b.setOrigin(0.5);
+            b.setInteractive({ useHandCursor: true });
+
+            b.on('pointerover', () => {
+                b.setStyle({ color: '#ffffff', backgroundColor: '#2274d7' });
+            });
+
+            b.on('pointerout', () => {
+                b.setStyle({ color: '#000000', backgroundColor: '#ffffff' });
+            });
+
+            b.on('pointerdown', accion);
+            panelObjs.push(b);
+        };
+
+        crearBotonPanel(480, 200, 'PRUEBA', () => {
+            this.scene.start('escena-manolo');
+        });
+
+        crearBotonPanel(480, 300, 'TABLERO NORMAL', () => {
+            this.scene.start('tablero-juego-normal');
+        });
+
+        crearBotonPanel(480, 400, 'TABLERO INFIERNO', () => {
+            this.scene.start('tablero-infierno');
+        });
+
+        crearBotonPanel(850, 500, 'VOLVER', () => {
+            mostrarPanel(false);
+        });
+
+        //El panel va por encima de todo y empieza oculto
+        panelObjs.forEach(o => o.setDepth(10));
+        mostrarPanel(false);
 
     }
 
