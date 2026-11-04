@@ -1,18 +1,27 @@
-.negro {
+.negro 
+{
   color: black;
 }
 
-.rojo {
+.rojo 
+{
   color: red;
+}
+
+.blanco
+{
+  color: white;
 }
 
 
 body 
 {
+  margin: 0;
+  padding: 0;
   background-image: url("../assets/web/fondo.jpg");
-  background-size: cover;        /* cubre toda la pantalla sin deformar */
-  background-position: center;   /* centrada */
-  background-repeat: no-repeat;  /* sin repetir */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -23,32 +32,28 @@ body
 }
 
 .contenedor {
-  position: relative;        /* ancla las posiciones absolutas de dentro */
-  display: inline-block;     /* mide lo que mida .detalle */
-  line-height: 0;            /* quita el hueco fantasma bajo la imagen */
-  margin-top: -10px;          /* aquí mueves el bloque entero */
-  margin-left: -10px;
-  margin-bottom: 100px;
+  position: relative;
+  display: inline-block;
+  line-height: 0
 }
 
 .detalle {
   display: block;
-  width: 1900px;              /* el tamaño que le pusiste en A */
+  width: 1900px;
   height: auto;
-  /* nada de position: relative ni top/left aquí */
 }
 
 .vivo {
   position: absolute;
-  top: 120px;                  /* % respecto al alto de .detalle */
-  left: 225px;                 /* % respecto al ancho de .detalle */
-  width: 300px;              /* ajusta a gusto */
+  top: 120px;
+  left: 250px;
+  width: 275px;
   transform: translate(-50%, -50%); /* centra vivo en ese punto */
 }
 
 .mesa-verde {
-  width: 1400px;             /* El ancho que tenías en #game */
-  min-height: 1300px;        /* Usa min-height en vez de height para que crezca si el texto es largo */
+  width: 1400px;
+  min-height: 1300px;
   margin: 0 auto;
   background: url("../assets/web/sobreFondo.jpg") top center / cover no-repeat;
   border-radius: 12px;
@@ -56,10 +61,35 @@ body
   /* Esto apila el juego y el texto, y los centra */
   display: flex;
   flex-direction: column;
-  align-items: center;       /* Centrado horizontal */
+  align-items: center;
   
-  padding-top: 80px;         /* Margen superior verde */
-  padding-bottom: 80px;      /* Margen inferior verde */
+  padding-top: 80px;         /* Margen superior de tapete */
+  padding-bottom: 80px;      /* Margen inferior del tapete */
   gap: 50px;                 /* Separación entre el juego y el texto */
   box-sizing: border-box;
+}
+
+/* La ventana que muestra el desfile (oculta lo que sobra) */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden; /* Oculta la imagen cuando sale de los bordes */
+  margin-bottom: 100px;
+}
+
+/* La pista que contiene las dos imágenes */
+.marquee-track {
+  display: flex;
+  width: max-content; /* Obliga a la pista a medir el ancho de las dos imágenes juntas */
+  animation: mover-derecha 25s linear infinite;
+  vertical-align: top;
+}
+
+/* Animación para mover a la derecha */
+@keyframes mover-derecha {
+  0% {
+    transform: translateX(-50%); /* Empieza mostrando la 2º imagen */
+  }
+  100% {
+    transform: translateX(0%);   /* Termina mostrando la 1º imagen */
+  }
 }

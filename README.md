@@ -32,7 +32,7 @@ Durante la partida, los jugadores deberán decidir constantemente entre avanzar 
 
 <div align="center">
   <a href="https://github.com/vroman02/Grupo08-PVLI.git" target="_blank">
-    <img src="GitHub_Invertocat_Logo.svg" width="70">
+    <img src="./assets/web/GitHub_Invertocat_Logo.svg" width="70">
   </a>
   
   <a href="https://x.com/NoloJuegos" target="_blank">
