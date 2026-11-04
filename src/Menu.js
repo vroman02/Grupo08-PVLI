@@ -9,7 +9,7 @@ export default class Menu extends Phaser.Scene
     preload()
     {
 
-            //fuente
+        //fuente
         this.loadFont('Isometra', 'assets/fonts/Isometra-Regular.ttf');
 
         //esto es para cargar imágenes y recursos
@@ -39,7 +39,7 @@ export default class Menu extends Phaser.Scene
 
 
         //fondo amarillo para que destaque
-        this.cameras.main.setBackgroundColor('#f1a53b');
+        this.cameras.main.setBackgroundColor('#ffcece');
 
 
 
@@ -83,7 +83,8 @@ export default class Menu extends Phaser.Scene
 
         //esto es para cuando has pulsado, aqui teneis q vincular vuestras escenas @marcos @victor
         boton.on('pointerdown', () => {
-            mostrarPanel(true);
+            //mostrarPanel(true);
+                this.scene.start('tablero-principal');
                 console.log('Has pulsado JUGAR');
             });
 
