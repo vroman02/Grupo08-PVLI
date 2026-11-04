@@ -22,6 +22,7 @@ let config = {
 	width:  960,
 	height: 540,
 	pixelArt: true,
+	transparent: true,
 	scale: {
 		autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
 	},

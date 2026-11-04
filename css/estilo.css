@@ -6,14 +6,60 @@
   color: red;
 }
 
-/*
-body {
-    text-align: center;
+
+body 
+{
+  background-image: url("../assets/web/fondo.jpg");
+  background-size: cover;        /* cubre toda la pantalla sin deformar */
+  background-position: center;   /* centrada */
+  background-repeat: no-repeat;  /* sin repetir */
+  background-attachment: fixed;
 }
-*/
+
 
 .justificado
 {
     text-align: center;
 }
 
+.contenedor {
+  position: relative;        /* ancla las posiciones absolutas de dentro */
+  display: inline-block;     /* mide lo que mida .detalle */
+  line-height: 0;            /* quita el hueco fantasma bajo la imagen */
+  margin-top: -10px;          /* aquí mueves el bloque entero */
+  margin-left: -10px;
+  margin-bottom: 100px;
+}
+
+.detalle {
+  display: block;
+  width: 1900px;              /* el tamaño que le pusiste en A */
+  height: auto;
+  /* nada de position: relative ni top/left aquí */
+}
+
+.vivo {
+  position: absolute;
+  top: 120px;                  /* % respecto al alto de .detalle */
+  left: 225px;                 /* % respecto al ancho de .detalle */
+  width: 300px;              /* ajusta a gusto */
+  transform: translate(-50%, -50%); /* centra vivo en ese punto */
+}
+
+.mesa-verde {
+  width: 1400px;             /* El ancho que tenías en #game */
+  min-height: 1300px;        /* Usa min-height en vez de height para que crezca si el texto es largo */
+  margin: 0 auto;
+  background: url("../assets/web/sobreFondo.jpg") top center / cover no-repeat;
+  border-radius: 12px;
+  
+  /* Esto apila el juego y el texto, y los centra */
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Centrado horizontal */
+  
+  padding-top: 80px;         /* Margen superior verde */
+  padding-bottom: 80px;      /* Margen inferior verde */
+  gap: 50px;                 /* Separación entre el juego y el texto */
+  box-sizing: border-box;
+}
