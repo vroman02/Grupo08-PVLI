@@ -39,3 +39,10 @@ Durante la partida, los jugadores deberán decidir constantemente entre avanzar 
     <img src="./assets/web/logoX.png" width="75">
   </a>
 </div>
+
+<h2 align="center">Enlace a la web:</h2>
+
+<div align="center">
+  <a href="https://vroman02.github.io/Grupo08-PVLI/" target="_blank">
+    <img src="./assets/web/botonJugarWeb.png" width="70">
+</div>
