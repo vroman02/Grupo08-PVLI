@@ -10,31 +10,50 @@
 </head>
 
 <body>
-  <img src="./assets/web/vivo.png" alt="Descripción de la imagen" width="400"> 
-  <div id="game"></div>
-  <div class = "justificado">
-    <h2 class=negro>Juego realizado por</h2>
-    <img src="./assets/web/logo.png" alt="Descripción de la imagen" width="300"> 
-     <h2 class=negro>Descripción del juego</h2>
-     <p> En VivO controlas a un personaje que debe recorrer<br>
-       un tablero maldito dividido en múltiples casillas con <br>
-       diversos minijuegos donde cada paso te costará años<br>
-       de vida. Podrás apostar años de vida en juegos de azar<br>
-       y comprar distintos dados pero evita no sacar por tu<br>
-      bien el número 4.
-    </p>
+  <div class="marquee-wrapper">
+  <div class="marquee-track">
+    
+    <!-- Contenedor Original -->
+    <div class="contenedor">
+      <img src="./assets/web/DetalleWebSuperior.png" class="detalle" alt="">
+      <img src="./assets/web/vivo.png" class="vivo" alt="">
+    </div>
 
-     <h2 class=negro>Integrantes</h2>
-     <p> Victor Román Román<br>
-       Daniel García Andrés <br>
-       Marcos Solano Pascual<br>
-       Marcos Tedín Cueto<br>
-    </p>
-    <a href="https://github.com/vroman02/Grupo08-PVLI.git" target="_blank">
-      <img src="GitHub_Invertocat_Logo.svg" width="70">
-    <a href="https://x.com/NoloJuegos" target="_blank">
-      <img src="./assets/web/logoX.png" width="75">
+    <!-- Contenedor Duplicado (para el efecto infinito) -->
+    <div class="contenedor" aria-hidden="true">
+      <img src="./assets/web/DetalleWebSuperior.png" class="detalle" alt="">
+      <img src="./assets/web/vivo.png" class="vivo" alt="">
+    </div>
+
   </div>
+</div>
+  <div class="mesa-verde">
+    <div id="game"></div>
+      <div class = "justificado">
+        <h2 class=blanco>Juego realizado por</h2>
+        <img src="./assets/web/Logo_NoloJuegos_trans.png" alt="Descripción de la imagen" width="300"> 
+        <h2 class=blanco>Descripción del juego</h2>
+        <p class=blanco> En VivO controlas a un personaje que debe recorrer<br>
+          un tablero maldito dividido en múltiples casillas con <br>
+          diversos minijuegos donde cada paso te costará años<br>
+          de vida. Podrás apostar años de vida en juegos de azar<br>
+          y comprar distintos dados pero evita no sacar por tu<br>
+          bien el número 4.
+        </p>
+
+      <h2 class=blanco>Integrantes</h2>
+        <p class=blanco> Victor Román Román<br>
+         Daniel García Andrés <br>
+         Marcos Solano Pascual<br>
+         Marcos Tedín Cueto<br>
+        </p>
+      <a href="https://github.com/vroman02/Grupo08-PVLI.git" target="_blank">
+       <img src="./assets/web/GitHub_Invertocat_Logo.svg" width="70">
+      <a href="https://x.com/NoloJuegos" target="_blank">
+       <img src="./assets/web/logoX.png" width="75">
+    </div>
+  </div>
+  
    
   <div>
     <script src="./src/Game.js" type="module"></script>

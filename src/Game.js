@@ -8,8 +8,9 @@ import Limpieza_minijuego from "./Limpieza_minijuego.js";
 import Pesca_minijuego from "./Pesca_minijuego.js";
 import Profesor_minijuego from "./Profesor_minijuego.js";
 import Shooter_minijuego from "./Shooter_minijuego.js";
-import TableroDeJuegoNormal from "./TableroJuegoNormal.js";
+import TableroDeJuegoNormal from "./TableroPrincipal.js";
 import TableroDeJuegoInfierno from "./TableroInfierno.js";
+import TableroPrincipal from "./TableroPrincipal.js";
 
 
 /**
@@ -22,10 +23,11 @@ let config = {
 	width:  960,
 	height: 540,
 	pixelArt: true,
+	transparent: true,
 	scale: {
 		autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
 	},
-	scene: [ Menu, EscenaManolo, EscenaPrueba, Selector , Bomba_minijuego, Kendama_minijuego, Limpieza_minijuego, Pesca_minijuego, Profesor_minijuego, Shooter_minijuego, TableroDeJuegoNormal, TableroDeJuegoInfierno],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
+	scene: [  Menu, TableroPrincipal,EscenaManolo, EscenaPrueba, Selector , Bomba_minijuego, Kendama_minijuego, Limpieza_minijuego, Pesca_minijuego, Profesor_minijuego, Shooter_minijuego, TableroDeJuegoInfierno],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
 	physics: { 
 		default: 'arcade', 
 		arcade: { 
