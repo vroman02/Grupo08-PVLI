@@ -232,6 +232,8 @@ export default class TableroPrincipal extends Phaser.Scene
             {
                 let numAleatorio = Phaser.Math.Between(0, 2);
                 console.log("SE METIO EN UN MINIJUEGO", numAleatorio);
+                //TEMPORAL, CARGAR EL MINIJUEGO DEL PROFESOR
+                this.scene.start('profesor-minigame');
 
                 /*
                 switch (numAleatorio)
