@@ -1,3 +1,5 @@
+import Pez_pesca from "./Pez_pesca.js";
+
 export default class Pesca_minijuego extends Phaser.Scene 
 {
 // Nombre de la escena para el SceneManager
@@ -18,9 +20,9 @@ export default class Pesca_minijuego extends Phaser.Scene
         const fondo = this.add.image(480, 270, 'barco');
         fondo.setDisplaySize(960, 540);
         
-        //Imagen del grafitti
-        const pescado = this.add.image(450, 270, 'pez');
-        pescado.setDisplaySize(360, 450);
+        //Crear pez
+        this.pez = new Pez_pesca(this, 100, 300)
+        this.pez.setDisplaySize(180, 225);
 
         //Imagen de la esponja
         const can = this.add.image(450, 270, 'cania');
@@ -57,6 +59,46 @@ export default class Pesca_minijuego extends Phaser.Scene
         boton.on('pointerdown', () => {
             this.scene.start('selector-minigames');
         });
+
+        const sedal = this.add.text(400, 425, 'PESCAR', {
+            fontSize: '30px',
+            fontFamily: 'Isometra',
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            padding: { x: 15, y: 10 }
+        });
+
+        sedal.setOrigin(0.5);
+        sedal.setInteractive({ useHandCursor: true });
+
+        sedal.on('pointerover', () => {
+            sedal.setStyle({
+                color: '#ffffff',
+                backgroundColor: '#da0000'
+            });
+        });
+
+        sedal.on('pointerout', () => {
+            sedal.setStyle({
+                color: '#000000',
+                backgroundColor: '#ffffff'
+            });
+        });
+
+        sedal.on('pointerdown', () => {
+            if (this.pez.x < 600 && this.pez.x > 500)
+            {
+                this.pez.setVisible(false);
+            }
+        });
+    }
+
+    update(t, dt)
+    {
+        if (this.pez)
+        {
+            this.pez.update(t, dt);
+        }
     }
 
 
