@@ -37,4 +37,5 @@ export default class Pez_pesca extends Phaser.GameObjects.Image {
         
 	}
 
+
 }
