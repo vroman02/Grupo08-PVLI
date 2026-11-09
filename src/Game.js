@@ -27,7 +27,7 @@ let config = {
 	scale: {
 		autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
 	},
-	scene: [ Menu, TableroPrincipal,EscenaManolo, EscenaPrueba, Selector , Bomba_minijuego, Pesca_minijuego,  Kendama_minijuego, Limpieza_minijuego, Profesor_minijuego, Shooter_minijuego, TableroDeJuegoInfierno],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
+	scene: [   Menu, TableroPrincipal,EscenaManolo, EscenaPrueba, Selector , Kendama_minijuego, Bomba_minijuego, Pesca_minijuego,  Limpieza_minijuego, Profesor_minijuego, Shooter_minijuego, TableroDeJuegoInfierno],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
 	physics: { 
 		default: 'arcade', 
 		arcade: { 

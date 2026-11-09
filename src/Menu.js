@@ -37,7 +37,7 @@ export default class Menu extends Phaser.Scene
     create()
     {
 
-
+        console.log(Phaser.VERSION);
         //fondo amarillo para que destaque
         this.cameras.main.setBackgroundColor('#ffcece');
 
