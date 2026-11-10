@@ -3,7 +3,7 @@ export default class Pez_pesca extends Phaser.GameObjects.Image {
     {
         super(scene, x, y, 'pez');
         scene.add.existing(this);
-        this.VEL = 0.5;
+        this.VEL = 0.75;
         this.velocidad = this.VEL;
         
     }

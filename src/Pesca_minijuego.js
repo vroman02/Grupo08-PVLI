@@ -11,6 +11,7 @@ export default class Pesca_minijuego extends Phaser.Scene
      preload()
     {
         this.load.image('pez', 'assets/minigames/Pesca/koi_imbecil.png');
+        this.load.image('salpicar', 'assets/minigames/Pesca/Salpicadura.png');
         this.load.image('barco', 'assets/minigames/Pesca/barco.png');
         this.load.image('cania', 'assets/minigames/Pesca/individual.png');
         this.load.image('pezpescao', 'assets/minigames/Pesca/koi_anzuelo.png');
@@ -18,7 +19,6 @@ export default class Pesca_minijuego extends Phaser.Scene
         this.load.image('medidor1', 'assets/minigames/Pesca/Medidor1.png');
         this.load.image('medidor2', 'assets/minigames/Pesca/Medidor2.png');
         this.load.image('medidor3', 'assets/minigames/Pesca/Medidor3.png');
-        this.load.image('salpicar', 'assets/minigames/Pesca/Salpicadura.png');
     }
 
     create(){
@@ -50,7 +50,8 @@ export default class Pesca_minijuego extends Phaser.Scene
         
         //Crear pez
         this.pez = new Pez_pesca(this, 100, 300)
-        this.pez.setDisplaySize(180, 225);
+        this.pez.setDisplaySize(120, 150);
+        this.pez.setAlpha(0.75);
 
         //Crear pez pescao
         this.pescao = this.add.image(470, 290, 'pezpescao')
@@ -60,6 +61,7 @@ export default class Pesca_minijuego extends Phaser.Scene
         //Imagen de la esponja
         const can = this.add.image(450, 270, 'cania');
         can.setDisplaySize(360, 750);
+        can.setDepth(2);
 
 
 
@@ -172,8 +174,9 @@ export default class Pesca_minijuego extends Phaser.Scene
         if (this.fallos == 3 && !this.peznt)
         {
             this.pez.setVisible(false);
-            const salpicadura = this.add.image(this.pez.x, this.pez.y, 'salpicar');
+            const salpicadura = this.add.image(this.pez.x, this.pez.y + 20, 'salpicar');
             salpicadura.setDisplaySize(200, 100);
+            salpicadura.setDepth(1);
             this.peznt = true;
         }
         
