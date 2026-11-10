@@ -2,12 +2,17 @@ import Shooter_enemy from './Shooter_enemy.js';
 export default class Shooter_minijuego extends Phaser.Scene 
 {
 // Nombre de la escena para el SceneManager
-    constructor() {
-            super({ key: 'shooter-minigame' });
-        }
+    constructor() 
+    {
+        super({ key: 'shooter-minigame' });
+
+        this.cooldownDisparo = 500;
+        this.vidaJugador = 100;
+
+    }
 
 
-     preload()
+    preload()
     {
         this.load.image('fabrica', 'assets/minigames/Shooter/FondoFabrica.png');
         this.load.image('pistola', 'assets/minigames/Shooter/pistola.png');
@@ -25,9 +30,14 @@ export default class Shooter_minijuego extends Phaser.Scene
         const fondo = this.add.image(480, 270, 'fabrica');
         fondo.setDisplaySize(960, 740);
 
+        this.numEnemigos = Phaser.Math.Between(5, 15);
+        console.log(this.numEnemigos);
         this.listaEnemigos = [];
+        this.contadorEnemigos = 0;
 
+        this.contador = 0;
 
+        //Crear animación
         if(!this.anims.exists('disparar'))
         {
             this.anims.create({
@@ -37,17 +47,32 @@ export default class Shooter_minijuego extends Phaser.Scene
             });
         }
 
+        //Mueres si te quedas a 0
+        if(this.vidaJugador <= 0)
+        {
+            this.scene.start('tablero-principal');
+        }
 
         this.pistol = this.add.sprite(780, 315, 'pistolaAnimada');
         this.pistol.setDisplaySize(360, 450);
         //Para que se muestre por encima de todo
         this.pistol.setDepth(10); 
         
-        //Al hacer click se dispara la pistola
-        this.input.on('pointerdown', (pointer) => {this.pistol.play('disparar')});
+        //Al hacer click se dispara la pistola si se ha cumplido el cooldown
+        this.input.on('pointerdown', (pointer) => {
+            if(this.contador >= this.cooldownDisparo)
+            {
+                this.contador = 0;
+                this.pistol.play('disparar');
+            }
+        });
 
-        this.generaEnemigo();
-
+        if(this.contadorEnemigos <= this.numEnemigos)
+        {
+            this.generaEnemigo();
+            this.contadorEnemigos++;
+        }
+        
         //Contador
         this.time.addEvent({
             delay: 2000, // 2000 ms = 2 segundos
@@ -55,6 +80,7 @@ export default class Shooter_minijuego extends Phaser.Scene
             callbackScope: this,
             loop: true
         });
+        
 
         //Boton volver
         const boton = this.add.text(825, 480, 'VOLVER', {
@@ -93,27 +119,42 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.listaEnemigos.forEach(enemigo => {
             enemigo.update(t, dt);
         });
+
+        this.contador += dt;
     }
 
     generaEnemigo()
     {
-        let randomCoor = Phaser.Math.Between(100, 800);
-        let nuevoEnemigo = new Shooter_enemy(this, randomCoor, 200);
-        let vida = 3;
+        if(this.contadorEnemigos <= this.numEnemigos)
+        {
+            let randomCoor = Phaser.Math.Between(100, 800);
+            let nuevoEnemigo = new Shooter_enemy(this, randomCoor, 200);
+            let vida = 3;
 
-        nuevoEnemigo.setDisplaySize(360, 450);
+            nuevoEnemigo.setDisplaySize(360, 450);
 
-        nuevoEnemigo.setInteractive();
-        nuevoEnemigo.on('pointerdown', () => {
-            vida--;
-            if(vida <= 0)
-            {
-                this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
-                nuevoEnemigo.destroy();
-            }
-        })
+            nuevoEnemigo.setInteractive();
+            nuevoEnemigo.on('pointerdown', () => {
+                if(this.contador >= this.cooldownDisparo)
+                {
+                    vida--;
+                    if(vida <= 0)
+                    {
+                        this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
+                        nuevoEnemigo.destroy();
+                    }
+                }
+            })
+
+            nuevoEnemigo.on('recibe-daño', () => {
+                this.vidaJugador -= nuevoEnemigo.daño;
+                console.log("Daño recibido");
+            })
 
         this.listaEnemigos.push(nuevoEnemigo);
+        this.contadorEnemigos++;
+        }
+        
     }
 
 }
