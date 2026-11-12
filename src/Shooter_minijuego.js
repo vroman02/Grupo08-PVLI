@@ -1,4 +1,5 @@
 import Shooter_enemy from './Shooter_enemy.js';
+import mira from'./mira.js';
 export default class Shooter_minijuego extends Phaser.Scene 
 {
 // Nombre de la escena para el SceneManager
@@ -6,16 +7,24 @@ export default class Shooter_minijuego extends Phaser.Scene
     {
         super({ key: 'shooter-minigame' });
 
-        this.cooldownDisparo = 500;
-        this.vidaJugador = 100;
-
+        this.cooldownDisparo = 250;
     }
 
+    init()
+    {
+        this.vidaJugador = 100;
+        this.contador = 0;
+        this.listaEnemigos = [];
+        this.contadorEnemigos = 0;
+        this.numEnemigos = 0;
+        this.enemigosMuertos = 0;
+    }
 
     preload()
     {
         this.load.image('fabrica', 'assets/minigames/Shooter/FondoFabrica.png');
         this.load.image('pistola', 'assets/minigames/Shooter/pistola.png');
+        this.load.image('mira', 'assets/minigames/Shooter/mira.png');
         this.load.spritesheet('pistolaAnimada', 'assets/minigames/Shooter/first_person_gun.png', {
             frameWidth: 180,
             frameHeight: 180
@@ -25,10 +34,20 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.load.image('enemigo', 'assets/characters/DoctorMuerte.png');
     }
 
-    create(){
+    create()
+    {   
+        //Cuando se quita la escena el cursor se vuelve a mostrar
+        this.events.once('shutdown', () => {
+            this.input.setDefaultCursor('default');
+        });
 
         const fondo = this.add.image(480, 270, 'fabrica');
         fondo.setDisplaySize(960, 740);
+
+        this.mira = new mira(this, 0, 0);
+        this.mira.setDisplaySize(50, 50);
+        this.mira.setDepth(30); 
+        this.input.setDefaultCursor('none');
 
         this.numEnemigos = Phaser.Math.Between(5, 15);
         console.log(this.numEnemigos);
@@ -45,12 +64,6 @@ export default class Shooter_minijuego extends Phaser.Scene
                 frames: this.anims.generateFrameNumbers('pistolaAnimada', {start: 0, end: 13}),
                 frameRate: 12,
             });
-        }
-
-        //Mueres si te quedas a 0
-        if(this.vidaJugador <= 0)
-        {
-            this.scene.start('tablero-principal');
         }
 
         this.pistol = this.add.sprite(780, 315, 'pistolaAnimada');
@@ -80,6 +93,16 @@ export default class Shooter_minijuego extends Phaser.Scene
             callbackScope: this,
             loop: true
         });
+
+        //Texto vida
+        this.textoVida = this.add.text(0, 0, `VIDA: ${this.vidaJugador}`, {
+            fontSize: '30px',
+            fontFamily: 'Isometra',
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            padding: { x: 20, y: 10 }
+        })
+        this.textoVida.setDepth(20); 
         
 
         //Boton volver
@@ -100,6 +123,7 @@ export default class Shooter_minijuego extends Phaser.Scene
                 color: '#ffffff',
                 backgroundColor: '#2274d7'
             });
+            this.mira.setVisible(false);
         });
 
         boton.on('pointerout', () => {
@@ -107,6 +131,7 @@ export default class Shooter_minijuego extends Phaser.Scene
                 color: '#000000',
                 backgroundColor: '#ffffff'
             });
+            this.mira.setVisible(true);
         });
 
         boton.on('pointerdown', () => {
@@ -116,10 +141,15 @@ export default class Shooter_minijuego extends Phaser.Scene
 
     update(t, dt) 
     {
+        //Actualizar cada enemigo
         this.listaEnemigos.forEach(enemigo => {
             enemigo.update(t, dt);
         });
 
+        //Actualizar la mira
+        this.mira.update(t, dt);
+
+        //Actualizar el contador
         this.contador += dt;
     }
 
@@ -141,18 +171,37 @@ export default class Shooter_minijuego extends Phaser.Scene
                     if(vida <= 0)
                     {
                         this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
+                        this.enemigosMuertos++;
                         nuevoEnemigo.destroy();
+
+                        //Carga el tablero si has matado a todos los enemigos
+                        if(this.enemigosMuertos == this.numEnemigos)
+                        {
+                            console.log('has ganado');
+                            this.scene.start('tablero-principal');
+                        }
                     }
                 }
             })
 
+            //Cuando recibes daño se muestra, si la vida es 30 o menos se muestra en rojo
             nuevoEnemigo.on('recibe-daño', () => {
                 this.vidaJugador -= nuevoEnemigo.daño;
+                this.textoVida.setText(`VIDA: ${this.vidaJugador}`);
+                if(this.vidaJugador <= 30)
+                {
+                    this.textoVida.setColor('#CC0000');
+                }
+                if(this.vidaJugador <= 0)
+                {
+                    console.log("Has muerto");
+                    this.scene.start('tablero-principal');
+                }
                 console.log("Daño recibido");
             })
 
-        this.listaEnemigos.push(nuevoEnemigo);
-        this.contadorEnemigos++;
+            this.listaEnemigos.push(nuevoEnemigo);
+            this.contadorEnemigos++;
         }
         
     }
