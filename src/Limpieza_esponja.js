@@ -7,6 +7,8 @@ export default class Esponja extends Phaser.GameObjects.Image {
         this.pointer = scene.input.activePointer;
     }
 
+    
+
     preload()
     {
         
@@ -22,6 +24,4 @@ export default class Esponja extends Phaser.GameObjects.Image {
         this.x = this.pointer.worldX;
         this.y = this.pointer.worldY;
 	}
-
-
 }

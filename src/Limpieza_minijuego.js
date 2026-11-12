@@ -17,12 +17,30 @@ export default class Limpieza_minijuego extends Phaser.Scene
 
     create(){
 
+        //Imagen del fondo
         const fondo = this.add.image(480, 270, 'pared');
         fondo.setDisplaySize(960, 540);
         
-
+        //Se crea el grafitti
         const grafitti = this.add.image(450, 270, 'grafitti');
-        grafitti.setDisplaySize(560, 450);
+        grafitti.setDisplaySize(840, 540);
+
+        //Se crea la máscara
+        this.mascara = this.add.renderTexture(480, 270, 960, 540);
+        this.mascara.fill(0xffffff);
+        this.mascara.render();
+        grafitti.enableFilters().filters.external.addMask(this.mascara);
+        this.mascara.setVisible(false);
+
+        //Se borra el grafitti
+        this.input.on('pointermove', pointer =>
+        {
+            if (pointer.isDown)
+            {
+                this.mascara.erase(this.espon).render();
+            }
+
+        });
 
 
         //Imagen de la esponja
