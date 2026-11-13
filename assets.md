@@ -13,8 +13,10 @@
 - **Enemigos**: Se reutilizó el asset del "Doctor Doom" que ya estaba en el juego.
 
 ### 💣 Minijuego Bomba
-- **Bomba 2D**: Asset generado con IA.
+- **Bomba 2D**: Dibujado por Marcos Solano.
 - **Mesa de herramientas**: Imagen obtenida de [Magnific/Google](https://img.magnific.com/premium-photo/spanners-tools-dark-black-background-top-view-with-copy-space_981948-17786.jpg) y pixelada con [Color3Arte](https://www.color3arte.com/en/creador-de-pixel-art/).
+- **Pistas papel**: Dibujado por Marcos Solano.
+- **Tijeras**: Dibujado por Marcos Solano.
 
 ### 🪀 Minijuego Kendama
 - **Objeto Kendama**: Hecho con IA (fue imposible encontrar un asset adecuado de este objeto).
