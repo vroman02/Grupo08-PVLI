@@ -1,3 +1,5 @@
+import Esponja from "./Limpieza_esponja.js";
+
 export default class Limpieza_minijuego extends Phaser.Scene 
 {
 // Nombre de la escena para el SceneManager
@@ -15,18 +17,35 @@ export default class Limpieza_minijuego extends Phaser.Scene
 
     create(){
 
+        //Imagen del fondo
         const fondo = this.add.image(480, 270, 'pared');
         fondo.setDisplaySize(960, 540);
         
-        //Imagen del grafitti
-        const pintura = this.add.image(450, 270, 'grafitti');
-        pintura.setDisplaySize(560, 450);
+        //Se crea el grafitti
+        const grafitti = this.add.image(450, 270, 'grafitti');
+        grafitti.setDisplaySize(840, 540);
+
+        //Se crea la máscara
+        this.mascara = this.add.renderTexture(480, 270, 960, 540);
+        this.mascara.fill(0xffffff);
+        this.mascara.render();
+        grafitti.enableFilters().filters.external.addMask(this.mascara);
+        this.mascara.setVisible(false);
+
+        //Se borra el grafitti
+        this.input.on('pointermove', pointer =>
+        {
+            if (pointer.isDown)
+            {
+                this.mascara.erase(this.espon).render();
+            }
+
+        });
+
 
         //Imagen de la esponja
-        const espon = this.add.image(450, 270, 'esponja');
-       
-
-
+        this.espon = new Esponja(this, 450, 270);
+        this.espon.setDisplaySize(100,100);
 
         //Boton volver
         const boton = this.add.text(825, 480, 'VOLVER', {
@@ -59,6 +78,10 @@ export default class Limpieza_minijuego extends Phaser.Scene
         });
     }
 
+    update()
+    {
+        this.espon.update();
+    }
 
 
 }
