@@ -7,6 +7,17 @@ export default class Profesor_minijuego extends Phaser.Scene
     {
         super({ key: 'profesor-minigame' });
 
+        this.fallosMaximos = 5;
+
+        //Contador de fallos
+        this.fallosActuales = 0;
+
+        //Años de vida, TEMPORAL, esta variable se le comunica al entrar en la escena
+        this.añosDeVida = 100;
+
+        //Cantidad de años a restar por fallo, TEMPORAL
+        this.añosARestar = 10;
+
         //Lista de preguntas
         this.listaPreguntas = [
             {
@@ -70,15 +81,17 @@ export default class Profesor_minijuego extends Phaser.Scene
     {
         this.load.image('contento', 'assets/minigames/Profesor/Profe_Contento_Editado.png');
         this.load.image('enfadado', 'assets/minigames/Profesor/Profe_Enfadao_Editado.jpg');
-
+        this.load.image('corazonUI', 'assets/CorazonTemp.png');
     }
 
     create()
     {
         this.spawnProfeContento();
-        
         this.spawnProfeEnfadado();
-        this.profeEnfadado.setVisible(false);
+
+        //El contento empieza siendo totalmente visible y el enfadado no se ve
+        this.profeContento.setAlpha(1);
+        this.profeEnfadado.setAlpha(0)
 
         this.mostrarPregunta();
 
@@ -111,6 +124,23 @@ export default class Profesor_minijuego extends Phaser.Scene
         boton.on('pointerdown', () => {
             this.scene.start('selector-minigames');
         });
+
+        //Años de vida restantes
+        this.añosRestantes = this.add.text(0, 0, this.añosDeVida, {
+        fontFamily: 'Isometra',
+        fontSize: '40px',
+        color: '#000000',
+        backgroundColor: '#ffffff',
+        padding: { x: 45, y: 15 },
+        align: 'center',
+        wordWrap: { width: 700 }
+        });
+        this.añosRestantes.setDepth(10);
+
+        this.corazon = this.add.image(10, 25, 'corazonUI');
+        this.corazon.setDisplaySize(30, 30);
+        this.corazon.setOrigin(0, 0);
+        this.corazon.setDepth(20);
     }
 
     spawnProfeContento()
@@ -121,8 +151,31 @@ export default class Profesor_minijuego extends Phaser.Scene
 
     spawnProfeEnfadado()
     {
-        this.profeEnfadado = this.add.image(450, 270, 'enfadado');
-        this.profeEnfadado.setDisplaySize(360, 450);
+        this.profeEnfadado = this.add.image(450, 300, 'enfadado');
+        this.profeEnfadado.setDisplaySize(500, 650);
+    }
+
+    actualizarEnfado()
+    {
+        this.fallosActuales++;
+
+        //Da un valor de 0 a 1 en función de cuantos fallos lleves
+        const progreso = Phaser.Math.Clamp(this.fallosActuales / this.fallosMaximos, 0, 1);
+
+        //Tweens hace la transición mas suave
+        this.tweens.add({
+            targets: this.profeEnfadado,
+            alpha: progreso,
+            duration: 600,
+            ease: 'Sine.easeInOut'
+        });
+
+        this.tweens.add({
+            targets: this.profeContento,
+            alpha: 1 - progreso,
+            duration: 600,
+            ease: 'Sine.easeInOut'
+        });
     }
 
     mostrarPregunta()
@@ -144,7 +197,7 @@ export default class Profesor_minijuego extends Phaser.Scene
         // Cogemos los datos de la pregunta actual
         let datos = this.listaPreguntas[this.indicePreguntaActual];
 
-         this.miPregunta = new pregunta(
+        this.miPregunta = new pregunta(
             this, 
             480, 60, 
             datos.texto, 
@@ -155,16 +208,15 @@ export default class Profesor_minijuego extends Phaser.Scene
         //Si se ha acertado se quita al profe enfadado y se vuelve a poner al contento
         this.miPregunta.on('acierto', () => {
             console.log("¡Has acertado!");
-            this.profeEnfadado.setVisible(false);
-            this.profeContento.setVisible(true);
             this.siguientePregunta();
         });
 
         //Si se ha fallado se quita al profe contento y se pone al enfadado
         this.miPregunta.on('fallo', () => {
-            console.log("¡Has acertado!");
-            this.profeContento.setVisible(false);
-            this.profeEnfadado.setVisible(true);
+            console.log("¡Has fallado!");
+            this.añosDeVida -= this.añosARestar;
+            this.añosRestantes.setText(String(this.añosDeVida));
+            this.actualizarEnfado();
             this.siguientePregunta();
         });
     }
@@ -177,9 +229,6 @@ export default class Profesor_minijuego extends Phaser.Scene
         // Temporizador entre preguntas para poder ver cuál era la respuesta
         this.time.delayedCall(1500, () => {
             this.mostrarPregunta();
-            //Cuando carga la nueva pregunta el profe deja de estar enfadado (TEMPORAL)
-            this.profeEnfadado.setVisible(false);
-            this.profeContento.setVisible(true);
         });
     }
 }
