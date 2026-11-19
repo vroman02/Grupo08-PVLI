@@ -216,6 +216,41 @@ export default class TableroPrincipal extends Phaser.Scene
         boton.on('pointerdown', () => {
             this.scene.start('menu-principal');
         });
+
+
+        //boton tienda
+                const botonTienda = this.add.text(60, 500, 'TIENDA', {
+            fontSize: '10px',
+            fontFamily: 'Isometra',
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            padding: { x: 20, y: 10 }
+        });
+
+        botonTienda.setOrigin(0.5);
+        botonTienda.setInteractive({ useHandCursor: true });
+
+        botonTienda.on('pointerover', () => {
+            botonTienda.setStyle({
+                color: '#ffffff',
+                backgroundColor: '#2274d7'
+            });
+        });
+
+        botonTienda.on('pointerout', () => {
+            botonTienda.setStyle({
+                color: '#000000',
+                backgroundColor: '#ffffff'
+            });
+        });
+
+        botonTienda.on('pointerdown', () => {
+            this.scene.launch('tienda', { tablero: this });
+            this.scene.pause();
+        });
+
+
+
     }
 
 
