@@ -218,7 +218,40 @@ export default class TableroPrincipal extends Phaser.Scene
         });
 
 
-        //boton tienda
+        //boton apuestas
+                const botonApuestas = this.add.text(150, 500, 'Apuestas', {
+            fontSize: '10px',
+            fontFamily: 'Isometra',
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            padding: { x: 20, y: 10 }
+        });
+
+        botonApuestas.setOrigin(0.5);
+        botonApuestas.setInteractive({ useHandCursor: true });
+
+        botonApuestas.on('pointerover', () => {
+            botonApuestas.setStyle({
+                color: '#ffffff',
+                backgroundColor: '#ff0000'
+            });
+        });
+
+        botonApuestas.on('pointerout', () => {
+            botonApuestas.setStyle({
+                color: '#000000',
+                backgroundColor: '#ffffff'
+            });
+        });
+
+        botonApuestas.on('pointerdown', () => {
+            this.scene.launch('apuestas', { tablero: this });
+            this.scene.pause();
+        });
+
+        
+
+         //boton tienda
                 const botonTienda = this.add.text(60, 500, 'TIENDA', {
             fontSize: '10px',
             fontFamily: 'Isometra',
