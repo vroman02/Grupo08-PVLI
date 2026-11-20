@@ -18,6 +18,10 @@ export default class Profesor_minijuego extends Phaser.Scene
         //Cantidad de años a restar por fallo, TEMPORAL
         this.añosARestar = 10;
 
+        //Temporizador
+        this.tiempoMaximo = 7;
+        this.tiempoRestante = this.tiempoMaximo;
+
         //Lista de preguntas
         this.listaPreguntas = [
             {
@@ -82,6 +86,7 @@ export default class Profesor_minijuego extends Phaser.Scene
         this.load.image('contento', 'assets/minigames/Profesor/Profe_Contento_Editado.png');
         this.load.image('enfadado', 'assets/minigames/Profesor/Profe_Enfadao_Editado.jpg');
         this.load.image('corazonUI', 'assets/CorazonTemp.png');
+        this.load.image('imagenContador', 'assets/minigames/Profesor/ConejoReloj.jpg');
     }
 
     create()
@@ -91,9 +96,41 @@ export default class Profesor_minijuego extends Phaser.Scene
 
         //El contento empieza siendo totalmente visible y el enfadado no se ve
         this.profeContento.setAlpha(1);
-        this.profeEnfadado.setAlpha(0)
+        this.profeEnfadado.setAlpha(0);
 
-        this.mostrarPregunta();
+        //Años de vida restantes
+        this.añosRestantes = this.add.text(0, 0, this.añosDeVida, {
+        fontFamily: 'Isometra',
+        fontSize: '40px',
+        color: '#000000',
+        backgroundColor: '#ffffff',
+        padding: { x: 45, y: 15 },
+        align: 'center',
+        wordWrap: { width: 700 }
+        });
+        this.añosRestantes.setDepth(10);
+
+        this.corazon = this.add.image(10, 25, 'corazonUI');
+        this.corazon.setDisplaySize(30, 30);
+        this.corazon.setOrigin(0, 0);
+        this.corazon.setDepth(20);
+
+        //Tiempo restante para responder
+        this.textoTiempo = this.add.text(820, 0, this.tiempoMaximo, {
+            fontFamily: 'Isometra',
+            fontSize: '40px',
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            padding: { x: 70, y: 15 },
+            align: 'right',
+            wordWrap: { width: 700 }
+        });
+        this.textoTiempo.setDepth(10);
+
+        this.imgContador = this.add.image(830, 17, 'imagenContador');
+        this.imgContador.setDisplaySize(40, 45);
+        this.imgContador.setOrigin(0, 0);
+        this.imgContador.setDepth(20);
 
         //Boton volver
         const boton = this.add.text(855, 515, 'VOLVER', {
@@ -125,22 +162,7 @@ export default class Profesor_minijuego extends Phaser.Scene
             this.scene.start('selector-minigames');
         });
 
-        //Años de vida restantes
-        this.añosRestantes = this.add.text(0, 0, this.añosDeVida, {
-        fontFamily: 'Isometra',
-        fontSize: '40px',
-        color: '#000000',
-        backgroundColor: '#ffffff',
-        padding: { x: 45, y: 15 },
-        align: 'center',
-        wordWrap: { width: 700 }
-        });
-        this.añosRestantes.setDepth(10);
-
-        this.corazon = this.add.image(10, 25, 'corazonUI');
-        this.corazon.setDisplaySize(30, 30);
-        this.corazon.setOrigin(0, 0);
-        this.corazon.setDepth(20);
+        this.mostrarPregunta();
     }
 
     spawnProfeContento()
@@ -178,6 +200,64 @@ export default class Profesor_minijuego extends Phaser.Scene
         });
     }
 
+    iniciarTemporizador()
+    {
+        //Reiniciar variables
+        this.tiempoRestante = this.tiempoMaximo;
+        this.textoTiempo.setText(String(this.tiempoRestante));
+        // Vuelve a negro al empezar
+        this.textoTiempo.setColor('#000000');
+        this.textoTiempo.setBackgroundColor('#ffffff');
+        this.preguntaActiva = true;
+
+        //Da un tick cada 1s
+        this.temporizador = this.time.addEvent({
+            delay: 1000,
+            callback: this.tickTiempo,
+            callbackScope: this,
+            loop: true
+        });
+    }
+
+    tickTiempo()
+    {
+        this.tiempoRestante--;
+        
+        if (this.tiempoRestante > 0) 
+        {
+            this.textoTiempo.setText(String(this.tiempoRestante));
+            //Si quedan x segundos se pone en rojo
+            if (this.tiempoRestante <= 3) 
+            {
+                this.textoTiempo.setColor('#ff0000');
+            }
+        } 
+        else 
+        {
+            //Se acabó el tiempo
+            this.textoTiempo.setText("0");
+            this.textoTiempo.setColor('#ffFFFF');
+            this.textoTiempo.setBackgroundColor('#ff0000');
+            this.temporizador.remove();
+
+            //Solo contar el fallo si aún había pregunta activa
+            if (this.preguntaActiva) 
+            {
+                this.preguntaActiva = false;
+                console.log("¡Se acabó el tiempo!");
+                this.procesarFallo();
+            }
+        }
+    }
+
+    procesarFallo()
+    {
+        this.añosDeVida -= this.añosARestar;
+        this.añosRestantes.setText(String(this.añosDeVida));
+        this.actualizarEnfado();
+        this.siguientePregunta();
+    }
+
     mostrarPregunta()
     {
         //Si se ha respondido a todo acaba
@@ -205,6 +285,10 @@ export default class Profesor_minijuego extends Phaser.Scene
             datos.correcta
         );
 
+        this.miPregunta.setDepth(100); 
+
+        this.iniciarTemporizador();
+
         //Si se ha acertado se quita al profe enfadado y se vuelve a poner al contento
         this.miPregunta.on('acierto', () => {
             console.log("¡Has acertado!");
@@ -214,10 +298,8 @@ export default class Profesor_minijuego extends Phaser.Scene
         //Si se ha fallado se quita al profe contento y se pone al enfadado
         this.miPregunta.on('fallo', () => {
             console.log("¡Has fallado!");
-            this.añosDeVida -= this.añosARestar;
-            this.añosRestantes.setText(String(this.añosDeVida));
-            this.actualizarEnfado();
-            this.siguientePregunta();
+            this.temporizador.remove();
+            this.procesarFallo();
         });
     }
 
