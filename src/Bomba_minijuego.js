@@ -18,7 +18,7 @@ export default class Bomba_minijuego extends Phaser.Scene
         this.load.image('pista', 'assets/minigames/Bomba/PistasBomba.png');
 
         //Sprite sheet de las tijeras (frame 1 = abiertas, frame 2 = cerradas)
-        this.load.image('tijeras', 'assets/minigames/Bomba/sprite_sheetTijera.png');
+        this.load.image('tijeras', 'assets/minigames/Bomba/Tijeras.png');
     }
 
     create(){
@@ -83,6 +83,12 @@ export default class Bomba_minijuego extends Phaser.Scene
                 cable.setFrame(c.color + '_2');
                 cable.setData('cortado', true);
                 cable.disableInteractive();
+
+                //Si el cable cortado es el rojo aparece un rectangulo rojo (x, y, ancho, alto, color)
+                if (c.color === 'rojo') {
+                    const rectanguloRojo = this.add.rectangle(W / 2, 60, 200, 80, 0xff0000);
+                    rectanguloRojo.setDepth(6);
+                }
             });
         }
 
