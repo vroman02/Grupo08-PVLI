@@ -1,0 +1,5002 @@
+[
+    {
+        "texto": "¿Qué capital portuguesa está junto al estuario del Tajo?",
+        "opciones": [
+            "Burdeos",
+            "Lagos",
+            "Lisboa",
+            "Marsella"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿En qué año comenzó la Revolución francesa?",
+        "opciones": [
+            "1918",
+            "1789",
+            "1917",
+            "1939"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cuál es la fórmula molecular del agua?",
+        "opciones": [
+            "Oxígeno",
+            "Potasio",
+            "Aluminio",
+            "H₂O"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué órgano constituye la principal barrera física frente al entorno?",
+        "opciones": [
+            "Laringe",
+            "La piel",
+            "Esternón",
+            "Radio"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué autor asturiano firmó La Regenta como Clarín?",
+        "opciones": [
+            "Jorge Amado",
+            "Dante Alighieri",
+            "George Orwell",
+            "Leopoldo Alas, Clarín"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué compañía tecnológica desarrolló Windows NT?",
+        "opciones": [
+            "Oracle",
+            "NVIDIA",
+            "Sony",
+            "Microsoft"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuántos jugadores por equipo inician un partido de fútbol?",
+        "opciones": [
+            "9",
+            "10",
+            "11",
+            "12"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué fruto se tritura para preparar guacamole?",
+        "opciones": [
+            "Aguacate",
+            "Mango",
+            "Papaya",
+            "Chirimoya"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué cetáceo puede superar los 30 metros de longitud?",
+        "opciones": [
+            "Beluga",
+            "Narval",
+            "Ballena azul",
+            "Orca"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿En qué saga aparece Anakin Skywalker?",
+        "opciones": [
+            "Alien",
+            "Avatar",
+            "El algoritmo de TikTok haciendo otra transición de 14 segundos",
+            "Star Wars"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuánto es 3 multiplicado por 2⁵?",
+        "opciones": [
+            "48",
+            "64",
+            "96",
+            "128"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital noruega está al fondo de un fiordo?",
+        "opciones": [
+            "París",
+            "Buenos Aires",
+            "Oslo",
+            "Asunción"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿En qué año se abrió el Muro de Berlín?",
+        "opciones": [
+            "1989",
+            "1981",
+            "1918",
+            "2010"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué gas fijan las plantas durante la fotosíntesis?",
+        "opciones": [
+            "Óxido nitroso",
+            "Dióxido de carbono",
+            "Dióxido de azufre",
+            "Oxígeno"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué tipo de célula sanguínea contiene hemoglobina?",
+        "opciones": [
+            "Glóbulos rojos",
+            "Basófilos",
+            "Reticulocitos",
+            "Eosinófilos"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Quién publicó Don Quijote en 1605?",
+        "opciones": [
+            "Jorge Amado",
+            "J. R. R. Tolkien",
+            "Miguel de Cervantes",
+            "George Orwell"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué lenguaje de marcado estructura las páginas web?",
+        "opciones": [
+            "XML",
+            "MathML",
+            "XHTML",
+            "HTML"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuántos puntos vale un tiro libre convertido en baloncesto FIBA?",
+        "opciones": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿En qué país se consolidó la pizza moderna?",
+        "opciones": [
+            "Italia",
+            "Vietnam",
+            "Suiza",
+            "Jamaica"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué mamífero africano tiene patas y cuello muy largos?",
+        "opciones": [
+            "Nutria marina",
+            "Jirafa",
+            "Murciélago de la fruta",
+            "Lémur"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué personaje de Nintendo protagoniza Super Mario?",
+        "opciones": [
+            "Link",
+            "Kirby",
+            "Mario",
+            "Samus Aran"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuántos lados tiene un dodecágono?",
+        "opciones": [
+            "10",
+            "11",
+            "12",
+            "14"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital egipcia significa «la victoriosa» en árabe?",
+        "opciones": [
+            "Daca",
+            "El Cairo",
+            "Asunción",
+            "Dublín"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿En qué año llegó Colón al Caribe?",
+        "opciones": [
+            "1788",
+            "1492",
+            "1975",
+            "1929"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué planeta del sistema solar tiene el período orbital más corto?",
+        "opciones": [
+            "Mercurio",
+            "Saturno",
+            "Tierra",
+            "Venus"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué órgano contiene los islotes de Langerhans?",
+        "opciones": [
+            "Faringe",
+            "Aurícula derecha",
+            "Hígado",
+            "El páncreas"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué artista pintó el retrato conocido como La Gioconda?",
+        "opciones": [
+            "Leonardo da Vinci",
+            "Joan Miró",
+            "Vincent van Gogh",
+            "Auronplay"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué sigla identifica al procesador de un ordenador?",
+        "opciones": [
+            "ROM",
+            "Unidad central de procesamiento",
+            "Chipset",
+            "Tarjeta de red"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué selección ganó el Mundial de fútbol de 2010?",
+        "opciones": [
+            "Noruega",
+            "Islandia",
+            "Hungría",
+            "España"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué legumbre triturada con tahini forma el hummus?",
+        "opciones": [
+            "Lenteja",
+            "Guisante",
+            "Garbanzo",
+            "Soja"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué mamífero australiano pone huevos y tiene pico de pato?",
+        "opciones": [
+            "Elefante africano",
+            "Ornitorrinco",
+            "Tigre siberiano",
+            "Guepardo"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué película de Pixar presenta a un robot llamado WALL·E?",
+        "opciones": [
+            "Regreso al futuro",
+            "WALL·E",
+            "Frozen",
+            "Los Increíbles"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama el ángulo de 90 grados?",
+        "opciones": [
+            "Ángulo completo",
+            "Ángulo recto",
+            "Ángulo llano",
+            "Ángulo obtuso"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué capital tailandesa se conoce como Krung Thep?",
+        "opciones": [
+            "Islamabad",
+            "Bangkok",
+            "Pekín",
+            "Londres"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué heredero de César venció a Marco Antonio?",
+        "opciones": [
+            "Marco Antonio",
+            "Augusto",
+            "Isabel I de Castilla",
+            "IlloJuan"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué fuerza atrae entre sí a los cuerpos con masa?",
+        "opciones": [
+            "La fuerza electromagnética",
+            "La fuerza nuclear fuerte",
+            "La gravedad",
+            "La fuerza nuclear débil"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuántos huesos tiene normalmente el esqueleto adulto?",
+        "opciones": [
+            "196",
+            "206",
+            "208",
+            "212"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Quién escribió Romeo y Julieta?",
+        "opciones": [
+            "Homero",
+            "H. G. Wells",
+            "William Shakespeare",
+            "Juan Ramón Jiménez"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué empresa presentó el primer iPhone en 2007?",
+        "opciones": [
+            "Apple",
+            "Mozilla",
+            "IBM",
+            "Sony"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Sobre qué superficie se juega Roland Garros?",
+        "opciones": [
+            "Boxeo",
+            "Tierra batida",
+            "Biatlón",
+            "Críquet"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué lácteo se obtiene fermentando leche con bacterias?",
+        "opciones": [
+            "Levadura",
+            "Romero",
+            "Azafrán",
+            "Yogur"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué proceso transforma una larva en adulto?",
+        "opciones": [
+            "Mitosis",
+            "Metamorfosis",
+            "Meiosis",
+            "Fecundación"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué serie transcurre en Hawkins y presenta el Mundo del Revés?",
+        "opciones": [
+            "Breaking Bad",
+            "The Crown",
+            "Friends",
+            "Stranger Things"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuál es la raíz cuadrada exacta de 144?",
+        "opciones": [
+            "10",
+            "11",
+            "12",
+            "14"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué ciudad canadiense es la capital federal del país?",
+        "opciones": [
+            "Ciudad de México",
+            "Katmandú",
+            "Roma",
+            "Ottawa"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué civilización construyó Machu Picchu?",
+        "opciones": [
+            "La civilización maya",
+            "La civilización mexica",
+            "La civilización inca",
+            "La civilización mochica"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué símbolo químico representa el oro (del latín aurum)?",
+        "opciones": [
+            "Calcio",
+            "H₂O",
+            "Au",
+            "Zinc"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué parte coloreada del ojo regula la pupila?",
+        "opciones": [
+            "Retina",
+            "Córnea",
+            "El iris",
+            "Pupila"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué pintor creó Guernica en 1937?",
+        "opciones": [
+            "Edgar Degas",
+            "Pablo Picasso",
+            "Francisco de Goya",
+            "Jordi Wild"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué lenguaje de programación recibió su nombre de Monty Python?",
+        "opciones": [
+            "Python",
+            "Ruby",
+            "Java",
+            "PHP"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Cuántos aros forman el símbolo olímpico?",
+        "opciones": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué semillas de *Theobroma cacao* se usan para hacer chocolate?",
+        "opciones": [
+            "Granos de café",
+            "Semillas de sésamo",
+            "Semillas de cacao",
+            "Almendras"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué reptil cambia de color gracias a los cromatóforos?",
+        "opciones": [
+            "Culebra de escalera",
+            "Víbora hocicuda",
+            "Caimán",
+            "Camaleón"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué videojuego de Mojang popularizó los creepers?",
+        "opciones": [
+            "Mario Kart",
+            "Overwatch",
+            "Minecraft",
+            "El gato que entra en plano con el trend «my moon my man»"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué número primo es el único comprendido estrictamente entre 10 y 12?",
+        "opciones": [
+            "9",
+            "11",
+            "13",
+            "17"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué ciudad australiana es la capital del país?",
+        "opciones": [
+            "Pekín",
+            "Seúl",
+            "La Paz",
+            "Canberra"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿En qué año se aprobó la Declaración de Independencia de EE. UU.?",
+        "opciones": [
+            "1871",
+            "1776",
+            "1989",
+            "2014"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué físico formuló las leyes del movimiento y la gravedad?",
+        "opciones": [
+            "Jordi Wild",
+            "Stephen Hawking",
+            "Isaac Newton",
+            "Alan Turing"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué molécula de doble hélice almacena la información genética?",
+        "opciones": [
+            "ARN",
+            "Proteínas",
+            "Lípidos",
+            "ADN"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Quién compuso Las cuatro estaciones?",
+        "opciones": [
+            "IlloJuan",
+            "Giuseppe Verdi",
+            "Antonio Vivaldi",
+            "Igor Stravinski"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué protocolo web cifra la conexión HTTP con TLS?",
+        "opciones": [
+            "SSH",
+            "DHCP",
+            "FTP",
+            "HTTPS"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿A qué deporte pertenece el Tour de Francia?",
+        "opciones": [
+            "Críquet",
+            "Natación",
+            "Surf",
+            "Ciclismo"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué tipo de pasta tiene forma de pequeños granos parecidos al arroz?",
+        "opciones": [
+            "Alubia",
+            "Harina",
+            "Orzo",
+            "Sushi"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuál es el felino más grande del mundo?",
+        "opciones": [
+            "Tigre",
+            "León africano",
+            "Caracal",
+            "Leopardo"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Cómo se llama la escuela de magia de Harry Potter?",
+        "opciones": [
+            "Matrix",
+            "Kung Fu Panda",
+            "Toy Story",
+            "Hogwarts"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuántos minutos hay en dos horas y media?",
+        "opciones": [
+            "120",
+            "135",
+            "150",
+            "180"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital está junto al Río de la Plata y tiene Plaza de Mayo?",
+        "opciones": [
+            "Buenos Aires",
+            "Sarajevo",
+            "Rabat",
+            "Vilna"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué reina gobernaba durante la Armada Invencible?",
+        "opciones": [
+            "Nelson Mandela",
+            "Isabel I",
+            "Mahatma Gandhi",
+            "Isaac Newton"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué partícula elemental posee carga eléctrica negativa?",
+        "opciones": [
+            "Protón",
+            "Electrón",
+            "Neutrón",
+            "Positrón"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué órganos filtran la sangre y producen orina?",
+        "opciones": [
+            "Epidermis",
+            "Los riñones",
+            "Laringe",
+            "Intestino delgado"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Quién pintó La noche estrellada?",
+        "opciones": [
+            "Leonardo da Vinci",
+            "Paul Cézanne",
+            "Vincent van Gogh",
+            "Diego Velázquez"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué memoria volátil usa el ordenador para tareas activas?",
+        "opciones": [
+            "Memoria ROM",
+            "Memoria RAM",
+            "Memoria flash",
+            "Disco duro"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cuántos sets hay que ganar en un Grand Slam masculino?",
+        "opciones": [
+            "1 set",
+            "2 sets",
+            "3 sets",
+            "4 sets"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué bebida se prepara infusionando hojas de *Camellia sinensis*?",
+        "opciones": [
+            "Quesadilla",
+            "Té",
+            "Gazpacho",
+            "Quinoa"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué ave simboliza la paz con una rama de olivo?",
+        "opciones": [
+            "Pato real",
+            "Paloma",
+            "Kiwi",
+            "Gaviota"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué película de Pixar protagoniza la familia Parr?",
+        "opciones": [
+            "Shrek",
+            "Los Increíbles",
+            "Interstellar",
+            "En busca del arca perdida"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué edificio pentagonal alberga el Departamento de Defensa de EE. UU.?",
+        "opciones": [
+            "Triángulo",
+            "Cuadrilátero",
+            "Pentágono",
+            "Hexágono"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital marroquí está junto al Atlántico y al río Bu Regreg?",
+        "opciones": [
+            "Berlín",
+            "Argel",
+            "Rabat",
+            "Dublín"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿En qué país?",
+        "opciones": [
+            "Reino Unido",
+            "México",
+            "España",
+            "Italia"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué unidad del SI mide la intensidad de corriente?",
+        "opciones": [
+            "Voltio",
+            "Amperio",
+            "Vatio",
+            "Ohmio"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué proceso celular produce ATP usando glucosa y oxígeno?",
+        "opciones": [
+            "Apoptosis",
+            "Osmosis",
+            "Respiración celular",
+            "Transcripción"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Quién escribió Cien años de soledad?",
+        "opciones": [
+            "Virginia Woolf",
+            "Gabriel García Márquez",
+            "Llados",
+            "ElXokas"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué sigla identifica la dirección de un recurso web?",
+        "opciones": [
+            "Nombre uniforme de recurso",
+            "Identificador uniforme de recursos",
+            "Localizador de dirección web",
+            "Localizador uniforme de recursos"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué país asiático tiene a Tokio como capital y tuvo shogunes?",
+        "opciones": [
+            "Japón",
+            "Canadá",
+            "Polonia",
+            "Italia"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué fruto seco es la base del mazapán de Toledo?",
+        "opciones": [
+            "Avellana",
+            "Pistacho",
+            "Almendra",
+            "Nuez"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué cefalópodo bentónico posee ocho brazos con ventosas?",
+        "opciones": [
+            "Tiburón blanco",
+            "Calamar gigante",
+            "Pulpo",
+            "Tiburón martillo"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué erizo azul de Sega se enfrenta al Dr. Eggman?",
+        "opciones": [
+            "Sonic",
+            "The Witcher 3",
+            "Persona 5",
+            "Fortnite"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué constante relaciona una circunferencia con su diámetro?",
+        "opciones": [
+            "3,14",
+            "3,16",
+            "3,41",
+            "2,71"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué ciudad japonesa alberga Shibuya y el santuario Meiji?",
+        "opciones": [
+            "Katmandú",
+            "Tokio",
+            "Brasilia",
+            "Lisboa"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué ciudad quedó sepultada por el Vesubio en el año 79?",
+        "opciones": [
+            "Pompeya",
+            "Kioto",
+            "Mérida",
+            "La Paz"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué órgano impulsa la sangre por todo el cuerpo?",
+        "opciones": [
+            "Hígado",
+            "Pulmón",
+            "El corazón",
+            "Intestino delgado"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué sistema integra encéfalo, médula y nervios periféricos?",
+        "opciones": [
+            "Sistema endocrino",
+            "Sistema nervioso",
+            "Sistema linfático",
+            "Sistema muscular"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué compositor quedó sordo y creó la Novena Sinfonía?",
+        "opciones": [
+            "Jordi Wild",
+            "Ludwig van Beethoven",
+            "Johann Sebastian Bach",
+            "Claude Debussy"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué empresa desarrolló el buscador Google y PageRank?",
+        "opciones": [
+            "IBM",
+            "Sony",
+            "El carrusel «I’m so sorry» cuyo giro llega en la última foto",
+            "Google"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué deporte de raqueta se juega con un volante?",
+        "opciones": [
+            "Bádminton",
+            "Golf",
+            "Baloncesto",
+            "Críquet"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué plato valenciano se cocina con arroz y azafrán?",
+        "opciones": [
+            "Queso manchego",
+            "Cacao",
+            "Paella",
+            "Tomillo"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué marsupial australiano se desplaza mediante grandes saltos?",
+        "opciones": [
+            "Jirafa",
+            "Canguro",
+            "Zorro rojo",
+            "Cachalote"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué serie animada transcurre en Springfield?",
+        "opciones": [
+            "The Last of Us",
+            "Los Simpson",
+            "Dark",
+            "Stranger Things"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué fracción representa una de dos partes iguales?",
+        "opciones": [
+            "1/3",
+            "1/2",
+            "2/3",
+            "3/4"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cuál es la capital de Islandia?",
+        "opciones": [
+            "Abuya",
+            "Seúl",
+            "Nairobi",
+            "Reikiavik"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Quién fue el primer ser humano en caminar sobre la Luna?",
+        "opciones": [
+            "IlloJuan",
+            "Albert Einstein",
+            "ElXokas",
+            "Neil Armstrong"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué planeta tiene la Gran Mancha Roja?",
+        "opciones": [
+            "Júpiter",
+            "Tierra",
+            "Urano",
+            "Marte"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué tejido une los músculos a los huesos?",
+        "opciones": [
+            "Cápsula articular",
+            "Tendones",
+            "Cartílago",
+            "Aponeurosis"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Quién esculpió el David y pintó la Capilla Sixtina?",
+        "opciones": [
+            "Miguel Ángel",
+            "Leonardo da Vinci",
+            "Pierre-Auguste Renoir",
+            "Ibai"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué periférico muestra la imagen de la tarjeta gráfica?",
+        "opciones": [
+            "Plotter",
+            "Altavoces",
+            "Monitor",
+            "Proyector"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué pieza de ajedrez salta en forma de L?",
+        "opciones": [
+            "Alfil",
+            "Caballo",
+            "Torre",
+            "Reina"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué queso se usa en la ensalada caprese?",
+        "opciones": [
+            "Mantequilla",
+            "Yogur",
+            "Mozzarella",
+            "Nata"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué insecto social realiza la polinización de numerosos cultivos?",
+        "opciones": [
+            "Polilla de seda",
+            "Abeja",
+            "Libélula",
+            "Escarabajo pelotero"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué película de Cameron transcurre en Pandora con los Na’vi?",
+        "opciones": [
+            "Avatar",
+            "Parásitos",
+            "El padrino",
+            "En busca del arca perdida"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué amplitud, medida en grados, tiene un ángulo llano?",
+        "opciones": [
+            "90 grados",
+            "120 grados",
+            "180 grados",
+            "360 grados"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital chilena se extiende al pie de los Andes?",
+        "opciones": [
+            "Lisboa",
+            "Sarajevo",
+            "La Habana",
+            "Santiago"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿En qué año terminó la Segunda Guerra Mundial?",
+        "opciones": [
+            "1945",
+            "1969",
+            "1914",
+            "2001"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué gas constituye aproximadamente el 78 % de la atmósfera terrestre?",
+        "opciones": [
+            "NaCl",
+            "Nitrógeno",
+            "Zinc",
+            "NH₃"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué conducto une la laringe con los bronquios?",
+        "opciones": [
+            "La tráquea",
+            "El esófago",
+            "Los bronquios",
+            "La laringe"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué escritor creó al detective Sherlock Holmes?",
+        "opciones": [
+            "Llados",
+            "Arthur Conan Doyle",
+            "Carmen Laforet",
+            "Herman Melville"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué lenguaje de estilos controla el diseño de páginas web?",
+        "opciones": [
+            "Less",
+            "Sass",
+            "CSS",
+            "Stylus"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuánto dura un partido de fútbol reglamentario?",
+        "opciones": [
+            "60",
+            "80",
+            "90",
+            "120"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué fruta se utiliza para elaborar sidra tradicional?",
+        "opciones": [
+            "Pera",
+            "Manzana",
+            "Membrillo",
+            "Uva"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué árbol del género *Quercus* produce bellotas?",
+        "opciones": [
+            "Abeto",
+            "Olmo",
+            "Álamo",
+            "Roble"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué saga de Nintendo tiene lugar en Hyrule y sigue a Link?",
+        "opciones": [
+            "God of War",
+            "Metroid",
+            "Grand Theft Auto V",
+            "The Legend of Zelda"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué signo indica la operación inversa de multiplicar?",
+        "opciones": [
+            "+",
+            "−",
+            "×",
+            "÷"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuál es la capital de Perú?",
+        "opciones": [
+            "Estocolmo",
+            "Islamabad",
+            "Pekín",
+            "Lima"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué tratado de 1919 impuso la paz a Alemania?",
+        "opciones": [
+            "Tratado de Versalles",
+            "Civilización micénica",
+            "Civilización sumeria",
+            "Batalla de Lepanto"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué instrumento sirve para medir la temperatura?",
+        "opciones": [
+            "Barómetro",
+            "Termómetro",
+            "Higrómetro",
+            "Manómetro"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué región del encéfalo coordina la precisión de los movimientos?",
+        "opciones": [
+            "Tálamo",
+            "El cerebelo",
+            "Hipotálamo",
+            "Tronco encefálico"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Quién escribió La casa de Bernarda Alba?",
+        "opciones": [
+            "Federico García Lorca",
+            "Luis de Góngora",
+            "Homero",
+            "Gabriel García Márquez"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Cuántos bits tiene un byte?",
+        "opciones": [
+            "Bit",
+            "Kilobyte",
+            "Byte",
+            "Petabyte"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué deporte incluye mariposa, espalda, braza y libre?",
+        "opciones": [
+            "Biatlón",
+            "Críquet",
+            "Natación",
+            "Tenis"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué especia se obtiene de los estigmas secos de *Crocus sativus*?",
+        "opciones": [
+            "Azafrán",
+            "Canela",
+            "Comino",
+            "Pimentón"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué elemento, de número atómico 8, es vital para respirar?",
+        "opciones": [
+            "Calcio",
+            "Silicio",
+            "Hierro",
+            "Oxígeno"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Quién interpreta a Jack Sparrow?",
+        "opciones": [
+            "Albert Einstein",
+            "Isabel I de Castilla",
+            "Johnny Depp",
+            "Rubius"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué valor decimal representa el numeral romano X?",
+        "opciones": [
+            "5",
+            "10",
+            "50",
+            "100"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿En qué ciudad nació la democracia clásica?",
+        "opciones": [
+            "Atenas",
+            "Bangkok",
+            "Buenos Aires",
+            "Berna"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué líder indio defendió la resistencia no violenta?",
+        "opciones": [
+            "Cleopatra",
+            "Albert Einstein",
+            "Peereira7",
+            "Mahatma Gandhi"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cómo se llama el paso de líquido a gas?",
+        "opciones": [
+            "Condensación",
+            "Vaporización",
+            "Sublimación",
+            "Solidificación"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué otro nombre reciben los glóbulos blancos?",
+        "opciones": [
+            "Linfocitos",
+            "Monocitos",
+            "Neutrófilos",
+            "Glóbulos blancos"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué artista mexicana pintó Las dos Fridas?",
+        "opciones": [
+            "Pablo Picasso",
+            "Frida Kahlo",
+            "Sandro Botticelli",
+            "Plex"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama el software creado para dañar o espiar sistemas?",
+        "opciones": [
+            "Hardware",
+            "Firmware",
+            "Malware",
+            "Middleware"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué deporte tiene como final el Super Bowl?",
+        "opciones": [
+            "Fútbol americano",
+            "Biatlón",
+            "Golf",
+            "Baloncesto"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué plato japonés combina arroz avinagrado y pescado?",
+        "opciones": [
+            "Gluten",
+            "Mostaza",
+            "Café",
+            "Sushi"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué roedor semiacuático construye diques?",
+        "opciones": [
+            "Jerbo",
+            "Puercoespín norteamericano",
+            "Hámster",
+            "Castor"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué película de Disney presenta a Elsa y Anna?",
+        "opciones": [
+            "Origen",
+            "Star Wars",
+            "Kung Fu Panda",
+            "Frozen"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cómo se llama una palabra que se lee igual en ambos sentidos?",
+        "opciones": [
+            "Palíndromo",
+            "Interjección",
+            "Conjunción",
+            "Sujeto"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué capital irlandesa vio nacer a James Joyce?",
+        "opciones": [
+            "Dublín",
+            "Washington D. C.",
+            "Kingston",
+            "Kiev"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué faraón fue hallado en una tumba casi intacta en 1922?",
+        "opciones": [
+            "Nelson Mandela",
+            "ElXokas",
+            "Galileo Galilei",
+            "Tutankamón"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué metal líquido tiene el símbolo Hg?",
+        "opciones": [
+            "NaCl",
+            "Oxígeno",
+            "Fósforo",
+            "Mercurio"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cómo se llama la comunidad de microbios del intestino?",
+        "opciones": [
+            "Microbiota intestinal",
+            "Núcleo celular",
+            "Vacuola",
+            "Cerebelo"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué compositor ruso escribió El lago de los cisnes?",
+        "opciones": [
+            "Maurice Ravel",
+            "Giacomo Puccini",
+            "Piotr Ilich Chaikovski",
+            "Johann Sebastian Bach"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué servicio de Google almacena archivos en la nube?",
+        "opciones": [
+            "Nextcloud",
+            "Google Drive",
+            "OneDrive",
+            "iCloud Drive"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿En qué país se celebra el torneo de Wimbledon?",
+        "opciones": [
+            "Nueva Zelanda",
+            "Túnez",
+            "Hungría",
+            "Reino Unido"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué producto se obtiene al batir la nata?",
+        "opciones": [
+            "Queso manchego",
+            "Piña",
+            "Mantequilla",
+            "Orzo"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cómo se denomina un conjunto de árboles?",
+        "opciones": [
+            "Matorral",
+            "Sotobosque",
+            "Arboleda",
+            "Pradera"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué saga gira en torno a capturar y entrenar Pokémon?",
+        "opciones": [
+            "Fortnite",
+            "League of Legends",
+            "Pokémon",
+            "El oso polar de IA que canta que ya viene noviembre de 2026"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué categoría gramatical es el núcleo del predicado?",
+        "opciones": [
+            "Onomatopeya",
+            "Adjetivo",
+            "Sustantivo",
+            "Verbo"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué capital de Corea del Sur está atravesada por el río Han?",
+        "opciones": [
+            "Santiago",
+            "Seúl",
+            "Lisboa",
+            "Ottawa"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué imperio medieval tuvo Constantinopla como capital?",
+        "opciones": [
+            "Imperio otomano",
+            "Imperio bizantino",
+            "Imperio carolingio",
+            "Imperio romano de Occidente"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Quién formuló la teoría de la relatividad especial?",
+        "opciones": [
+            "Alexander Fleming",
+            "Isaac Newton",
+            "Albert Einstein",
+            "Llados"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué vitamina participa en la coagulación sanguínea?",
+        "opciones": [
+            "Vitamina E",
+            "Vitamina A",
+            "Vitamina B6",
+            "Vitamina K"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué autora británica publicó Frankenstein en 1818?",
+        "opciones": [
+            "William Shakespeare",
+            "Mary Shelley",
+            "Jorge Luis Borges",
+            "Rubius"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué empresa japonesa fundaron Masaru Ibuka y Akio Morita en 1946?",
+        "opciones": [
+            "Mozilla",
+            "Samsung",
+            "Adobe",
+            "Sony"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuántos jugadores por equipo hay en pista en baloncesto?",
+        "opciones": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué tubérculo andino se convirtió en alimento básico mundial?",
+        "opciones": [
+            "Tomillo",
+            "Patata",
+            "Romero",
+            "Kimchi"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué vertebrados tienen piel húmeda y sufren metamorfosis?",
+        "opciones": [
+            "Pez",
+            "Anfibio",
+            "Mamífero",
+            "Ave"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué vaquero lidera a los juguetes en Toy Story?",
+        "opciones": [
+            "Bo Peep",
+            "Hamm",
+            "Woody",
+            "Capitán América"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuál es el plural de «luz»?",
+        "opciones": [
+            "Lapices",
+            "Lápizes",
+            "Lápizs",
+            "Lápices"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué capital keniana tiene un parque nacional a sus puertas?",
+        "opciones": [
+            "Nairobi",
+            "Wellington",
+            "Quito",
+            "Buenos Aires"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿En qué año se aprobó la Constitución española?",
+        "opciones": [
+            "1978",
+            "1989",
+            "1788",
+            "1968"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué unidad del SI mide la frecuencia?",
+        "opciones": [
+            "Hercio",
+            "Vatio",
+            "Amperio",
+            "Julio"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué órgano produce bilis y ayuda a metabolizar nutrientes?",
+        "opciones": [
+            "Fémur",
+            "El hígado",
+            "Pulmón",
+            "Clavícula"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué movimiento artístico exploró sueños y subconsciente?",
+        "opciones": [
+            "Rococó",
+            "Romanticismo",
+            "Art nouveau",
+            "Surrealismo"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué conexión informática se abrevia USB?",
+        "opciones": [
+            "Interfaz multimedia de alta definición",
+            "Interfaz de datos en serie",
+            "Protocolo de transferencia de archivos",
+            "Bus serie universal"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué bandera señala el final de una carrera de motor?",
+        "opciones": [
+            "Bandera negra con círculo naranja",
+            "Bandera roja",
+            "Bandera negra",
+            "Bandera a cuadros"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué bebida se obtiene fermentando mosto de uva?",
+        "opciones": [
+            "Cerveza",
+            "Sidra",
+            "Vino",
+            "Sake"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué animal marino tiene ocho brazos con ventosas?",
+        "opciones": [
+            "Morsa",
+            "Atún rojo",
+            "Pulpo",
+            "Cachalote"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué serie sigue a seis amigos que frecuentan Central Perk?",
+        "opciones": [
+            "Friends",
+            "Sherlock",
+            "The Mandalorian",
+            "The Last of Us"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué signo doble abre las preguntas en español?",
+        "opciones": [
+            "Dos puntos",
+            "Signo de exclamación de apertura",
+            "Signo de interrogación de apertura",
+            "Punto y coma"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuál es la capital de Turquía?",
+        "opciones": [
+            "Berna",
+            "Roma",
+            "Ankara",
+            "Katmandú"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Quién completó la primera vuelta al mundo tras Magallanes?",
+        "opciones": [
+            "Charles Darwin",
+            "Napoleón Bonaparte",
+            "Juan Sebastián Elcano",
+            "Aníbal Barca"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué pH tiene el agua pura a 25 °C?",
+        "opciones": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué estructura ósea protege el encéfalo?",
+        "opciones": [
+            "Mandíbula",
+            "El cráneo",
+            "Esternón",
+            "Pelvis"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué compositor creó La flauta mágica y el Réquiem?",
+        "opciones": [
+            "Wolfgang Amadeus Mozart",
+            "Giuseppe Verdi",
+            "Astor Piazzolla",
+            "Richard Wagner"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué tecnología inalámbrica conecta auriculares y teclados?",
+        "opciones": [
+            "Bluetooth",
+            "Infrarrojos",
+            "NFC",
+            "La versión «AI vs. handmade» haciendo exactamente el mismo baile"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué deporte se juega con hoyos y palos?",
+        "opciones": [
+            "Béisbol",
+            "Judo",
+            "Golf",
+            "Hockey sobre hierba"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué cereal se maltea habitualmente para elaborar cerveza?",
+        "opciones": [
+            "Cebada",
+            "Piña",
+            "Quinoa",
+            "Cocido"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué ave marina no voladora habita principalmente el hemisferio sur?",
+        "opciones": [
+            "Pingüino",
+            "Paloma bravía",
+            "Albatros viajero",
+            "Flamenco"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué saga presenta a un cyborg enviado desde el futuro?",
+        "opciones": [
+            "Monstruos, S. A.",
+            "Blade Runner",
+            "Terminator",
+            "Coco"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cómo se denomina la palabra cuya sílaba tónica es la última?",
+        "opciones": [
+            "Hiato",
+            "Aguda",
+            "Llana",
+            "Adverbio"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué ciudad es la capital de Suiza?",
+        "opciones": [
+            "Buenos Aires",
+            "Seúl",
+            "Berna",
+            "Katmandú"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué líder encabezó el gobierno bolchevique?",
+        "opciones": [
+            "Nicolás Copérnico",
+            "Vladímir Lenin",
+            "Charles Darwin",
+            "IlloJuan"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué vitamina produce la piel con radiación UVB?",
+        "opciones": [
+            "Vitamina A",
+            "Vitamina D",
+            "Vitamina B6",
+            "Vitamina E"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cuál es el hueso más largo del cuerpo humano?",
+        "opciones": [
+            "Tibia",
+            "Fémur",
+            "Húmero",
+            "Peroné"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué poeta chileno ganó el Nobel de Literatura en 1971?",
+        "opciones": [
+            "Carmen Martín Gaite",
+            "Pablo Neruda",
+            "George Orwell",
+            "TheGrefg"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué red mundial utiliza los protocolos TCP/IP?",
+        "opciones": [
+            "Intranet",
+            "Extranet",
+            "Internet",
+            "VPN"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué país sudamericano tiene como capital Buenos Aires?",
+        "opciones": [
+            "Argentina",
+            "Islandia",
+            "Kenia",
+            "Bélgica"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué fruta tropical de pulpa amarilla contiene bromelina?",
+        "opciones": [
+            "Parmesano",
+            "Quinoa",
+            "Piña",
+            "Arroz arborio"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué mamífero del orden Chiroptera es el único capaz de vuelo activo?",
+        "opciones": [
+            "Murciélago",
+            "Pangolín",
+            "Manatí",
+            "Orca"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué saga de estrategia permite dirigir civilizaciones históricas?",
+        "opciones": [
+            "Elden Ring",
+            "Mario Kart",
+            "Age of Empires",
+            "Tomb Raider"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cómo se llama una palabra de significado opuesto?",
+        "opciones": [
+            "Antónimo",
+            "Sujeto",
+            "Anáfora",
+            "Pronombre"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué capital de Austria está atravesada por el Danubio?",
+        "opciones": [
+            "Podgorica",
+            "Washington D. C.",
+            "Viena",
+            "Skopie"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué muro dividió Berlín entre 1961 y 1989?",
+        "opciones": [
+            "La Gran Muralla China",
+            "El Muro de Adriano",
+            "El Muro de Berlín",
+            "La barrera de Cisjordania"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué tipo de energía almacena una batería?",
+        "opciones": [
+            "Energía térmica",
+            "Energía eléctrica",
+            "Energía química",
+            "Energía nuclear"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué tipo de articulación permite girar la cabeza de lado a lado?",
+        "opciones": [
+            "Articulación plana",
+            "Articulación trocoide",
+            "Articulación esferoidea",
+            "Articulación en bisagra"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué novelista escribió Orgullo y prejuicio?",
+        "opciones": [
+            "Federico García Lorca",
+            "Franz Kafka",
+            "Carmen Laforet",
+            "Jane Austen"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué dispositivo de red dirige paquetes entre redes?",
+        "opciones": [
+            "Punto de acceso",
+            "Switch de red",
+            "Router",
+            "Adaptador inalámbrico"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué carrera atlética mide exactamente 42,195 kilómetros?",
+        "opciones": [
+            "Gimnasia artística",
+            "Waterpolo",
+            "Esgrima",
+            "Maratón"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué salsa lleva albahaca, piñones, parmesano y ajo?",
+        "opciones": [
+            "Manzana",
+            "Rábano picante",
+            "Pesto",
+            "Lenteja"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué felino terrestre puede superar los 100 km/h?",
+        "opciones": [
+            "Caracal",
+            "Guepardo",
+            "León africano",
+            "Jaguar"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué película presenta a Po, el panda experto en kung-fu?",
+        "opciones": [
+            "Monstruos, S. A.",
+            "Kung Fu Panda",
+            "Alien",
+            "Pulp Fiction"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué valor decimal suman los números romanos L y V?",
+        "opciones": [
+            "45",
+            "50",
+            "55",
+            "60"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital fue reconstruida tras el levantamiento de 1944?",
+        "opciones": [
+            "Atenas",
+            "Varsovia",
+            "Liubliana",
+            "Lisboa"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué reina fue la última gobernante de la dinastía ptolemaica?",
+        "opciones": [
+            "Galileo Galilei",
+            "Fernando II de Aragón",
+            "Cleopatra",
+            "Albert Einstein"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué fenómeno separa la luz blanca en colores con un prisma?",
+        "opciones": [
+            "Reflexión",
+            "Refracción",
+            "Dispersión",
+            "Difracción"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué hormona regula el ciclo del sueño?",
+        "opciones": [
+            "Adrenalina",
+            "Tiroxina",
+            "Glucagón",
+            "Melatonina"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué arquitecto diseñó la Sagrada Familia y el Park Güell?",
+        "opciones": [
+            "Paul Cézanne",
+            "Leonardo da Vinci",
+            "Antoni Gaudí",
+            "Auronplay"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué lenguaje se usa para consultar bases de datos relacionales?",
+        "opciones": [
+            "SQL",
+            "Datalog",
+            "Cypher",
+            "PL/SQL"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué arte marcial japonés usa proyecciones e inmovilizaciones?",
+        "opciones": [
+            "Fútbol",
+            "Balonmano",
+            "Golf",
+            "Judo"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué plato español combina huevo batido y patata?",
+        "opciones": [
+            "Harina",
+            "Manzana",
+            "Tortilla",
+            "Gazpacho"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué insecto vive en colonias organizadas alrededor de una reina?",
+        "opciones": [
+            "Mariposa monarca",
+            "Mosquito",
+            "Hormiga",
+            "Polilla de seda"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Quién es el rey de los Koopas en Super Mario?",
+        "opciones": [
+            "Donkey Kong",
+            "Wario",
+            "Bowser",
+            "Yoshi"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuánto aumenta 200 al subir un 15 %?",
+        "opciones": [
+            "20",
+            "25",
+            "30",
+            "35"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital húngara une Buda, Óbuda y Pest?",
+        "opciones": [
+            "Vilna",
+            "Budapest",
+            "El Cairo",
+            "Kingston"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿En qué año comenzó la Primera Guerra Mundial?",
+        "opciones": [
+            "1871",
+            "1989",
+            "1947",
+            "1914"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué gas acepta electrones al final de la respiración aeróbica?",
+        "opciones": [
+            "Litio",
+            "Cloro",
+            "Oxígeno",
+            "Mercurio"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué macronutriente incluye azúcares, almidón y fibra?",
+        "opciones": [
+            "Agua",
+            "Vitaminas",
+            "Minerales",
+            "Carbohidratos"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué pintor neerlandés del Siglo de Oro creó La joven de la perla?",
+        "opciones": [
+            "Paul Gauguin",
+            "Francisco de Goya",
+            "Johannes Vermeer",
+            "Paul Cézanne"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué componente de un ordenador se conoce como GPU?",
+        "opciones": [
+            "Unidad central de procesamiento",
+            "Memoria de acceso aleatorio",
+            "Unidad de procesamiento gráfico",
+            "Placa base"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué piloto español ganó la Fórmula 1 en 2005 y 2006?",
+        "opciones": [
+            "Fernando Alonso",
+            "Carlos Alcaraz",
+            "Lewis Hamilton",
+            "Auronplay"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué postre italiano lleva café y mascarpone?",
+        "opciones": [
+            "Panna cotta",
+            "Cannoli",
+            "Tiramisú",
+            "Zabaglione"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué ecosistema marino destaca por sus corales y biodiversidad?",
+        "opciones": [
+            "Bosque tropical",
+            "Pradera marina",
+            "Tundra",
+            "Ecosistema marino"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué serie adapta Canción de hielo y fuego?",
+        "opciones": [
+            "The Wire",
+            "Friends",
+            "Juego de tronos",
+            "The Crown"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cómo se llama el triángulo con tres lados iguales?",
+        "opciones": [
+            "Escaleno",
+            "Isósceles",
+            "Equilátero",
+            "Rectángulo"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué ciudad neerlandesa destaca por sus museos y canales?",
+        "opciones": [
+            "Utrecht",
+            "Róterdam",
+            "Ámsterdam",
+            "La Haya"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué ciudad fue la capital del Imperio mexica?",
+        "opciones": [
+            "Tirana",
+            "Busan",
+            "Tenochtitlan",
+            "Gotemburgo"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuántas caras tiene un cubo, uno de los cinco sólidos platónicos?",
+        "opciones": [
+            "4",
+            "6",
+            "8",
+            "12"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué orgánulo alberga los cromosomas en células eucariotas?",
+        "opciones": [
+            "Ribosoma",
+            "Membrana plasmática",
+            "El núcleo",
+            "Mitocondria"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿A qué poeta griego se atribuye la Ilíada?",
+        "opciones": [
+            "Gabriel García Márquez",
+            "Homero",
+            "Franz Kafka",
+            "Tirso de Molina"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué organización desarrolla el navegador Firefox?",
+        "opciones": [
+            "IBM",
+            "Mozilla",
+            "Apple",
+            "AMD"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué deporte combina esquí de fondo y tiro con rifle?",
+        "opciones": [
+            "Esgrima",
+            "Balonmano",
+            "Waterpolo",
+            "Biatlón"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué alimento lácteo se obtiene coagulando la leche?",
+        "opciones": [
+            "Mantequilla",
+            "Queso",
+            "Yogur",
+            "Nata"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué mamífero terrestre tiene trompa y gran tamaño?",
+        "opciones": [
+            "Narval",
+            "Orca",
+            "Elefante",
+            "Murciélago de la fruta"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué peces cartilaginosos tienen varias hendiduras branquiales?",
+        "opciones": [
+            "Rayas",
+            "Tiburones",
+            "Quimeras",
+            "Peces sierra"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cuántos grados tiene una vuelta completa?",
+        "opciones": [
+            "180 grados",
+            "270 grados",
+            "360 grados",
+            "540 grados"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital belga alberga las instituciones de la Unión Europea?",
+        "opciones": [
+            "Tallin",
+            "Reikiavik",
+            "Bruselas",
+            "Kingston"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué rey francés centralizó el poder en Versalles durante 72 años?",
+        "opciones": [
+            "Juan Sebastián Elcano",
+            "Tutankamón",
+            "Llados",
+            "Luis XIV"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué instrumento óptico amplía muestras diminutas?",
+        "opciones": [
+            "Microscopio",
+            "Sismógrafo",
+            "Telescopio",
+            "Pirómetro"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué división celular produce dos células hijas idénticas?",
+        "opciones": [
+            "Mitosis",
+            "Difusión",
+            "Meiosis",
+            "Fagocitosis"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué instrumento de teclado golpea cuerdas con martillos?",
+        "opciones": [
+            "Marimba",
+            "Xilófono",
+            "Órgano",
+            "Piano"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué formato de imagen usa la extensión .jpg?",
+        "opciones": [
+            "PNG",
+            "GIF",
+            "JPEG/JPG",
+            "SVG"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuántos jugadores por equipo hay en voleibol de sala?",
+        "opciones": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué condimento se elabora con semillas de Sinapis?",
+        "opciones": [
+            "Wasabi",
+            "Pimentón",
+            "Mostaza",
+            "Comino"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué palmera produce cocos?",
+        "opciones": [
+            "Nogal",
+            "Tilo",
+            "Cocotero",
+            "Cedro"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué saga de carreras de Nintendo reúne a Mario y Peach?",
+        "opciones": [
+            "Final Fantasy VII",
+            "God of War",
+            "Mario Kart",
+            "Metroid"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué número representa el resultado de cinco al cuadrado más sesenta?",
+        "opciones": [
+            "75",
+            "80",
+            "85",
+            "90"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital nórdica alberga la plaza del Senado?",
+        "opciones": [
+            "Oslo",
+            "Helsinki",
+            "Estocolmo",
+            "Copenhague"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué conflicto enfrentó a Atenas y Esparta entre 431 y 404 a. C.?",
+        "opciones": [
+            "Guerras púnicas",
+            "Guerra del Peloponeso",
+            "Guerras médicas",
+            "Guerra de Troya"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama el centro de un átomo?",
+        "opciones": [
+            "Catión",
+            "Corteza electrónica",
+            "Electrón",
+            "Núcleo"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cómo se llama la falta de agua corporal?",
+        "opciones": [
+            "Hipotermia",
+            "Deshidratación",
+            "Hipertensión",
+            "Anemia"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué compositor renovó el tango con Adiós Nonino?",
+        "opciones": [
+            "Wolfgang Amadeus Mozart",
+            "Antonio Vivaldi",
+            "Astor Piazzolla",
+            "Frédéric Chopin"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué fraude suplanta webs para robar contraseñas?",
+        "opciones": [
+            "Vishing",
+            "Smishing",
+            "Pharming",
+            "Phishing"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué gran vuelta ciclista se disputa tradicionalmente en España?",
+        "opciones": [
+            "Ciclismo",
+            "Vuelta a España",
+            "Escalada deportiva",
+            "Voleibol"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué hortaliza alargada se usa en ensaladas y encurtidos?",
+        "opciones": [
+            "Pepino",
+            "Calabacín",
+            "Berenjena",
+            "Pimiento"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué gran felino africano vive en manadas?",
+        "opciones": [
+            "Cachalote",
+            "Nutria marina",
+            "Oso polar",
+            "León"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué actor protagonizó Forrest Gump y Náufrago?",
+        "opciones": [
+            "TheGrefg",
+            "Cleopatra",
+            "Tom Hanks",
+            "Galileo Galilei"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué tipo de expresión es un cociente de polinomios?",
+        "opciones": [
+            "Polinómica",
+            "Irracional",
+            "Racional",
+            "Exponencial"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital sueca se extiende sobre catorce islas?",
+        "opciones": [
+            "La Habana",
+            "Ámsterdam",
+            "Argel",
+            "Estocolmo"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué pueblo desarrolló ciudades y escritura cuneiforme?",
+        "opciones": [
+            "Elamitas",
+            "Los sumerios",
+            "Acadios",
+            "Hititas"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Quién formuló la evolución por selección natural?",
+        "opciones": [
+            "Katherine Johnson",
+            "Rosalind Franklin",
+            "Charles Darwin",
+            "Ibai"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué tendón une la pantorrilla con el calcáneo?",
+        "opciones": [
+            "Tendón rotuliano",
+            "Tendón de Aquiles",
+            "Tendón del bíceps",
+            "Tendón extensor"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué escritor y aviador francés publicó El principito en 1943?",
+        "opciones": [
+            "Antoine de Saint-Exupéry",
+            "Pío Baroja",
+            "Llados",
+            "ElXokas"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué sistema numérico utiliza solo los dígitos 0 y 1?",
+        "opciones": [
+            "Base 64",
+            "Binario",
+            "Babilónico",
+            "Hexadecimal"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué deporte se juega con balón ovalado y ensayos?",
+        "opciones": [
+            "Piragüismo",
+            "Críquet",
+            "Natación",
+            "Rugby"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué azúcar de la leche necesita lactasa para digerirse?",
+        "opciones": [
+            "Sacarosa",
+            "Maltosa",
+            "Lactosa",
+            "Glucosa"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué reptil puede regenerar parcialmente su cola?",
+        "opciones": [
+            "Tortuga boba",
+            "Anaconda verde",
+            "Lagartija",
+            "Dragón de Komodo"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué película de Pixar tiene a Mike y Sulley como protagonistas?",
+        "opciones": [
+            "Monstruos, S. A.",
+            "Avatar",
+            "Casablanca",
+            "La momia"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Cuántas horas forman medio día, expresadas como un número entero?",
+        "opciones": [
+            "6",
+            "10",
+            "12",
+            "24"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital escandinava se reparte entre numerosas islas?",
+        "opciones": [
+            "Katmandú",
+            "Copenhague",
+            "Tokio",
+            "Sofía"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿En qué año comenzó la Guerra Civil española?",
+        "opciones": [
+            "1936",
+            "1969",
+            "1776",
+            "1947"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué escala mide la dureza de los minerales?",
+        "opciones": [
+            "Escala de Vickers",
+            "Escala de dureza de Knoop",
+            "Escala de Mohs",
+            "Escala de Rockwell"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué órganos contienen alvéolos para intercambiar gases?",
+        "opciones": [
+            "Tráquea",
+            "Bronquios",
+            "Los pulmones",
+            "Laringe"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué pintor creó El nacimiento de Venus y La primavera?",
+        "opciones": [
+            "Caravaggio",
+            "Auguste Rodin",
+            "Sandro Botticelli",
+            "El Greco"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué empresa desarrolla macOS y los ordenadores Mac?",
+        "opciones": [
+            "Microsoft",
+            "Apple",
+            "NVIDIA",
+            "Samsung"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿En qué país surgió el sumo?",
+        "opciones": [
+            "Finlandia",
+            "Sudáfrica",
+            "Japón",
+            "Grecia"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué fruto se prensa para obtener aceite de oliva?",
+        "opciones": [
+            "Cereza",
+            "Aceituna",
+            "Ciruela",
+            "Albaricoque"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué équido africano tiene franjas blancas y negras?",
+        "opciones": [
+            "Elefante africano",
+            "Oso pardo",
+            "Gorila",
+            "Cebra"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué personaje vive en una piña en Fondo de Bikini?",
+        "opciones": [
+            "Friends",
+            "The Crown",
+            "Un POV de «Housewife» con lip-sync de telenovela",
+            "Bob Esponja"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué recurso lingüístico imita sonidos como «miau» o «tic-tac»?",
+        "opciones": [
+            "Metáfora",
+            "Onomatopeya",
+            "Hipérbole",
+            "Aliteración"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué capital neozelandesa se ubica junto al estrecho de Cook?",
+        "opciones": [
+            "Tirana",
+            "Ankara",
+            "Vilna",
+            "Wellington"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué zar ruso abdicó durante la Revolución de Febrero?",
+        "opciones": [
+            "Alejandro II",
+            "Pedro I",
+            "Nicolás II",
+            "Alejandro III"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué gas noble tiene número atómico 10?",
+        "opciones": [
+            "Neón",
+            "Mercurio",
+            "Cloro",
+            "Aluminio"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué tejido líquido transporta oxígeno y nutrientes?",
+        "opciones": [
+            "Linfa",
+            "Plasma sanguíneo",
+            "La sangre",
+            "Líquido intersticial"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué cantante grabó Hound Dog y Jailhouse Rock?",
+        "opciones": [
+            "Giacomo Puccini",
+            "Elvis Presley",
+            "Georges Bizet",
+            "Robert Schumann"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué significan las siglas IA?",
+        "opciones": [
+            "Aprendizaje automático",
+            "Inteligencia artificial",
+            "Robótica",
+            "Procesamiento del lenguaje natural"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué tenista español conquistó catorce títulos de Roland Garros?",
+        "opciones": [
+            "Carlos Moyá",
+            "Novak Djokovic",
+            "Álex Corretja",
+            "Rafael Nadal"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué bebida se obtiene de las semillas tostadas y molidas del cafeto?",
+        "opciones": [
+            "Parmesano",
+            "Paella",
+            "Maíz",
+            "Café"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué planta carnívora captura insectos con sus hojas?",
+        "opciones": [
+            "Encina",
+            "Venus atrapamoscas",
+            "Helecho",
+            "Eucalipto"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué saga de videojuegos protagoniza Lara Croft?",
+        "opciones": [
+            "Tomb Raider",
+            "Grand Theft Auto V",
+            "Mario Kart",
+            "The Last of Us"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué variedad china tiene más hablantes nativos?",
+        "opciones": [
+            "Chino cantonés",
+            "Chino wu",
+            "Chino min",
+            "Chino mandarín"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué capital india alberga el Fuerte Rojo?",
+        "opciones": [
+            "Kingston",
+            "Kiev",
+            "Nueva Delhi",
+            "Bruselas"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué explorador español avistó el Pacífico desde América en 1513?",
+        "opciones": [
+            "Tutankamón",
+            "Aníbal Barca",
+            "Jordi Wild",
+            "Vasco Núñez de Balboa"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué rama de la física estudia el calor y la energía?",
+        "opciones": [
+            "Termodinámica",
+            "Óptica",
+            "Mecánica clásica",
+            "Electromagnetismo"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué pigmento da color a la piel, el cabello y el iris?",
+        "opciones": [
+            "Hemoglobina",
+            "Caroteno",
+            "Clorofila",
+            "Melanina"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué banda de Liverpool grabó Hey Jude y Let It Be?",
+        "opciones": [
+            "Maurice Ravel",
+            "Johann Sebastian Bach",
+            "IlloJuan",
+            "The Beatles"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué periférico mueve el puntero en pantalla?",
+        "opciones": [
+            "Joystick",
+            "Escáner",
+            "Ratón",
+            "Teclado"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué disco óptico se conoce por las siglas CD?",
+        "opciones": [
+            "DVD",
+            "Blu-ray",
+            "CD",
+            "HD DVD"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué cocido español lleva garbanzos, verduras y carne?",
+        "opciones": [
+            "Fabada asturiana",
+            "Escudella",
+            "Cocido",
+            "Pote gallego"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué arácnido produce seda y teje telarañas?",
+        "opciones": [
+            "Araña",
+            "Opilión",
+            "Escorpión",
+            "Ácaro"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué película de Indiana Jones busca el Arca de la Alianza?",
+        "opciones": [
+            "Buscando a Nemo",
+            "El Señor de los Anillos",
+            "Pulp Fiction",
+            "En busca del arca perdida"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuántas letras tiene el alfabeto español actual?",
+        "opciones": [
+            "24",
+            "26",
+            "27",
+            "28"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué ciudad fue conocida como México-Tenochtitlan?",
+        "opciones": [
+            "Estocolmo",
+            "Buenos Aires",
+            "Ciudad de México",
+            "Kiev"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué dinastía china gobernó entre 1368 y 1644?",
+        "opciones": [
+            "Dinastía Yuan",
+            "Dinastía Ming",
+            "Dinastía Qing",
+            "Dinastía Song"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué unidad del SI mide la fuerza?",
+        "opciones": [
+            "Ohmio",
+            "Newton",
+            "Vatio",
+            "Julio"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué tipo de dientes presentan una corona puntiaguda?",
+        "opciones": [
+            "Molares",
+            "Incisivos",
+            "Caninos",
+            "Muelas del juicio"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Quién escribió La metamorfosis?",
+        "opciones": [
+            "Jane Austen",
+            "Franz Kafka",
+            "Herman Melville",
+            "Arthur Conan Doyle"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué estudio creó originalmente Minecraft?",
+        "opciones": [
+            "Valve",
+            "Mojang Studios",
+            "Ubisoft",
+            "Rockstar Games"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué deporte de combate usa guantes y golpes de puño?",
+        "opciones": [
+            "Judo",
+            "Boxeo",
+            "Karate",
+            "Lucha olímpica"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué pasta italiana tiene forma de pequeños tubos?",
+        "opciones": [
+            "Macarrones",
+            "Penne",
+            "Fusilli",
+            "Rigatoni"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Cómo se llama la cría de la oveja?",
+        "opciones": [
+            "Ternero",
+            "Cabrito",
+            "Cachorro",
+            "Cordero"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿En qué saga aparece el cazador Geralt de Rivia?",
+        "opciones": [
+            "Sonic the Hedgehog",
+            "The Witcher",
+            "Age of Empires",
+            "Animal Crossing"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué categoría gramatical atribuye cualidades al sustantivo?",
+        "opciones": [
+            "Sustantivo",
+            "Verbo",
+            "Adjetivo",
+            "Adverbio"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital colombiana está a 2.600 metros de altitud?",
+        "opciones": [
+            "Medellín",
+            "Cali",
+            "Bogotá",
+            "Cartagena de Indias"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué imperio fundó Carlomagno y coronó en el año 800?",
+        "opciones": [
+            "Imperio bizantino",
+            "Imperio carolingio",
+            "Sacro Imperio romano germánico",
+            "Imperio otomano"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué fenómeno desvía la luz al pasar de un medio a otro?",
+        "opciones": [
+            "Reflexión",
+            "Dispersión",
+            "Difracción",
+            "Refracción"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué ventrículo bombea sangre oxigenada hacia la aorta?",
+        "opciones": [
+            "Aurícula derecha",
+            "Aurícula izquierda",
+            "Ventrículo derecho",
+            "Ventrículo izquierdo"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Quién pintó Las meninas?",
+        "opciones": [
+            "Diego Velázquez",
+            "Miguel Ángel",
+            "Paul Gauguin",
+            "Plex"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué plataforma de videollamadas se popularizó en la pandemia?",
+        "opciones": [
+            "Skype",
+            "Zoom",
+            "Cisco Webex",
+            "Discord"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cuántos hoyos tiene una ronda estándar de golf?",
+        "opciones": [
+            "9",
+            "12",
+            "18",
+            "36"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué levadura se utiliza habitualmente para hacer pan?",
+        "opciones": [
+            "*Lactobacillus acidophilus*",
+            "*Penicillium chrysogenum*",
+            "*Saccharomyces cerevisiae*",
+            "*Aspergillus niger*"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué mamífero marino usa piedras para abrir moluscos?",
+        "opciones": [
+            "Ballena jorobada",
+            "Jirafa",
+            "Foca elefante",
+            "Nutria marina"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué película de Disney tiene a Baymax y Hiro?",
+        "opciones": [
+            "Big Hero 6",
+            "Interstellar",
+            "Alien",
+            "Terminator"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué número se obtiene al elevar nueve al cuadrado?",
+        "opciones": [
+            "72",
+            "81",
+            "90",
+            "99"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué capital caribeña alberga el Malecón y La Habana Vieja?",
+        "opciones": [
+            "San Juan",
+            "Santo Domingo",
+            "La Habana",
+            "Kingston"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿En qué año estalló la Revolución francesa?",
+        "opciones": [
+            "1789",
+            "1788",
+            "1957",
+            "2001"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué metal, símbolo Fe, es clave en el acero?",
+        "opciones": [
+            "Argón",
+            "Azufre",
+            "Aluminio",
+            "Hierro"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué sentido permite percibir aromas?",
+        "opciones": [
+            "Olfato",
+            "Gusto",
+            "Vista",
+            "Tacto"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué estilo musical destaca por la improvisación y el swing?",
+        "opciones": [
+            "Funk",
+            "Salsa",
+            "Jazz",
+            "Blues"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cómo se llama un conjunto de instrucciones ejecutables?",
+        "opciones": [
+            "Programa",
+            "Protocolo de red",
+            "Sistema de archivos",
+            "Base de datos"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué flor de tallo espinoso simboliza el amor?",
+        "opciones": [
+            "Rosa",
+            "Tulipán",
+            "Clavel",
+            "Margarita"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿De qué fruto se extrae el aceite de palma?",
+        "opciones": [
+            "Aceituna",
+            "Semilla de girasol",
+            "Fruto de la palma aceitera",
+            "Coco"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué árbol de corteza clara pertenece al género *Betula*?",
+        "opciones": [
+            "Abedul",
+            "Roble",
+            "Cedro",
+            "Secuoya"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué superhéroe de Marvel es Peter Parker?",
+        "opciones": [
+            "Superman",
+            "Spider-Man",
+            "Batman",
+            "Iron Man"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama un entero divisible entre dos?",
+        "opciones": [
+            "Impar",
+            "Par",
+            "Primo",
+            "Compuesto"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cuál es la capital de Croacia?",
+        "opciones": [
+            "Split",
+            "Dubrovnik",
+            "Zagreb",
+            "Rijeka"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Quién fue el primer presidente negro de Sudáfrica?",
+        "opciones": [
+            "Nicolás II",
+            "Augusto",
+            "Marco Antonio",
+            "Nelson Mandela"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué planeta tiene anillos prominentes de hielo y roca?",
+        "opciones": [
+            "Mercurio",
+            "Neptuno",
+            "Venus",
+            "Saturno"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué estructura del oído participa en el equilibrio?",
+        "opciones": [
+            "El sistema vestibular",
+            "Sistema respiratorio",
+            "Sistema urinario",
+            "Sistema circulatorio"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué compositor ruso escribió el ballet El cascanueces?",
+        "opciones": [
+            "Frédéric Chopin",
+            "Richard Wagner",
+            "Dmitri Shostakóvich",
+            "Piotr Ilich Chaikovski"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué tecnología identifica objetos mediante radiofrecuencia?",
+        "opciones": [
+            "Código de barras",
+            "Infrarrojos",
+            "Código QR",
+            "RFID"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué prueba atlética combina diez disciplinas?",
+        "opciones": [
+            "Pentatlón",
+            "Heptatlón",
+            "Decatlón",
+            "Triatlón"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué gastronomía incluye pho y rollitos frescos?",
+        "opciones": [
+            "Vietnamita",
+            "Japonesa",
+            "Tailandesa",
+            "Coreana"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué equinodermo tiene brazos alrededor de un disco central?",
+        "opciones": [
+            "Erizo de mar",
+            "Pepino de mar",
+            "Estrella de mar",
+            "Ofiura"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué saga de videojuegos tiene como heroína a Aloy?",
+        "opciones": [
+            "Animal Crossing",
+            "Portal",
+            "Horizon",
+            "El trend «My Ride Is Here»: llegar al trabajo en una escoba"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuántos centímetros equivalen a una quinta parte de un metro?",
+        "opciones": [
+            "10 centímetros",
+            "15 centímetros",
+            "20 centímetros",
+            "25 centímetros"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital serbia está entre el Danubio y el Sava?",
+        "opciones": [
+            "Belgrado",
+            "Buenos Aires",
+            "Varsovia",
+            "Ankara"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué ciudad sufrió el primer bombardeo atómico en una guerra?",
+        "opciones": [
+            "Chengdu",
+            "Daegu",
+            "Hiroshima",
+            "Kioto"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué energía tiene un cuerpo por estar en movimiento?",
+        "opciones": [
+            "Energía potencial",
+            "Energía térmica",
+            "Energía cinética",
+            "Energía química"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué monosacárido circula por la sangre como fuente de energía?",
+        "opciones": [
+            "Fructosa",
+            "Sacarosa",
+            "Glucosa",
+            "Lactosa"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué autora británica creó la saga literaria de Harry Potter?",
+        "opciones": [
+            "Rosa Chacel",
+            "J. R. R. Tolkien",
+            "J. K. Rowling",
+            "Llados"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué dispositivo permite conectarse a Wi-Fi sin cable Ethernet?",
+        "opciones": [
+            "Tarjeta de red Ethernet",
+            "Adaptador inalámbrico",
+            "Punto de acceso",
+            "Módem"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué país europeo ganó el Mundial masculino de fútbol de 2010?",
+        "opciones": [
+            "España",
+            "Suiza",
+            "Etiopía",
+            "China"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué pasta japonesa fermentada se elabora con soja?",
+        "opciones": [
+            "Miso",
+            "Natto",
+            "Salsa de soja",
+            "Tempeh"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué ave carroñera tiene un pico ganchudo?",
+        "opciones": [
+            "Flamenco",
+            "Pavo real",
+            "Buitre",
+            "Águila real"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué serie española de atracos incluye a Tokio y Berlín?",
+        "opciones": [
+            "The Crown",
+            "Black Mirror",
+            "The Mandalorian",
+            "La casa de papel"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué figura geométrica tiene tres lados?",
+        "opciones": [
+            "Cuadrado",
+            "Triángulo",
+            "Pentágono",
+            "Hexágono"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué capital vietnamita se sitúa en el delta del río Rojo?",
+        "opciones": [
+            "Ámsterdam",
+            "Hanói",
+            "Berna",
+            "Bruselas"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué comunidades prehistóricas levantaron Stonehenge?",
+        "opciones": [
+            "Celtas",
+            "Pueblos prehistóricos del Neolítico y la Edad del Bronce",
+            "Romanos",
+            "Cultura campaniforme"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué unidad de temperatura parte del cero absoluto?",
+        "opciones": [
+            "Joule",
+            "Newton",
+            "Amperio",
+            "Kelvin"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué parte del tubo digestivo va del estómago al colon?",
+        "opciones": [
+            "Esófago",
+            "Estómago",
+            "Intestino delgado",
+            "Intestino grueso"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Quién diseñó el Museo Guggenheim de Bilbao?",
+        "opciones": [
+            "Frank Lloyd Wright",
+            "Frank Gehry",
+            "Antoni Gaudí",
+            "Norman Foster"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué empresa adquirió Android y desarrolló su sistema móvil?",
+        "opciones": [
+            "AMD",
+            "Adobe",
+            "Meta",
+            "Google"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué deporte de equipo se juega con dos canastas?",
+        "opciones": [
+            "Biatlón",
+            "Tenis de mesa",
+            "Waterpolo",
+            "Baloncesto"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué hierba aromática es clave en el pesto genovés?",
+        "opciones": [
+            "Perejil",
+            "Romero",
+            "Albahaca",
+            "Tomillo"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué roedor norteamericano tiene púas defensivas?",
+        "opciones": [
+            "Castor",
+            "Capibara",
+            "Marmota",
+            "Puercoespín"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué musical de 1978 protagonizan Danny y Sandy?",
+        "opciones": [
+            "Grease",
+            "Coco",
+            "WALL·E",
+            "Casablanca"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué operación indica cuántas veces cabe un número en otro?",
+        "opciones": [
+            "Suma",
+            "Resta",
+            "Multiplicación",
+            "División"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuál es la transliteración oficial ucraniana de Kiev?",
+        "opciones": [
+            "Kyiv",
+            "Minsk",
+            "Chisináu",
+            "Tiflis"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué general cartaginés cruzó los Alpes con elefantes?",
+        "opciones": [
+            "Escipión el Africano",
+            "Julio César",
+            "Alejandro Magno",
+            "Aníbal Barca"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué científico escocés descubrió la penicilina en 1928?",
+        "opciones": [
+            "IlloJuan",
+            "Alexander Fleming",
+            "Nikola Tesla",
+            "Auronplay"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué glándula produce las hormonas T3 y T4?",
+        "opciones": [
+            "Hipófisis",
+            "Tiroides",
+            "Glándulas suprarrenales",
+            "Páncreas"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué artista conocido como el Rey del Pop publicó Thriller y Bad?",
+        "opciones": [
+            "Jordi Wild",
+            "Robert Schumann",
+            "Michael Jackson",
+            "TheGrefg"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué significan las siglas PDF?",
+        "opciones": [
+            "Formato de documento portátil",
+            "ODT",
+            "DOCX",
+            "TXT"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué torneo de fútbol sudamericano disputan selecciones nacionales?",
+        "opciones": [
+            "Copa Sudamericana",
+            "Copa América",
+            "Copa Africana de Naciones",
+            "Copa Oro de la Concacaf"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué fruto se deshidrata para obtener pasas?",
+        "opciones": [
+            "Higo",
+            "Ciruela",
+            "Uva",
+            "Albaricoque"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué larva de mariposa produce el hilo de seda?",
+        "opciones": [
+            "Mantis religiosa",
+            "Gusano de seda",
+            "Termita",
+            "Avispa común"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué videojuego de terror transcurre en una pizzería con animatrónicos?",
+        "opciones": [
+            "Street Fighter",
+            "Five Nights at Freddy’s",
+            "Pokémon",
+            "Portal"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué unidad gramatical suele tener sujeto y predicado?",
+        "opciones": [
+            "Palabra",
+            "Sintagma",
+            "Oración",
+            "Morfema"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuál es la capital de Rumanía?",
+        "opciones": [
+            "Madrid",
+            "Bucarest",
+            "Lisboa",
+            "Pekín"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué revolución rusa provocó la abdicación de Nicolás II en 1917?",
+        "opciones": [
+            "Revolución francesa",
+            "Revolución de Octubre",
+            "Revolución mexicana",
+            "Revolución de Febrero"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué gas se libera al quemar carbón, petróleo y gas?",
+        "opciones": [
+            "Metano",
+            "Dióxido de carbono",
+            "Óxido nitroso",
+            "Ozono"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama la fase de contracción del corazón?",
+        "opciones": [
+            "Diástole",
+            "Sístole",
+            "Fibrilación",
+            "Repolarización"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Quién escribió La sombra del viento?",
+        "opciones": [
+            "Jane Austen",
+            "Luis de Góngora",
+            "Carlos Ruiz Zafón",
+            "Pío Baroja"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué formato de datos usa pares clave-valor y objetos?",
+        "opciones": [
+            "JSON",
+            "Protocol Buffers",
+            "YAML",
+            "CSV"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué deporte utiliza florete, espada o sable?",
+        "opciones": [
+            "Judo",
+            "Karate",
+            "Boxeo",
+            "Esgrima"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué helado italiano tiene textura densa y poco aire?",
+        "opciones": [
+            "Granizado",
+            "Gelato",
+            "Sorbete",
+            "Semifrío"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué mamífero se orienta mediante ecolocalización?",
+        "opciones": [
+            "Tapir",
+            "Murciélago",
+            "Nutria marina",
+            "Lémur"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué hermano de Mario viste de verde?",
+        "opciones": [
+            "Luigi",
+            "Wario",
+            "Toad",
+            "Yoshi"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué cociente exacto se obtiene al dividir 100 entre cuatro?",
+        "opciones": [
+            "20",
+            "25",
+            "30",
+            "40"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué capital de Bulgaria se encuentra al pie del monte Vitosha?",
+        "opciones": [
+            "Hanói",
+            "Asunción",
+            "Oslo",
+            "Sofía"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿En qué año entró en vigor la Carta de las Naciones Unidas?",
+        "opciones": [
+            "1929",
+            "1917",
+            "1945",
+            "1957"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué enlace químico comparte pares de electrones?",
+        "opciones": [
+            "Enlace iónico",
+            "Enlace metálico",
+            "Enlace covalente",
+            "Puente de hidrógeno"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué células de los islotes pancreáticos producen insulina?",
+        "opciones": [
+            "Células beta",
+            "Células alfa",
+            "Células delta",
+            "Células PP"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué instrumento de seis cuerdas se usa en flamenco y rock?",
+        "opciones": [
+            "Guitarra",
+            "Violín",
+            "Mandolina",
+            "Arpa"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Cómo se llama una copia de seguridad de datos?",
+        "opciones": [
+            "Backup",
+            "Sincronización",
+            "Punto de recuperación",
+            "Instantánea del sistema"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué cinturón suele indicar maestría en karate?",
+        "opciones": [
+            "Blanco",
+            "Amarillo",
+            "Negro",
+            "Naranja"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué bebida se obtiene exprimiendo naranjas?",
+        "opciones": [
+            "Zumo de manzana",
+            "Zumo de naranja",
+            "Zumo de uva",
+            "Limonada"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué bioma boreal se extiende por Canadá y Siberia?",
+        "opciones": [
+            "Desierto frío",
+            "Taiga",
+            "Sabana",
+            "Pradera templada"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué película sigue a Marlin en busca de Nemo?",
+        "opciones": [
+            "Star Wars",
+            "Buscando a Nemo",
+            "Ciudadano Kane",
+            "Matrix"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama el polígono de ocho lados?",
+        "opciones": [
+            "Hexágono",
+            "Heptágono",
+            "Octógono",
+            "Decágono"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué capital eslovena se encuentra junto al río Ljubljanica?",
+        "opciones": [
+            "Wellington",
+            "Montevideo",
+            "El Cairo",
+            "Liubliana"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué gobernante francés fue derrotado en Waterloo?",
+        "opciones": [
+            "Nicolás Copérnico",
+            "Napoleón Bonaparte",
+            "TheGrefg",
+            "Rubius"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué instrumento registra las ondas de los terremotos?",
+        "opciones": [
+            "Espectrómetro",
+            "Pirómetro",
+            "Sismógrafo",
+            "Microscopio"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué tejido muscular recubre los órganos huecos?",
+        "opciones": [
+            "Músculo liso",
+            "Músculo cardíaco",
+            "Músculo esquelético",
+            "Músculo mioepitelial"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué impresionista pintó series de nenúfares?",
+        "opciones": [
+            "Paul Gauguin",
+            "Kazimir Malévich",
+            "Claude Monet",
+            "Jordi Wild"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué tipo de memoria conserva datos sin electricidad?",
+        "opciones": [
+            "Memoria volátil",
+            "Memoria no volátil",
+            "Memoria caché",
+            "Memoria virtual"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué carrera automovilística dura 24 horas en Le Mans?",
+        "opciones": [
+            "24 Horas de Nürburgring",
+            "Indianapolis 500",
+            "Rally Dakar",
+            "24 Horas de Le Mans"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué parte de la planta de la patata se consume habitualmente?",
+        "opciones": [
+            "Raíz",
+            "Tallo",
+            "El tubérculo",
+            "Hoja"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué mamífero marino respira por un espiráculo?",
+        "opciones": [
+            "Foca elefante",
+            "Hipopótamo",
+            "Murciélago de la fruta",
+            "Delfín"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué saga tiene como protagonistas a Rick y Evelyn O’Connell?",
+        "opciones": [
+            "Shrek",
+            "La momia",
+            "Origen",
+            "Ciudadano Kane"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué valor aparece más veces en un conjunto de datos?",
+        "opciones": [
+            "Desviación típica",
+            "Frecuencia relativa",
+            "Mediana",
+            "Moda"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué capital estonia está junto al golfo de Finlandia?",
+        "opciones": [
+            "Reikiavik",
+            "Sofía",
+            "Belgrado",
+            "Tallin"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué ciudad andina fue el centro del Imperio inca?",
+        "opciones": [
+            "Odesa",
+            "Cuzco",
+            "Mendoza",
+            "Recife"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué ciencia estudia los fósiles?",
+        "opciones": [
+            "Arqueología",
+            "Física",
+            "Climatología",
+            "Paleontología"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué proteína de los glóbulos rojos transporta oxígeno?",
+        "opciones": [
+            "Elastina",
+            "Hemoglobina",
+            "Colágeno",
+            "Insulina"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué compositor francés escribió la ópera Carmen?",
+        "opciones": [
+            "Georges Bizet",
+            "Giuseppe Verdi",
+            "Ludwig van Beethoven",
+            "Maurice Ravel"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué fabricante desarrolla los procesadores Ryzen y Radeon?",
+        "opciones": [
+            "Microsoft",
+            "Samsung",
+            "Apple",
+            "AMD"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué deporte acuático se practica sobre olas con una tabla?",
+        "opciones": [
+            "Piragüismo",
+            "Natación",
+            "Surf",
+            "Remo"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué tipo de arroz se utiliza habitualmente para preparar risotto?",
+        "opciones": [
+            "Bomba",
+            "Basmati",
+            "Arborio",
+            "Jazmín"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué ave puede imitar sonidos y palabras humanas?",
+        "opciones": [
+            "Loro",
+            "Cuervo",
+            "Cóndor andino",
+            "Buitre leonado"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué saga de Nintendo incluye Hyrule y la Espada Maestra?",
+        "opciones": [
+            "Super Mario Bros.",
+            "Pokémon",
+            "The Legend of Zelda",
+            "Metroid"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cómo se llama el punto donde se cruzan dos rectas?",
+        "opciones": [
+            "Punto medio",
+            "Perpendicularidad",
+            "Mediatriz",
+            "Intersección"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué capital letona se encuentra junto al río Daugava?",
+        "opciones": [
+            "Riga",
+            "Belgrado",
+            "Lisboa",
+            "Seúl"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué reina apoyó el viaje de Colón de 1492?",
+        "opciones": [
+            "Nicolás Copérnico",
+            "Jordi Wild",
+            "Isaac Newton",
+            "Isabel I de Castilla"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué elemento químico tiene el símbolo Fe?",
+        "opciones": [
+            "Neón",
+            "Hierro",
+            "Carbono",
+            "Potasio"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué conducto lleva el alimento de la faringe al estómago?",
+        "opciones": [
+            "Esófago",
+            "La faringe",
+            "Duodeno",
+            "Colon"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué escultor francés realizó la obra monumental El pensador?",
+        "opciones": [
+            "Auguste Rodin",
+            "Claude Monet",
+            "Johannes Vermeer",
+            "Peereira7"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué interfaz transmite vídeo y audio HD por un cable?",
+        "opciones": [
+            "DVI",
+            "HDMI",
+            "Composite Video",
+            "S-Video"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué país ha ganado más Mundiales masculinos de fútbol?",
+        "opciones": [
+            "Italia",
+            "Portugal",
+            "Brasil",
+            "Corea del Sur"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué raíz picante se usa como sustituto del wasabi?",
+        "opciones": [
+            "Rábano picante",
+            "Jengibre",
+            "Wasabi",
+            "Cúrcuma"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué planta del desierto almacena agua en sus tejidos?",
+        "opciones": [
+            "Cactus",
+            "Olivo",
+            "Yuca",
+            "Venus atrapamoscas"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿En qué serie Walter White fabrica metanfetamina?",
+        "opciones": [
+            "Dark",
+            "Juego de tronos",
+            "The Crown",
+            "Breaking Bad"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué letra suele representar una incógnita algebraica?",
+        "opciones": [
+            "x",
+            "y",
+            "z",
+            "n"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué océano alberga la fosa de las Marianas?",
+        "opciones": [
+            "Océano Ártico",
+            "Océano Atlántico",
+            "Océano Antártico",
+            "Océano Pacífico"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué antigua cultura creó la democracia de Atenas?",
+        "opciones": [
+            "Civilización egipcia",
+            "Civilización griega",
+            "Civilización romana",
+            "Civilización fenicia"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué parte del espectro electromagnético puede ver el ojo humano?",
+        "opciones": [
+            "Rayos X",
+            "Luz visible",
+            "Ultravioleta",
+            "Infrarrojo"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué ciencia estudia los seres vivos?",
+        "opciones": [
+            "Climatología",
+            "Astronomía",
+            "Botánica",
+            "Biología"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué autora ganó el Nadal en 1945 con la novela Nada?",
+        "opciones": [
+            "J. R. R. Tolkien",
+            "Carmen Laforet",
+            "Francisco de Quevedo",
+            "George Orwell"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué identificador localiza un dispositivo en una red IP?",
+        "opciones": [
+            "Dirección MAC",
+            "URL",
+            "Dirección IP",
+            "Puerta de enlace"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué deporte olímpico incluye anillas y caballo con arcos?",
+        "opciones": [
+            "Gimnasia artística",
+            "Gimnasia rítmica",
+            "Gimnasia en trampolín",
+            "Gimnasia aeróbica"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué plato mexicano lleva tortilla doblada y queso fundido?",
+        "opciones": [
+            "Taco",
+            "Quesadilla",
+            "Tamal",
+            "Enchilada"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué camélido tiene una o dos jorobas?",
+        "opciones": [
+            "Ornitorrinco",
+            "Ballena jorobada",
+            "Jirafa",
+            "Camello"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué película de Nolan explora sueños compartidos?",
+        "opciones": [
+            "Regreso al futuro",
+            "La vida es bella",
+            "Buscando a Nemo",
+            "Origen"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Cuál es el valor absoluto de −17?",
+        "opciones": [
+            "−17",
+            "17",
+            "0",
+            "1"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué cordillera separa la península ibérica del resto de Europa?",
+        "opciones": [
+            "Los Alpes",
+            "Los Andes",
+            "Los Pirineos",
+            "Los Cárpatos"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué batalla derrotó definitivamente a Napoleón en 1815?",
+        "opciones": [
+            "Batalla de Austerlitz",
+            "Batalla de Waterloo",
+            "Batalla de Trafalgar",
+            "Batalla de Leipzig"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué astrónomo defendió el modelo heliocéntrico?",
+        "opciones": [
+            "Nicolás Copérnico",
+            "Stephen Hawking",
+            "Michael Faraday",
+            "Ibai"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué sistema corporal incluye piel, uñas y cabello?",
+        "opciones": [
+            "Sistema nervioso",
+            "Sistema respiratorio",
+            "Sistema tegumentario",
+            "Sistema endocrino"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué cantante publicó 21 y el éxito Rolling in the Deep?",
+        "opciones": [
+            "Ludwig van Beethoven",
+            "George Frideric Handel",
+            "Astor Piazzolla",
+            "Adele"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué servicio traduce nombres de dominio a direcciones IP?",
+        "opciones": [
+            "POP3",
+            "DNS",
+            "TCP/IP",
+            "SMTP"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cuántos puntos vale un ensayo en rugby union?",
+        "opciones": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué fruto seco da sabor a la gianduja?",
+        "opciones": [
+            "Almendra",
+            "Avellana",
+            "Nuez",
+            "Anacardo"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama el cambio periódico del plumaje de las aves?",
+        "opciones": [
+            "Migración",
+            "Hibernación",
+            "Muda",
+            "Metamorfosis"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué juego de Nintendo permite crear una isla con vecinos animales?",
+        "opciones": [
+            "Animal Crossing",
+            "Los Sims",
+            "Stardew Valley",
+            "Harvest Moon"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué signo separa enteros y decimales en español?",
+        "opciones": [
+            "Signos de exclamación",
+            "Puntos suspensivos",
+            "Corchetes",
+            "Coma"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué desierto cálido del norte de África es el más extenso del mundo?",
+        "opciones": [
+            "Gobi",
+            "Gran Desierto Victoria",
+            "El Sáhara",
+            "Desierto sirio"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Quién fue el primer presidente de Estados Unidos?",
+        "opciones": [
+            "George Washington",
+            "Charles Darwin",
+            "TheGrefg",
+            "Auronplay"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Cómo se llama el paso directo de sólido a gas?",
+        "opciones": [
+            "Condensación",
+            "Fusión",
+            "Vaporización",
+            "Sublimación"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué estructura cerebral consolida recuerdos episódicos?",
+        "opciones": [
+            "Hipocampo",
+            "Hipotálamo",
+            "Epidermis",
+            "Pupila"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué poeta español del Romanticismo escribió Rimas y Leyendas?",
+        "opciones": [
+            "Gustavo Adolfo Bécquer",
+            "Tirso de Molina",
+            "George Orwell",
+            "Ibai"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué empresa ofrece Word, Excel y PowerPoint?",
+        "opciones": [
+            "Microsoft",
+            "NVIDIA",
+            "Meta",
+            "La IA haciendo una presentación con 47 transiciones y cero contenido"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué equipo juega en el estadio Santiago Bernabéu?",
+        "opciones": [
+            "Atlético de Madrid",
+            "Real Madrid",
+            "Getafe CF",
+            "Rayo Vallecano"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué plato coreano fermentado lleva col china y chile?",
+        "opciones": [
+            "Chucrut",
+            "Tsukemono",
+            "Encurtidos de pepino",
+            "Kimchi"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué reptil tiene caparazón dorsal y ventral?",
+        "opciones": [
+            "Cocodrilo del Nilo",
+            "Iguana verde",
+            "Tortuga",
+            "Anaconda verde"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué alter ego de Bruce Wayne combate el crimen en Gotham City?",
+        "opciones": [
+            "Superman",
+            "Batman",
+            "Wonder Woman",
+            "Spider-Man"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama un triángulo con un ángulo mayor de 90°?",
+        "opciones": [
+            "Acutángulo",
+            "Rectángulo",
+            "Obtusángulo",
+            "Equilátero"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cuál es la montaña más alta del mundo?",
+        "opciones": [
+            "K2",
+            "Lhotse",
+            "El Everest",
+            "Kangchenjunga"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué Estado socialista puso en órbita el Sputnik 1 en octubre de 1957?",
+        "opciones": [
+            "República Democrática Alemana",
+            "Cuba",
+            "Yugoslavia",
+            "La Unión Soviética"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué elemento tiene símbolo Na y número atómico 11?",
+        "opciones": [
+            "Sodio",
+            "Potasio",
+            "Litio",
+            "Rubidio"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué elemento químico tiene símbolo Ca?",
+        "opciones": [
+            "Berilio",
+            "Calcio",
+            "Magnesio",
+            "Estroncio"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué estilo arquitectónico usa arcos apuntados y arbotantes?",
+        "opciones": [
+            "Gótico",
+            "Renacimiento",
+            "Postimpresionismo",
+            "Rococó"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué clase de aplicación interpreta HTML?",
+        "opciones": [
+            "Motor de renderizado",
+            "Servidor web",
+            "Cliente HTTP",
+            "Navegador"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué modalidad de tenis se juega sobre una mesa?",
+        "opciones": [
+            "Béisbol",
+            "Tenis de mesa",
+            "Escalada deportiva",
+            "Críquet"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué ingrediente se mezcla con mantequilla para hacer un roux?",
+        "opciones": [
+            "Harina de avena",
+            "Harina de cebada",
+            "Harina de trigo",
+            "Harina de maíz"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿A qué grupo de vertebrados pertenece la salamandra?",
+        "opciones": [
+            "Pez",
+            "Ave",
+            "Reptil",
+            "Anfibio"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué película de Pixar personifica cinco emociones de Riley?",
+        "opciones": [
+            "Los Increíbles",
+            "Del revés",
+            "Matrix",
+            "Origen"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué número expresa cuántos centímetros contiene exactamente un metro?",
+        "opciones": [
+            "10",
+            "50",
+            "100",
+            "1000"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué estrecho conecta el Atlántico con el Mediterráneo?",
+        "opciones": [
+            "Canal de la Mancha",
+            "Estrecho de Gibraltar",
+            "Bósforo",
+            "Estrecho de Mesina"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué enfermedad causó la gran pandemia europea del siglo XIV?",
+        "opciones": [
+            "La peste bubónica",
+            "Peste neumónica",
+            "Sarampión",
+            "Gripe"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué unidad de potencia equivale a un julio por segundo?",
+        "opciones": [
+            "Newton",
+            "Pascal",
+            "Vatio",
+            "Julio"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Cómo se llama la capa más externa de la piel?",
+        "opciones": [
+            "Epidermis",
+            "Dermis",
+            "Hipodermis",
+            "Fascia"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué grupo sueco ganó Eurovisión con Waterloo?",
+        "opciones": [
+            "Johann Sebastian Bach",
+            "Antonio Vivaldi",
+            "ABBA",
+            "IlloJuan"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué tipo de red se abrevia LAN?",
+        "opciones": [
+            "Red de área amplia",
+            "Red de área personal",
+            "Red de área local",
+            "Red de área de campus"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué velocista marcó el récord de 100 m en 9,58 segundos?",
+        "opciones": [
+            "Lionel Messi",
+            "Simone Biles",
+            "Marc Márquez",
+            "Usain Bolt"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué embutido curado se obtiene de la pierna del cerdo?",
+        "opciones": [
+            "Jamón curado",
+            "Chorizo curado",
+            "Lomo embuchado",
+            "Salchichón"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué insecto adulto pertenece al orden Lepidoptera?",
+        "opciones": [
+            "Luciérnaga",
+            "Abeja melífera",
+            "Libélula",
+            "Mariposa"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué manga sigue a Luffy en busca del tesoro One Piece?",
+        "opciones": [
+            "Naruto",
+            "One Piece",
+            "Bleach",
+            "Dragon Ball"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Cómo se llama una abreviatura formada por iniciales?",
+        "opciones": [
+            "Sustantivo",
+            "Adjetivo",
+            "Sujeto",
+            "Sigla"
+        ],
+        "correcta": 3
+    },
+    {
+        "texto": "¿Qué río atraviesa París y desemboca en el canal de la Mancha?",
+        "opciones": [
+            "El Sena",
+            "Dniéster",
+            "Danubio",
+            "Zambeze"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿Qué tratado de 1494 dividió las zonas de expansión de España y Portugal?",
+        "opciones": [
+            "Tratado de Tordesillas",
+            "Tratado de Versalles",
+            "Tratado de Utrecht",
+            "Tratado de París"
+        ],
+        "correcta": 0
+    },
+    {
+        "texto": "¿En qué capa atmosférica se concentra el ozono?",
+        "opciones": [
+            "Mesosfera",
+            "Estratosfera",
+            "Termosfera",
+            "Troposfera"
+        ],
+        "correcta": 1
+    },
+    {
+        "texto": "¿Qué inmunidad genera el cuerpo tras vacunarse?",
+        "opciones": [
+            "Inmunidad innata",
+            "Inmunidad activa natural",
+            "Inmunidad activa artificial",
+            "Inmunidad pasiva natural"
+        ],
+        "correcta": 2
+    },
+    {
+        "texto": "¿Qué dramaturgo del Barroco español escribió La vida es sueño?",
+        "opciones": [
+            "Rosa Chacel",
+            "Pedro Calderón de la Barca",
+            "Carmen Laforet",
+            "William Shakespeare"
+        ],
+        "correcta": 1
+    }
+]

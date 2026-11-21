@@ -19,65 +19,24 @@ export default class Profesor_minijuego extends Phaser.Scene
         this.añosARestar = 10;
 
         //Temporizador
-        this.tiempoMaximo = 7;
+        this.tiempoMaximo = 10;
         this.tiempoRestante = this.tiempoMaximo;
 
-        //Lista de preguntas
-        this.listaPreguntas = [
-            {
-                texto: "¿Cuándo se descubrió América?",
-                opciones: ["1942", "Ayer", "1492", "1789"],
-                correcta: 2
-            },
-            {
-                texto: "¿Quién escribió La Regenta?",
-                opciones: ["Lorca", "Clarín", "José Zorrilla", "Jordi Wild"],
-                correcta: 1
-            },
-            {
-                texto: "¿Cuál es la capital de Francia?",
-                opciones: ["Madrid", "Roma", "París", "Berlín"],
-                correcta: 2
-            },
-            {
-                texto: "¿Cuál es el símbolo químico del agua?",
-                opciones: ["CO2", "H2O", "O2", "NaCli"],
-                correcta: 1
-            },
-            {
-                texto: "¿En qué año comenzó la Revolución Francesa?",
-                opciones: ["1492", "1789", "1914", "1812"],
-                correcta: 1
-            },
-            {
-                texto: "¿Quién escribió 'Don Quijote de la Mancha'?",
-                opciones: ["Lope de Vega", "Miguel de Cervantes", "Federico García Lorca", "David Cánovas"],
-                correcta: 1
-            },
-            {
-                texto: "¿Quién pintó la famosa 'Mona Lisa'?",
-                opciones: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Salvador Dalí"],
-                correcta: 2
-            },
-            {
-                texto: "¿Cuántos lados tiene un hexágono?",
-                opciones: ["5", "6", "7", "8"],
-                correcta: 1
-            },
-            {
-                texto: "¿Cuál de estos es un motor de videojuegos?",
-                opciones: ["Unity", "Photoshop", "Word", "Excel"],
-                correcta: 0
-            },
-            {
-                texto: "¿Cuál es el órgano más grande del cuerpo humano?",
-                opciones: ["El estómago", "El cerebro", "La piel", "El hígado"],
-                correcta: 2
-            }
-        ];
-        
-        //Controla por qué pregunta vamos
-        this.indicePreguntaActual = 0; 
+        //Cuántas preguntas debe responder el jugador
+        this.preguntasParaResponder = 5;
+
+        //Cuenta cuántas preguntas lleva el jugador y así saber cuándo acaba el minijuego
+        this.contadorDePreguntas = 0;
+    }
+
+    init()
+    {
+        //Resetear variables
+        this.fallosActuales = 0;
+        //TEMPORAL
+        this.añosDeVida = 100;
+        this.tiempoRestante = this.tiempoMaximo;
+        this.contadorDePreguntas = 0;
     }
 
 
@@ -87,10 +46,17 @@ export default class Profesor_minijuego extends Phaser.Scene
         this.load.image('enfadado', 'assets/minigames/Profesor/Profe_Enfadao_Editado.jpg');
         this.load.image('corazonUI', 'assets/CorazonTemp.png');
         this.load.image('imagenContador', 'assets/minigames/Profesor/ConejoReloj.jpg');
+        this.load.json('ListaDePreguntas', 'archivos/ListaDePreguntas.json');
     }
 
     create()
     {
+        //Lista de preguntas
+        this.listaPreguntas = this.cache.json.get('ListaDePreguntas');
+
+        //Controla por qué pregunta vamos
+        this.indicePreguntaActual = Phaser.Math.Between(0, this.listaPreguntas.length - 1); 
+
         this.spawnProfeContento();
         this.spawnProfeEnfadado();
 
@@ -115,6 +81,9 @@ export default class Profesor_minijuego extends Phaser.Scene
         this.corazon.setOrigin(0, 0);
         this.corazon.setDepth(20);
 
+        this.escalaOriginalCorX = this.corazon.scaleX;
+        this.escalaOriginalCorY = this.corazon.scaleY;
+
         //Tiempo restante para responder
         this.textoTiempo = this.add.text(820, 0, this.tiempoMaximo, {
             fontFamily: 'Isometra',
@@ -131,6 +100,10 @@ export default class Profesor_minijuego extends Phaser.Scene
         this.imgContador.setDisplaySize(40, 45);
         this.imgContador.setOrigin(0, 0);
         this.imgContador.setDepth(20);
+
+        //Sin esto su animación va rara
+        this.escalaOriginalImgX = this.imgContador.scaleX;
+        this.escalaOriginalImgY = this.imgContador.scaleY;
 
         //Boton volver
         const boton = this.add.text(855, 515, 'VOLVER', {
@@ -202,6 +175,8 @@ export default class Profesor_minijuego extends Phaser.Scene
 
     iniciarTemporizador()
     {
+        //Si existe un temporizador se borra antes de crear uno nuevo
+        if (this.temporizador) this.temporizador.remove();
         //Reiniciar variables
         this.tiempoRestante = this.tiempoMaximo;
         this.textoTiempo.setText(String(this.tiempoRestante));
@@ -231,6 +206,7 @@ export default class Profesor_minijuego extends Phaser.Scene
             {
                 this.textoTiempo.setColor('#ff0000');
             }
+
         } 
         else 
         {
@@ -248,12 +224,23 @@ export default class Profesor_minijuego extends Phaser.Scene
                 this.procesarFallo();
             }
         }
+
+        //Animación del contador
+        this.animacionLatido(this.textoTiempo, 1.2, 1.2, 200);
+
+        //Animación de la imagen del contador
+        this.animacionLatido(this.imgContador, this.escalaOriginalImgX * 1.2, this.escalaOriginalImgY * 1.2, 200);
     }
 
     procesarFallo()
     {
         this.añosDeVida -= this.añosARestar;
         this.añosRestantes.setText(String(this.añosDeVida));
+        //Animación del texto
+        this.animacionLatido(this.añosRestantes, 1.2, 1.2, 200);
+
+        //Animacion del corazon
+        this.animacionLatido(this.corazon, this.escalaOriginalCorX * 1.2, this.escalaOriginalCorY * 1.2, 200);
         this.actualizarEnfado();
         this.siguientePregunta();
     }
@@ -261,7 +248,7 @@ export default class Profesor_minijuego extends Phaser.Scene
     mostrarPregunta()
     {
         //Si se ha respondido a todo acaba
-        if (this.indicePreguntaActual >= this.listaPreguntas.length) 
+        if (this.contadorDePreguntas >= this.preguntasParaResponder) 
         {
             console.log("¡Has terminado todas las preguntas!");
             this.scene.start('tablero-principal'); 
@@ -279,7 +266,7 @@ export default class Profesor_minijuego extends Phaser.Scene
 
         this.miPregunta = new pregunta(
             this, 
-            480, 60, 
+            480, 50, 
             datos.texto, 
             datos.opciones, 
             datos.correcta
@@ -292,6 +279,8 @@ export default class Profesor_minijuego extends Phaser.Scene
         //Si se ha acertado se quita al profe enfadado y se vuelve a poner al contento
         this.miPregunta.on('acierto', () => {
             console.log("¡Has acertado!");
+            //Si existe un temporizador se borra antes de crear uno nuevo
+            if (this.temporizador) this.temporizador.remove();
             this.siguientePregunta();
         });
 
@@ -306,11 +295,24 @@ export default class Profesor_minijuego extends Phaser.Scene
     siguientePregunta()
     {
         //Aumentar el índice de pregunta
-        this.indicePreguntaActual++;
+        this.indicePreguntaActual = Phaser.Math.Between(0, this.listaPreguntas.length - 1);
+        this.contadorDePreguntas++;
         
         // Temporizador entre preguntas para poder ver cuál era la respuesta
         this.time.delayedCall(1500, () => {
             this.mostrarPregunta();
+        });
+    }
+
+    animacionLatido(objeto, escalaX, escalaY, duracion)
+    {
+        this.tweens.add({
+            targets: objeto,
+            scaleX: escalaX,
+            scaleY: escalaY,
+            duration: duracion,
+            yoyo: true,  
+            ease: 'Sine.easeInOut'
         });
     }
 }
