@@ -18,7 +18,11 @@ export default class Bomba_minijuego extends Phaser.Scene
         this.load.image('pista', 'assets/minigames/Bomba/PistasBomba.png');
 
         //Sprite sheet de las tijeras (frame 1 = abiertas, frame 2 = cerradas)
-        this.load.image('tijeras', 'assets/minigames/Bomba/Tijeras.png');
+        this.load.image('tijeras', 'assets/minigames/Bomba/sprite_sheetTijera.png');
+
+        //Paginas de manga de la derrota
+        this.load.image('manga1', 'assets/minigames/Bomba/Pagina1Comienzo.jpg');
+        this.load.image('manga2', 'assets/minigames/Bomba/Pagina2Explosion.jpg');
     }
 
     create(){
@@ -32,28 +36,27 @@ export default class Bomba_minijuego extends Phaser.Scene
         fondo.setDepth(0);
         
         //Imagen de la bomba -> MAS GRANDE y en el CENTRO de la escena
-        const BOMBA_W = 580;
-        const BOMBA_H = 420;
+        const BOMBA_W = 960;
+        const BOMBA_H = 720;
         const bomba = this.add.image(W / 2, H / 2, 'Nuke');
         bomba.setDisplaySize(BOMBA_W, BOMBA_H);
         bomba.setDepth(1);
 
         //CABLES. Buscado en google el como hacer el array para los cables
         //x1/x2/y/w/h = recorte REAL del sprite sheet (NO tocar: si se cambian, el frame sale transparente)
-        //dx/dy = desplazamiento manual (px) para anidar las L como en la referencia
-        const ESCALA = 0.95;                 //escala de los cables (proporcional al tamano nuevo de la bomba)
-        const FX = -0.17;                    //fraccion horizontal del sprite donde anclar el cable mas externo (verde)
-        const FY =  0.12;                    //fraccion vertical del sprite donde anclar ese mismo cable
+        //nx/ny = esquina INFERIOR-IZQUIERDA del cable sobre la imagen de la bomba (800x600), medida del PNG de referencia
+        //        (ahi los cables ya estan separados). Cambiando nx/ny se mueve/separa cada cable
+        const ESCALA = bomba.scaleX;         //los cables van a la misma escala que la bomba
         const cablesData = [
-            { color: 'rojo',     x1: 305, x2: 1105, y: 236,  w: 116, h: 76, dx:  14, dy: -14 },
-            { color: 'amarillo', x1: 293, x2: 1093, y: 837,  w: 127, h: 85, dx:   7, dy:  -7 },
-            { color: 'verde',    x1: 281, x2: 1081, y: 1437, w: 140, h: 97, dx:   0, dy:   0 },
-            { color: 'azul',     x1: 281, x2: 1081, y: 2120, w: 137, h: 30, dx:   7, dy:  10 }
+            { color: 'rojo',     x1: 305, x2: 1105, y: 236,  w: 116, h: 76, nx: 305, ny: 312 },
+            { color: 'amarillo', x1: 293, x2: 1093, y: 837,  w: 127, h: 85, nx: 293, ny: 322 },
+            { color: 'verde',    x1: 281, x2: 1081, y: 1437, w: 140, h: 97, nx: 281, ny: 334 },
+            { color: 'azul',     x1: 281, x2: 1081, y: 2120, w: 137, h: 30, nx: 281, ny: 350 }
         ];
 
-        //Ancla base = esquina inferior-izquierda del haz, dentro del panel gris de la bomba
-        const px = bomba.x + FX * BOMBA_W;
-        const py = bomba.y + FY * BOMBA_H;
+        //Esquina superior-izquierda de la imagen de la bomba en pantalla
+        const bombaX0 = bomba.x - BOMBA_W / 2;
+        const bombaY0 = bomba.y - BOMBA_H / 2;
 
         const texCables = this.textures.get('cables');
  
@@ -64,7 +67,7 @@ export default class Bomba_minijuego extends Phaser.Scene
             texCables.add(c.color + '_1', 0, c.x1, c.y, c.w, c.h);
             texCables.add(c.color + '_2', 0, c.x2, c.y, c.w, c.h);
  
-            const cable = this.add.image(px + c.dx, py + c.dy, 'cables', c.color + '_1');
+            const cable = this.add.image(bombaX0 + c.nx * ESCALA, bombaY0 + c.ny * ESCALA, 'cables', c.color + '_1');
             cable.setOrigin(0, 1);           //ancla en el vertice inf-izq de la L -> permite anidarlas
             cable.setScale(ESCALA);
             cable.setDepth(2);               //por DELANTE de la bomba
@@ -84,19 +87,23 @@ export default class Bomba_minijuego extends Phaser.Scene
                 cable.setData('cortado', true);
                 cable.disableInteractive();
 
-                //Si el cable cortado es el rojo aparece un rectangulo rojo (x, y, ancho, alto, color)
+                //De momento el cable rojo es el "malo": al cortarlo se pierde (sustituye al rectangulo rojo de prueba)
                 if (c.color === 'rojo') {
-                    const rectanguloRojo = this.add.rectangle(W / 2, 60, 200, 80, 0xff0000);
-                    rectanguloRojo.setDepth(6);
+                    this.perder();
                 }
             });
         }
 
         //Hasta que baje la pista no se puede empezar a jugar
         this.juegoActivo = false;
+        this.perdido = false;
 
         //Pista: al empezar se ve en el centro. Con ENTER baja en linea recta (sin aceleracion)
-        const papel = this.add.image(W / 2, H / 2, 'pista');
+        //Va pegada al borde INFERIOR de la pantalla (los brazos salen por abajo) como en el boceto
+        const ESCALA_PAPEL = 1;
+        const papel = this.add.image(W / 2, H, 'pista');
+        papel.setOrigin(0.5, 1);
+        papel.setScale(ESCALA_PAPEL);
 
         //SetDepth es para poner cosas por encima
         papel.setDepth(5);
@@ -133,7 +140,7 @@ export default class Bomba_minijuego extends Phaser.Scene
                 targets: papel,
 
                 //Bajada
-                y: H + papel.height / 2,
+                y: H + papel.displayHeight,
                 duration: 500,
                 ease: 'Linear',
                 onComplete: () => {
@@ -196,6 +203,104 @@ export default class Bomba_minijuego extends Phaser.Scene
             const p = this.input.activePointer;
             this.tijeras.setPosition(p.x, p.y);
         }
+    }
+
+    //DERROTA: se ven las dos paginas de manga una detras de otra
+    perder()
+    {
+        if (this.perdido) return;
+        this.perdido = true;
+        this.juegoActivo = false;
+
+        //Se devuelve la flechita y se esconden las tijeras
+        this.input.setDefaultCursor('default');
+        this.tijeras.setVisible(false);
+
+        const W = this.scale.width;
+        const H = this.scale.height;
+
+        //Fondo negro que tapa toda la escena y bloquea los clics de debajo
+        const negro = this.add.rectangle(W / 2, H / 2, W, H, 0x000000);
+        negro.setDepth(20);
+        negro.setInteractive();
+
+        const aviso = this.add.text(W - 20, H - 15, 'CLICK PARA CONTINUAR', {
+            fontFamily: 'Isometra',
+            fontSize: '20px',
+            color: '#ffffff',
+            backgroundColor: '#000000',
+            padding: { x: 10, y: 5 }
+        });
+        aviso.setOrigin(1, 1);
+        aviso.setDepth(23);
+        aviso.setVisible(false);
+
+        //Velocidad del scroll de las paginas: milisegundos por pixel (MAS ALTO = MAS LENTO)
+        const MS_POR_PIXEL = 14;
+
+        const paginas = ['manga1', 'manga2'];
+        let actual = 0;
+        let paginaImg = null;
+        let recorrido = 0;       //pixeles que hay que recorrer para llegar al final de la pagina
+        let yFinal = 0;          //posicion y a la que termina la pagina
+        let leida = false;       //true cuando la pagina ya ha llegado abajo del todo
+
+        //Las paginas son verticales (mas altas que la pantalla): se ajustan al ANCHO y bajan solas
+        const mostrarPagina = (i) => {
+            if (paginaImg) paginaImg.destroy();
+            leida = false;
+            aviso.setVisible(false);
+
+            //Con pixelArt:true las imagenes se ven pixeladas; para el manga se usa filtro suave
+            this.textures.get(paginas[i]).setFilter(Phaser.Textures.FilterMode.LINEAR);
+
+            paginaImg = this.add.image(W / 2, 0, paginas[i]);
+            paginaImg.setOrigin(0.5, 0);
+            paginaImg.setDepth(21);
+            paginaImg.setScale(W / paginaImg.width);
+
+            recorrido = paginaImg.displayHeight - H;
+
+            //Pagina 1: empieza arriba y baja. Pagina 2 (explosion): empieza abajo, en el suelo, y SUBE hasta la nube
+            const subir = (i === 1);
+            paginaImg.y = subir ? -recorrido : 0;
+            yFinal = subir ? 0 : -recorrido;
+
+            this.tweens.add({
+                targets: paginaImg,
+                y: yFinal,
+                duration: recorrido * MS_POR_PIXEL,
+                delay: 800,
+                ease: 'Sine.easeInOut',
+                onComplete: () => {
+                    leida = true;
+                    aviso.setVisible(true);
+                }
+            });
+        };
+
+        //Click o ENTER: si la pagina aun esta bajando salta al final; si ya esta abajo pasa a la siguiente
+        const avanzar = () => {
+            if (!leida) {
+                this.tweens.killTweensOf(paginaImg);
+                paginaImg.y = yFinal;
+                leida = true;
+                aviso.setVisible(true);
+                return;
+            }
+
+            actual++;
+            if (actual < paginas.length) {
+                mostrarPagina(actual);
+            } else {
+                this.scene.start('selector-minigames');
+            }
+        };
+
+        negro.on('pointerdown', avanzar);
+        this.input.keyboard.on('keydown-ENTER', avanzar);
+
+        mostrarPagina(0);
     }
 
 
