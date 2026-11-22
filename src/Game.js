@@ -25,7 +25,9 @@ let config = {
 	pixelArt: true,
 	transparent: true,
 	scale: {
-		autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
+		mode: Phaser.Scale.FIT,
+		autoCenter: Phaser.Scale.CENTER_BOTH,
+		fullscreenTarget: 'game'
 	},
 	scene: [   Menu, TableroPrincipal, Tienda, ZonaApuestas, EscenaManolo, EscenaPrueba, Selector , Kendama_minijuego, Bomba_minijuego, Pesca_minijuego,  Limpieza_minijuego, Profesor_minijuego, Shooter_minijuego],	// Decimos a Phaser cual es nuestra escena, en nuestro caso el menú principal
 	physics: { 
@@ -37,7 +39,23 @@ let config = {
 	}
 };
 
-new Phaser.Game(config);
+const game = new Phaser.Game(config);
+
+const botonPantallaCompleta = document.createElement('button');
+botonPantallaCompleta.id = 'btn-fullscreen';
+botonPantallaCompleta.textContent = '⛶';
+botonPantallaCompleta.title = 'Pantalla completa (F)';
+document.body.appendChild(botonPantallaCompleta);
+
+botonPantallaCompleta.addEventListener('click', () => {
+    game.scale.startFullscreen();
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        game.scale.stopFullscreen();
+    }
+});
 
 // preload - método de las escenas donde se pueden cargar los recursos que necesitaremos
 function preload (){

@@ -124,7 +124,7 @@ export default class Menu extends Phaser.Scene
 
         
         //BOTON DE SALIR////////////
-
+        /*
         let botonSalir = this.add.text(80, 450, 'SALIR', {
         fontSize: '30px',
         fontFamily: 'Isometra',
@@ -156,8 +156,8 @@ export default class Menu extends Phaser.Scene
                 //console.log('Has pulsado SALIR');
                 this.scene.start('escena-prueba');
 
-            });
-
+        });
+        */
         
         //BOTON DE CREDITOS////////////
 

@@ -31,19 +31,22 @@ body
     text-align: center;
 }
 
-.contenedor {
+.contenedor 
+{
   position: relative;
   display: inline-block;
   line-height: 0
 }
 
-.detalle {
+.detalle 
+{
   display: block;
   width: 1900px;
   height: auto;
 }
 
-.vivo {
+.vivo 
+{
   position: absolute;
   top: 120px;
   left: 250px;
@@ -51,7 +54,8 @@ body
   transform: translate(-50%, -50%); /* centra vivo en ese punto */
 }
 
-.mesa-verde {
+.mesa-verde 
+{
   width: 1400px;
   min-height: 1300px;
   margin: 0 auto;
@@ -70,14 +74,16 @@ body
 }
 
 /* La ventana que muestra el desfile (oculta lo que sobra) */
-.marquee-wrapper {
+.marquee-wrapper 
+{
   width: 100%;
   overflow: hidden; /* Oculta la imagen cuando sale de los bordes */
   margin-bottom: 100px;
 }
 
 /* La pista que contiene las dos imágenes */
-.marquee-track {
+.marquee-track 
+{
   display: flex;
   width: max-content; /* Obliga a la pista a medir el ancho de las dos imágenes juntas */
   animation: mover-derecha 25s linear infinite;
@@ -85,11 +91,43 @@ body
 }
 
 /* Animación para mover a la derecha */
-@keyframes mover-derecha {
+@keyframes mover-derecha 
+{
   0% {
     transform: translateX(-50%); /* Empieza mostrando la 2º imagen */
   }
   100% {
     transform: translateX(0%);   /* Termina mostrando la 1º imagen */
   }
+}
+
+#game 
+{
+  position: relative;
+  width: 960px;
+  height: 540px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#btn-fullscreen 
+{
+  position: absolute;
+  bottom: -37px;
+  right: 1375px; 
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+#btn-fullscreen:hover 
+{
+  background: rgba(0, 0, 0, 0.85);
 }
