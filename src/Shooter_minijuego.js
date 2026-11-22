@@ -32,6 +32,9 @@ export default class Shooter_minijuego extends Phaser.Scene
 
         //Enemigo
         this.load.image('enemigo', 'assets/characters/DoctorMuerte.png');
+
+        //Viñeta de recibir dañó
+        this.load.image('viñetaDaño', 'assets/minigames/Shooter/ViñetaDaño.png');
     }
 
     create()
@@ -43,6 +46,13 @@ export default class Shooter_minijuego extends Phaser.Scene
 
         const fondo = this.add.image(480, 270, 'fabrica');
         fondo.setDisplaySize(960, 740);
+
+        //Crear la viñeta del efecto de daño
+        this.efectoDaño = this.add.image(0, 0, 'viñetaDaño');
+        this.efectoDaño.setOrigin(0, 0);
+        this.efectoDaño.setDisplaySize(this.scale.width, this.scale.height);
+        this.efectoDaño.setAlpha(0);
+        this.efectoDaño.setDepth(100);
 
         this.mira = new mira(this, 0, 0);
         this.mira.setDisplaySize(50, 50);
@@ -164,10 +174,49 @@ export default class Shooter_minijuego extends Phaser.Scene
             nuevoEnemigo.setDisplaySize(360, 450);
 
             nuevoEnemigo.setInteractive();
-            nuevoEnemigo.on('pointerdown', () => {
+            nuevoEnemigo.on('pointerdown', (pointer) => {
                 if(this.contador >= this.cooldownDisparo)
                 {
-                    vida--;
+                    //Obtener el rectángulo del enemigo
+                    let bounds = nuevoEnemigo.getBounds();
+
+                    //Definir el límite de la cabeza
+                    let limiteVerticalCabeza = bounds.top + (bounds.height * 0.2);
+
+                    let centroX = nuevoEnemigo.x;
+                    let anchoCabeza = nuevoEnemigo.displayWidth * 0.15; 
+                    
+                    let limiteIzquierda = centroX - anchoCabeza;
+                    let limiteDerecha = centroX + anchoCabeza;
+
+                    //Comprobar si el clic ha sido por encima de ese límite
+                    let esHeadshot = (pointer.y <= limiteVerticalCabeza && pointer.x >= limiteIzquierda && pointer.x <= limiteDerecha);
+
+                    // Si es crítico hace 2 de daño, si no, 1
+                    let daño = 1;
+                    let esCritico = Math.random() < 0.06; //6% de probabilidad
+
+                    if (esHeadshot && esCritico) 
+                    {
+                        daño = 5; // Headshot con crítico hace muchísimo daño
+                        esCritico = true;
+                    }
+                    else if (esHeadshot) 
+                    {
+                        daño = 3; // Headshot hace mucho daño
+                        esCritico = true;
+                    } 
+                    else if (esCritico) 
+                    {
+                        daño = 2;
+                    }
+
+                    vida -= daño;
+
+                    this.crearNumeroDaño(pointer.x, pointer.y, daño, esCritico, esHeadshot);
+
+                    this.animacionHit(nuevoEnemigo, 1.2, 1.2, 100, esCritico, esHeadshot);
+
                     if(vida <= 0)
                     {
                         this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
@@ -188,6 +237,18 @@ export default class Shooter_minijuego extends Phaser.Scene
             nuevoEnemigo.on('recibe-daño', () => {
                 this.vidaJugador -= nuevoEnemigo.daño;
                 this.textoVida.setText(`VIDA: ${this.vidaJugador}`);
+
+                //Eliminar cualquier animación anterior por si acaso
+                this.tweens.killTweensOf(this.efectoDaño);
+
+                this.tweens.add({
+                    targets: this.efectoDaño,
+                    alpha: 1,      // Aparece al 100%
+                    duration: 100,
+                    yoyo: true,
+                    ease: 'Sine.easeInOut'
+                });
+
                 if(this.vidaJugador <= 30)
                 {
                     this.textoVida.setColor('#CC0000');
@@ -204,6 +265,97 @@ export default class Shooter_minijuego extends Phaser.Scene
             this.contadorEnemigos++;
         }
         
+    }
+
+    animacionHit(objeto, multX, multY, duracion, critico, headshot)
+    {
+        //Guardar la escala que tiene el objeto en este justo momento
+        let escalaActualX = objeto.scaleX;
+        let escalaActualY = objeto.scaleY;
+
+        this.tweens.add({
+            targets: objeto,
+            scaleX: multX * escalaActualX,
+            scaleY: multY * escalaActualY,
+            duration: duracion,
+            yoyo: true,  
+            ease: 'Sine.easeInOut'
+        });
+
+        if(critico) objeto.setTint(0xcc7700); //Teñirlo de blanco
+        else if(headshot) objeto.setTint(0xffaa00); //Teñirlo de blanco
+        else objeto.setTint(0xff0000); //Teñirlo de rojo
+
+        //Quitar el color rojo al acabar la animacion
+        this.time.delayedCall(duracion, () => {
+            //Solo quitar el color si no se ha eliminado
+            if (objeto.active) 
+            {
+                objeto.clearTint();
+            }
+        });
+    }
+
+    crearNumeroDaño(x, y, cantidad, critico, headshot)
+    {
+        let textoDaño;
+
+        if(critico)
+        {
+            //Crear el texto con un borde negro
+            textoDaño = this.add.text(x, y, `-${cantidad}`, {
+                fontFamily: 'Isometra',
+                fontSize: '70px',
+                color: '#ffbb00',
+                stroke: '#000000',
+                strokeThickness: 6      // Grosor del borde
+            });
+        }
+        else if(headshot)
+        {
+            // Texto para Headshot (Enorme y morado/rosa)
+            textoDaño = this.add.text(x, y, textoAMostrar, {
+                fontFamily: 'Isometra',
+                fontSize: '60px',
+                color: '#ffed48', 
+                stroke: '#000000',
+                strokeThickness: 8
+            });
+        }
+        else
+        {
+            //Crear el texto con un borde negro
+            textoDaño = this.add.text(x, y, `-${cantidad}`, {
+                fontFamily: 'Isometra',
+                fontSize: '50px',
+                color: '#ff0000',
+                stroke: '#000000',
+                strokeThickness: 6      // Grosor del borde
+            });
+        }
+        
+        textoDaño.setOrigin(0.5);
+        textoDaño.setDepth(50);
+
+        //Para que no salgan todos en línea recta
+        let randomX = Phaser.Math.Between(-30, 30);
+        let randomY = Phaser.Math.Between(-40, -80);
+
+        //Sube, crece un poco y desaparece
+        this.tweens.add({
+            targets: textoDaño,
+            x: x + randomX,
+            y: y + randomY,
+            alpha: 0,
+            scaleX: 1.5,
+            scaleY: 1.5,
+            duration: 1000,
+            ease: 'Cubic.easeOut',
+            onComplete: () => 
+            {
+                textoDaño.destroy();
+            }
+        });
     }
 
 }

@@ -39,11 +39,13 @@ export default class Shooter_enemy extends Phaser.GameObjects.Image
 
         const puedeCrecer = this.displayWidth < this.topeAncho && this.displayHeight < this.topeAlto;
 
-        if (this.haLlegado && puedeCrecer)
+        if (this.haLlegado) 
         {
-            this.scaleX += aumentoEscala;
-            this.scaleY += aumentoEscala;
-            return;
+            if (puedeCrecer) {
+                this.scaleX += aumentoEscala;
+                this.scaleY += aumentoEscala;
+            }
+            return; 
         } 
 
         //Calcular la ruta que debe seguir el enemigo
@@ -55,8 +57,9 @@ export default class Shooter_enemy extends Phaser.GameObjects.Image
             this.x = this.destino.x;
             this.y = this.destino.y;
             this.haLlegado = true;
+            
             console.log("Ha llegado a su destino");
-            this.scene.time.addEvent({
+            this.timerDaño = this.scene.time.addEvent({
                 delay: 2000,
                 callback: () => this.emit('recibe-daño'),
                 loop: true
