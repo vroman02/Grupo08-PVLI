@@ -19,12 +19,16 @@ export default class Pesca_minijuego extends Phaser.Scene
         this.load.image('medidor1', 'assets/minigames/Pesca/Medidor1.png');
         this.load.image('medidor2', 'assets/minigames/Pesca/Medidor2.png');
         this.load.image('medidor3', 'assets/minigames/Pesca/Medidor3.png');
+        this.load.image('fallo', 'assets/minigames/Pesca/Miss.png');
+        this.load.image('vida', 'assets/CorazonTemp.png');
+
     }
 
     create(){
 
         this.fase = 0;
         this.fallos = 0;
+        this.maxfallos = 3;
         this.peznt = false;
 
         //Crear fondo
@@ -46,7 +50,13 @@ export default class Pesca_minijuego extends Phaser.Scene
         this.medidorfase3 = this.add.image(50, 150, 'medidor3');
         this.medidorfase3.setDisplaySize(100, 300);
         this.medidorfase3.setVisible(false);
-       
+
+        //Crear Vidas
+        this.vidas = [];
+        this.vidas.push(this.add.image(670, 60, 'vida').setDisplaySize(75, 75).setDepth(1));
+        this.vidas.push(this.add.image(770, 60, 'vida').setDisplaySize(75, 75).setDepth(1));
+        this.vidas.push(this.add.image(870, 60, 'vida').setDisplaySize(75, 75).setDepth(1));
+
         
         //Crear pez
         this.pez = new Pez_pesca(this, 100, 300)
@@ -58,7 +68,7 @@ export default class Pesca_minijuego extends Phaser.Scene
         this.pescao.setDisplaySize(200, 225);
         this.pescao.setVisible(false);
 
-        //Imagen de la esponja
+        //Imagen de la caña
         const can = this.add.image(450, 270, 'cania');
         can.setDisplaySize(360, 750);
         can.setDepth(2);
@@ -66,7 +76,7 @@ export default class Pesca_minijuego extends Phaser.Scene
 
 
         //Boton volver
-        const boton = this.add.text(825, 480, 'VOLVER', {
+        this.boton = this.add.text(825, 480, 'VOLVER', {
             fontSize: '30px',
             fontFamily: 'Isometra',
             color: '#000000',
@@ -74,27 +84,31 @@ export default class Pesca_minijuego extends Phaser.Scene
             padding: { x: 20, y: 10 }
         });
 
-        boton.setOrigin(0.5);
-        boton.setInteractive({ useHandCursor: true });
+        this.boton.setOrigin(0.5);
+        this.boton.setInteractive({ useHandCursor: true });
 
-        boton.on('pointerover', () => {
+        this.boton.setVisible(false);
+
+        this.boton.on('pointerover', () => {
             boton.setStyle({
                 color: '#ffffff',
                 backgroundColor: '#2274d7'
             });
         });
 
-        boton.on('pointerout', () => {
+        this.boton.on('pointerout', () => {
             boton.setStyle({
                 color: '#000000',
                 backgroundColor: '#ffffff'
             });
         });
 
-        boton.on('pointerdown', () => {
+        this.boton.on('pointerdown', () => {
             this.scene.start('selector-minigames');
         });
 
+
+        //Boton pescar
         const sedal = this.add.text(475, 500, 'PESCAR', {
             fontSize: '30px',
             fontFamily: 'Isometra',
@@ -121,7 +135,7 @@ export default class Pesca_minijuego extends Phaser.Scene
         });
 
         sedal.on('pointerdown', () => {
-            if (this.fase < 3 && this.fallos < 3)
+            if (this.fase < 3 && this.fallos < this.maxfallos)
             {
                 if (this.pez.x < 600 && this.pez.x > 500)
                 {
@@ -133,7 +147,20 @@ export default class Pesca_minijuego extends Phaser.Scene
                     {
                         this.fase--;
                     }
+                    if (this.fallos != this.maxfallos - 1)
+                    {
+                        //Crear alerta de fallo
+                        const alerta = this.add.image(this.pez.x, this.pez.y, 'fallo')
+                        alerta.setDisplaySize(200, 200);
+                        alerta.setDepth(3);
+                        this.time.delayedCall(500, () => {
+                            alerta.setVisible(false);
+                        });
+       
+                    }
                     this.fallos++;
+                    this.vidas.pop().destroy();
+                    
                 }
             }
             
@@ -142,7 +169,7 @@ export default class Pesca_minijuego extends Phaser.Scene
 
     update(t, dt)
     {
-        if (this.pez && this.fase < 3 && this.fallos < 3)
+        if (this.pez && this.fase < 3 && this.fallos < this.maxfallos)
         {
             this.pez.update(t, dt);
         }
@@ -170,14 +197,16 @@ export default class Pesca_minijuego extends Phaser.Scene
 
             this.pez.setVisible(false);
             this.pescao.setVisible(true);
+            this.boton.setVisible(true);
         }
-        if (this.fallos == 3 && !this.peznt)
+        if (this.fallos == this.maxfallos && !this.peznt)
         {
             this.pez.setVisible(false);
             const salpicadura = this.add.image(this.pez.x, this.pez.y + 20, 'salpicar');
             salpicadura.setDisplaySize(200, 100);
             salpicadura.setDepth(1);
             this.peznt = true;
+            this.boton.setVisible(true);
         }
         
     }

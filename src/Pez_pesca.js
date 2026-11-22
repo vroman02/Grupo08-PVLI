@@ -33,6 +33,18 @@ export default class Pez_pesca extends Phaser.GameObjects.Image {
            this.velocidad = this.VEL;
            this.setFlipX(false);
         }
+        if (this.x < 600 && this.x > 500)
+        {
+            this.setAlpha(1);
+            this.setDisplaySize(150, 187);
+            this.setTint(0xff8888);
+        }
+        else
+        {
+            this.setAlpha(0.75);
+            this.setDisplaySize(120, 150);
+            this.clearTint();
+        }
             
         
 	}
