@@ -1,3 +1,4 @@
+import VariablesGlobales from "./VariablesGlobales.js";
 import Pez_pesca from "./Pez_pesca.js";
 
 export default class Pesca_minijuego extends Phaser.Scene 
@@ -28,8 +29,17 @@ export default class Pesca_minijuego extends Phaser.Scene
 
         this.fase = 0;
         this.fallos = 0;
-        this.maxfallos = 3;
+        if (VariablesGlobales.ModoInfierno)
+        {
+            this.maxfallos = 1;
+        }
+        else
+        {
+            this.maxfallos = 3;
+        }
         this.peznt = false;
+
+        
 
         //Crear fondo
         const fondo = this.add.image(480, 270, 'barco');

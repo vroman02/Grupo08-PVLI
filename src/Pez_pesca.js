@@ -1,9 +1,17 @@
+import VariablesGlobales from "./VariablesGlobales.js";
 export default class Pez_pesca extends Phaser.GameObjects.Image {
     constructor(scene, x, y) 
     {
         super(scene, x, y, 'pez');
         scene.add.existing(this);
-        this.VEL = 0.75;
+        if (VariablesGlobales.ModoInfierno)
+        {
+            this.VEL = 1.25;
+        }
+        else
+        {
+            this.VEL = 0.75;
+        }
         this.velocidad = this.VEL;
         
     }
