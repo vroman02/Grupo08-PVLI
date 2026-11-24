@@ -11,8 +11,8 @@ export default class Shooter_enemy extends Phaser.GameObjects.Image
         this.destino.y = 450;
 
         this.margen = 5;
-        this.topeAncho = 850;
-        this.topeAlto  = 1050;
+        this.topeAncho = 700;
+        this.topeAlto  = 900;
         this.haLlegado = false;
         this.daño = 10;
     }

@@ -1,5 +1,6 @@
 import Shooter_enemy from './Shooter_enemy.js';
 import Shooter_shieldEnemy from './Shooter_shieldEnemy.js';
+import Shooter_zigzagEnemy from './Shooter_zigzagEnemy.js';
 import mira from'./mira.js';
 export default class Shooter_minijuego extends Phaser.Scene 
 {
@@ -20,6 +21,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.numEnemigos = 0;
         this.enemigosMuertos = 0;
         this.contadorEscudos = 0;
+        this.contadorZigzag = 0;
     }
 
     preload()
@@ -37,6 +39,9 @@ export default class Shooter_minijuego extends Phaser.Scene
 
         //Enemigo con escudo
         this.load.image('enemigoEscudo', 'assets/characters/Swat.png');
+
+        //Enemigo zigzag
+        this.load.image('enemigoZigzag', 'assets/characters/Frozono.png');
 
         //Viñeta de recibir dañó
         this.load.image('viñetaDaño', 'assets/minigames/Shooter/ViñetaDaño.png');
@@ -72,6 +77,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.contador = 0;
         this.contadorEscudos = 0;
         this.maxEscudos = 2;
+        this.maxZigzag = 1; 
 
         //Crear animación
         if(!this.anims.exists('disparar'))
@@ -120,7 +126,16 @@ export default class Shooter_minijuego extends Phaser.Scene
             padding: { x: 20, y: 10 }
         })
         this.textoVida.setDepth(200); 
-        
+
+        //Texto enemigos restantes
+        this.textoEnemigosRestantes = this.add.text(650, 0, `ENEMIGOS: ${this.numEnemigos}`, {
+            fontSize: '30px',
+            fontFamily: 'Isometra',
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            padding: { x: 20, y: 10 }
+        })
+        this.textoEnemigosRestantes.setDepth(200); 
 
         //Boton volver
         const boton = this.add.text(825, 480, 'VOLVER', {
@@ -175,109 +190,48 @@ export default class Shooter_minijuego extends Phaser.Scene
 
     generaEnemigo()
     {
+        //Ya se han generado los necesarios
+        if(this.contadorEnemigos >= this.numEnemigos) return;
+
+        //Ya has ganado
         if(this.enemigosMuertos >= this.numEnemigos) return;
 
         if(this.contadorEnemigos <= this.numEnemigos)
         {
             let randomCoorX = Phaser.Math.Between(100, 800);
             let randomCoorY = Phaser.Math.Between(150, 400);
-            let enemigoElegido = Phaser.Math.Between(0, 4); //Aumentar cuando haya más enemigos, el enemigo común tiene más probabilidad
+            let enemigoElegido = Phaser.Math.Between(0, 5); //Aumentar cuando haya más enemigos, el enemigo común tiene más probabilidad
+
             if(enemigoElegido == 4 && this.contadorEscudos >= this.maxEscudos)
+            {
+                enemigoElegido = 1;
+            }
+            // Si el zigzag está al máximo, tiramos de común
+            if (enemigoElegido == 5 && this.contadorZigzag >= this.maxZigzag)
             {
                 enemigoElegido = 1;
             }
 
             let nuevoEnemigo;
+
             if(enemigoElegido <= 3)
             {
                 nuevoEnemigo = new Shooter_enemy(this, randomCoorX, 200);
-                let vida = 5;
+                nuevoEnemigo.vida = 5;
 
                 nuevoEnemigo.setDisplaySize(250, 420);
                 nuevoEnemigo.setInteractive();
 
-                nuevoEnemigo.on('pointerdown', (pointer) => 
+                nuevoEnemigo.on('pointerdown', (pointer) =>
                 {
-                    if(this.contador >= this.cooldownDisparo)
+                    this.hit(nuevoEnemigo, pointer, () =>
                     {
-                        //Obtener el rectángulo del enemigo
-                        let bounds = nuevoEnemigo.getBounds();
-
-                        //Definir el límite de la cabeza
-                        let limiteVerticalCabeza = bounds.top + (bounds.height * 0.2);
-
-                        let centroX = nuevoEnemigo.x;
-                        let anchoCabeza = nuevoEnemigo.displayWidth * 0.15; 
-                        
-                        let limiteIzquierda = centroX - anchoCabeza;
-                        let limiteDerecha = centroX + anchoCabeza;
-
-                        //Comprobar si el clic ha sido por encima de ese límite
-                        let esHeadshot = (pointer.y <= limiteVerticalCabeza && pointer.x >= limiteIzquierda && pointer.x <= limiteDerecha);
-
-                        // Si es crítico hace 2 de daño, si no, 1
-                        let daño = 1;
-                        let esCritico = Math.random() < 0.06; //6% de probabilidad
-
-                        if (esHeadshot && esCritico) 
-                        {
-                            daño = 5; // Headshot con crítico hace muchísimo daño
-                            esCritico = true;
-                        }
-                        else if (esHeadshot) 
-                        {
-                            daño = 3; // Headshot hace mucho daño
-                        } 
-                        else if (esCritico) 
-                        {
-                            daño = 2;
-                        }
-
-                        vida -= daño;
-
-                        this.crearNumeroDaño(pointer.x, pointer.y, daño, esCritico, esHeadshot);
-
-                        let animHit = this.animacionHit(nuevoEnemigo, 1.2, 1.2, 100, esCritico, esHeadshot);
-
-                        if(vida <= 0)
-                        {
-                            //Desactivamos los clicks
-                            nuevoEnemigo.disableInteractive(); 
-
-                            this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
-                            this.enemigosMuertos++;
-
-                            //Quitarle el temporizador de daño
-                            if (nuevoEnemigo.timerDaño) {
-                                nuevoEnemigo.timerDaño.remove(false);
-                                nuevoEnemigo.timerDaño = null;
-                            }
-
-                            animHit.on('complete', () => 
-                            {
-                                this.tweens.add({
-                                    targets: nuevoEnemigo,
-                                    alpha: 0,
-                                    duration: 250,
-                                    onComplete: () => 
-                                    {
-                                        nuevoEnemigo.destroy();
-
-                                        //Comprobar si hemos ganado
-                                        if(this.enemigosMuertos === this.numEnemigos)
-                                        {
-                                            console.log('has ganado');
-                                            //Delay para ver morir al último
-                                            this.time.delayedCall(500, () => {
-                                                this.scene.start('tablero-principal');
-                                            });
-                                        }
-                                    }
-                                });
-                            });
-                        }
-                    }
-                })
+                        this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
+                        this.enemigosMuertos++;
+                        this.actualizarContadorEnemigos();
+                        this.comprobarVictoria();
+                    });
+                });
 
                 this.contadorEnemigos++;
             }
@@ -289,7 +243,7 @@ export default class Shooter_minijuego extends Phaser.Scene
                 else coorX = 1100;
 
                 nuevoEnemigo = new Shooter_shieldEnemy(this, coorX, randomCoorY);
-                nuevoEnemigo.setDisplaySize(230, 370);
+                nuevoEnemigo.setDisplaySize(200, 350);
                 nuevoEnemigo.setInteractive();
                 nuevoEnemigo.setDepth(90);
 
@@ -306,11 +260,38 @@ export default class Shooter_minijuego extends Phaser.Scene
                     this.contadorEscudos--;
                 });
             }
-            
+            else if(enemigoElegido == 5)
+            {
+                nuevoEnemigo = new Shooter_zigzagEnemy(this, randomCoorX, 200);
+                nuevoEnemigo.vida = 5;
+                nuevoEnemigo.setDisplaySize(170, 350);
+                nuevoEnemigo.setInteractive();
+                nuevoEnemigo.setDepth(50);
 
+                nuevoEnemigo.on('pointerdown', (pointer) =>
+                {
+                    this.hit(nuevoEnemigo, pointer, () =>
+                    {
+                        this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
+                        this.enemigosMuertos++;
+                        this.actualizarContadorEnemigos();
+                        this.comprobarVictoria();
+                    });
+                });
+
+                this.contadorZigzag++;
+                this.contadorEnemigos++;
+
+                //Cuando frozono se destruye se libera su hueco
+                nuevoEnemigo.once('destroy', () => 
+                {
+                    this.contadorZigzag--;
+                });
+            }
+            
             //Cuando recibes daño se muestra, si la vida es 30 o menos se muestra en rojo
             nuevoEnemigo.on('recibe-daño', () => 
-                {
+            {
                 this.vidaJugador -= nuevoEnemigo.daño;
                 this.textoVida.setText(`VIDA: ${this.vidaJugador}`);
                 this.animacionLatido(this.textoVida, 1.2, 1.2, 200);
@@ -340,7 +321,77 @@ export default class Shooter_minijuego extends Phaser.Scene
 
             this.listaEnemigos.push(nuevoEnemigo);
         }
-        
+    }
+
+    hit(enemigo, pointer, alMorir)
+    {
+        if (this.contador < this.cooldownDisparo) return;
+
+        //Headshot
+        const bounds = enemigo.getBounds();
+        const limiteVerticalCabeza = bounds.top + (bounds.height * 0.2);
+        const centroX = enemigo.x;
+        const anchoCabeza = enemigo.displayWidth * 0.15;
+        const limiteIzquierda = centroX - anchoCabeza;
+        const limiteDerecha = centroX + anchoCabeza;
+
+        const esHeadshot = pointer.y <= limiteVerticalCabeza && pointer.x >= limiteIzquierda && pointer.x <= limiteDerecha;
+
+        const esCritico = Math.random() < 0.06;
+
+        //Daño
+        let daño = 1;
+        if (esHeadshot && esCritico) daño = 5;
+        else if (esHeadshot) daño = 3;
+        else if (esCritico) daño = 2;
+
+        enemigo.vida -= daño;
+
+        //Animacion
+        this.crearNumeroDaño(pointer.x, pointer.y, daño, esCritico, esHeadshot);
+        const animHit = this.animacionHit(enemigo, 1.2, 1.2, 100, esCritico, esHeadshot);
+
+        if (enemigo.vida <= 0)
+        {
+            enemigo.disableInteractive();
+
+            if (enemigo.timerDaño)
+            {
+                enemigo.timerDaño.remove(false);
+                enemigo.timerDaño = null;
+            }
+
+            animHit.on('complete', () =>
+            {
+                this.tweens.add({
+                    targets: enemigo,
+                    alpha: 0,
+                    duration: 250,
+                    onComplete: () =>
+                    {
+                        enemigo.destroy();
+                        if (alMorir) alMorir.call(this);
+                    }
+                });
+            });
+        }
+    }
+
+    comprobarVictoria()
+    {
+        if (this.enemigosMuertos >= this.numEnemigos)
+        {
+            this.time.delayedCall(500, () => {
+                this.scene.start('tablero-principal');
+            });
+        }
+    }
+
+    actualizarContadorEnemigos()
+    {
+        const restantes = Math.max(0, this.numEnemigos - this.enemigosMuertos);
+        this.textoEnemigosRestantes.setText(`ENEMIGOS: ${restantes}`);
+        this.animacionLatido(this.textoEnemigosRestantes, 1.2, 1.2, 200);
     }
 
     animacionHit(objeto, multX, multY, duracion, critico, headshot)
