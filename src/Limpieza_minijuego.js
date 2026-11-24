@@ -8,11 +8,18 @@ export default class Limpieza_minijuego extends Phaser.Scene
         }
 
 
-     preload()
+    preload()
     {
         this.load.image('esponja', 'assets/minigames/Limpieza/esponja.png');
         this.load.image('pared', 'assets/minigames/Limpieza/Pared.jpg');
-        this.load.image('grafitti', 'assets/minigames/Limpieza/Graffiti-set/Graffiti-set/0_Tags/tag6.png');
+        this.NUM_GRAFFITIS = 15;
+        //Graffiti random
+        this.graffitiActual = Phaser.Math.Between(1, this.NUM_GRAFFITIS);
+        if (this.textures.exists('graffiti'))
+        {
+            this.textures.remove('graffiti');
+        }
+        this.load.image('graffiti',`assets/minigames/Limpieza/Graffitis/${this.graffitiActual}.png`);
     }
 
     create(){
@@ -20,30 +27,30 @@ export default class Limpieza_minijuego extends Phaser.Scene
         //Imagen del fondo
         const fondo = this.add.image(480, 270, 'pared');
         fondo.setDisplaySize(960, 540);
-        
+
         //Se crea el grafitti
-        const grafitti = this.add.image(450, 270, 'grafitti');
-        grafitti.setDisplaySize(840, 540);
+        const graffiti = this.add.image(this.scale.width/2, this.scale.height/2, 'graffiti');
+        graffiti.setDisplaySize(840, 540);
 
         //Se crea la máscara
-        this.mascara = this.add.renderTexture(480, 270, 960, 540);
+        this.mascara = this.add.renderTexture(this.scale.width/2, this.scale.height/2, 960, 540);
         this.mascara.fill(0xffffff);
         this.mascara.render();
-        grafitti.enableFilters().filters.external.addMask(this.mascara);
+        graffiti.enableFilters().filters.external.addMask(this.mascara);
         this.mascara.setVisible(false);
 
         // Rejilla de puntos donde hay pintura (alfa del grafitti > 0).
         // Se usan los píxeles reales de la imagen para no contar las zonas transparentes.
         const CELDA = 10;
-        const textura = this.textures.get('grafitti').getSourceImage();
-        const izquierda = grafitti.x - grafitti.displayWidth / 2;
-        const arriba = grafitti.y - grafitti.displayHeight / 2;
+        const textura = this.textures.get('graffiti').getSourceImage();
+        const izquierda = graffiti.x - graffiti.displayWidth / 2;
+        const arriba = graffiti.y - graffiti.displayHeight / 2;
         this.manchas = [];
-        for (let y = arriba + CELDA / 2; y < arriba + grafitti.displayHeight; y += CELDA) {
-            for (let x = izquierda + CELDA / 2; x < izquierda + grafitti.displayWidth; x += CELDA) {
-                const tx = Math.floor((x - izquierda) / grafitti.displayWidth * textura.width);
-                const ty = Math.floor((y - arriba) / grafitti.displayHeight * textura.height);
-                if (this.textures.getPixelAlpha(tx, ty, 'grafitti') > 0) this.manchas.push({ x, y });
+        for (let y = arriba + CELDA / 2; y < arriba + graffiti.displayHeight; y += CELDA) {
+            for (let x = izquierda + CELDA / 2; x < izquierda + graffiti.displayWidth; x += CELDA) {
+                const tx = Math.floor((x - izquierda) / graffiti.displayWidth * textura.width);
+                const ty = Math.floor((y - arriba) / graffiti.displayHeight * textura.height);
+                if (this.textures.getPixelAlpha(tx, ty, 'graffiti') > 0) this.manchas.push({ x, y });
             }
         }
         this.totalManchas = this.manchas.length;
