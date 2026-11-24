@@ -44,6 +44,7 @@ const game = new Phaser.Game(config);
 const gameContainer = document.getElementById('game');
 const botonPantallaCompleta = document.createElement('button');
 let pantallaCompleta = false;
+let scrollGuardado = 0;
 botonPantallaCompleta.id = 'btn-fullscreen';
 botonPantallaCompleta.textContent = '⛶';
 botonPantallaCompleta.title = 'Pantalla completa (F)';
@@ -51,13 +52,21 @@ gameContainer.appendChild(botonPantallaCompleta);
 
 botonPantallaCompleta.addEventListener('click', () => 
 {
-	if(!pantallaCompleta) game.scale.startFullscreen();
+	if(!pantallaCompleta)
+	{
+		scrollGuardado = window.scrollY;
+		game.scale.startFullscreen();	
+	}
 	else game.scale.stopFullscreen();
 });
 
 window.addEventListener('keydown', (e) => 
 {
-	if(e.key === 'f' || e.key === 'F') game.scale.startFullscreen();
+	if(e.key === 'f' || e.key === 'F')
+	{
+		scrollGuardado = window.scrollY;
+		game.scale.startFullscreen();
+	}
 });
 
 document.addEventListener('fullscreenchange', () => {
@@ -69,6 +78,10 @@ document.addEventListener('fullscreenchange', () => {
 	{
 		botonPantallaCompleta.textContent = '⛶';
 		pantallaCompleta = false;
+		//Esto arregla que al salir aparecías muy abajo en la página
+		setTimeout(() => {
+			window.scrollTo(0, scrollGuardado);
+		}, 0);
 	}
 });
 
