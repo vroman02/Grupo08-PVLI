@@ -38,10 +38,11 @@ export default class Shooter_zigzagEnemy extends Phaser.GameObjects.Image
     {
         const velocidad = 0.6 * dt;
         const aumentoEscala = 0.0001 * dt;
+        const puedeCrecer = this.displayWidth  < this.topeAncho && this.displayHeight < this.topeAlto;
 
         if (this.haLlegado)
         {
-            if (this.displayWidth  < this.topeAncho && this.displayHeight < this.topeAlto) 
+            if (puedeCrecer) 
             { 
                 this.scaleX += aumentoEscala; 
                 this.scaleY += aumentoEscala; 

@@ -1,6 +1,7 @@
 import Shooter_enemy from './Shooter_enemy.js';
 import Shooter_shieldEnemy from './Shooter_shieldEnemy.js';
 import Shooter_zigzagEnemy from './Shooter_zigzagEnemy.js';
+import Shooter_civil from './Shooter_civil.js';
 import mira from'./mira.js';
 export default class Shooter_minijuego extends Phaser.Scene 
 {
@@ -22,6 +23,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.enemigosMuertos = 0;
         this.contadorEscudos = 0;
         this.contadorZigzag = 0;
+        this.contadorCivil = 0;
     }
 
     preload()
@@ -42,6 +44,9 @@ export default class Shooter_minijuego extends Phaser.Scene
 
         //Enemigo zigzag
         this.load.image('enemigoZigzag', 'assets/characters/Frozono.png');
+
+        //Civil
+        this.load.image('civil', 'assets/characters/mamaCoco.png');
 
         //Viñeta de recibir dañó
         this.load.image('viñetaDaño', 'assets/minigames/Shooter/ViñetaDaño.png');
@@ -78,6 +83,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.contadorEscudos = 0;
         this.maxEscudos = 2;
         this.maxZigzag = 1; 
+        this.maxCivil = 1;
 
         //Crear animación
         if(!this.anims.exists('disparar'))
@@ -200,7 +206,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         {
             let randomCoorX = Phaser.Math.Between(100, 800);
             let randomCoorY = Phaser.Math.Between(150, 400);
-            let enemigoElegido = Phaser.Math.Between(0, 5); //Aumentar cuando haya más enemigos, el enemigo común tiene más probabilidad
+            let enemigoElegido = Phaser.Math.Between(0, 6); //Aumentar cuando haya más enemigos, el enemigo común tiene más probabilidad
 
             if(enemigoElegido == 4 && this.contadorEscudos >= this.maxEscudos)
             {
@@ -208,6 +214,10 @@ export default class Shooter_minijuego extends Phaser.Scene
             }
             // Si el zigzag está al máximo, tiramos de común
             if (enemigoElegido == 5 && this.contadorZigzag >= this.maxZigzag)
+            {
+                enemigoElegido = 1;
+            }
+            if(enemigoElegido == 6 && this.contadorCivil >= this.maxCivil)
             {
                 enemigoElegido = 1;
             }
@@ -224,7 +234,7 @@ export default class Shooter_minijuego extends Phaser.Scene
 
                 nuevoEnemigo.on('pointerdown', (pointer) =>
                 {
-                    this.hit(nuevoEnemigo, pointer, () =>
+                    this.hit(nuevoEnemigo, pointer, false, () =>
                     {
                         this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
                         this.enemigosMuertos++;
@@ -270,7 +280,7 @@ export default class Shooter_minijuego extends Phaser.Scene
 
                 nuevoEnemigo.on('pointerdown', (pointer) =>
                 {
-                    this.hit(nuevoEnemigo, pointer, () =>
+                    this.hit(nuevoEnemigo, pointer, false, () =>
                     {
                         this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
                         this.enemigosMuertos++;
@@ -286,6 +296,51 @@ export default class Shooter_minijuego extends Phaser.Scene
                 nuevoEnemigo.once('destroy', () => 
                 {
                     this.contadorZigzag--;
+                });
+            }
+            else if(enemigoElegido == 6)
+            {
+                nuevoEnemigo = new Shooter_civil(this, randomCoorX, 200);
+                nuevoEnemigo.vida = 1;
+
+                nuevoEnemigo.setDisplaySize(250, 200);
+                nuevoEnemigo.setInteractive();
+
+                nuevoEnemigo.on('pointerdown', (pointer) =>
+                {
+                    this.hit(nuevoEnemigo, pointer, true, () =>
+                    {
+                        this.listaEnemigos = this.listaEnemigos.filter(e => e !== nuevoEnemigo);
+                        this.actualizarContadorEnemigos();
+                        this.comprobarVictoria();
+
+                        //Todo el bloque de recibir daño
+                        this.vidaJugador -= nuevoEnemigo.daño;
+                        this.textoVida.setText(`VIDA: ${this.vidaJugador}`);
+                        this.animacionLatido(this.textoVida, 1.2, 1.2, 200);
+
+                        //Eliminar cualquier animación anterior por si acaso
+                        this.tweens.killTweensOf(this.efectoDaño);
+
+                        this.tweens.add({
+                            targets: this.efectoDaño,
+                            alpha: 1,      // Aparece al 100%
+                            duration: 100,
+                            yoyo: true,
+                            ease: 'Sine.easeInOut'
+                        });
+
+                        if(this.vidaJugador <= 30)
+                        {
+                            this.textoVida.setColor('#CC0000');
+                        }
+                        if(this.vidaJugador <= 0)
+                        {
+                            console.log("Has muerto");
+                            this.scene.start('tablero-principal');
+                        }
+                        console.log("Daño recibido");
+                    });
                 });
             }
             
@@ -323,7 +378,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         }
     }
 
-    hit(enemigo, pointer, alMorir)
+    hit(enemigo, pointer, esCivil, alMorir)
     {
         if (this.contador < this.cooldownDisparo) return;
 
@@ -341,9 +396,10 @@ export default class Shooter_minijuego extends Phaser.Scene
 
         //Daño
         let daño = 1;
-        if (esHeadshot && esCritico) daño = 5;
-        else if (esHeadshot) daño = 3;
-        else if (esCritico) daño = 2;
+        if(esCivil) daño = 999;
+        if (esHeadshot && esCritico) daño *= 5;
+        else if (esHeadshot) daño *= 3;
+        else if (esCritico) daño *= 2;
 
         enemigo.vida -= daño;
 
