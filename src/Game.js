@@ -41,20 +41,35 @@ let config = {
 
 const game = new Phaser.Game(config);
 
+const gameContainer = document.getElementById('game');
 const botonPantallaCompleta = document.createElement('button');
+let pantallaCompleta = false;
 botonPantallaCompleta.id = 'btn-fullscreen';
 botonPantallaCompleta.textContent = '⛶';
 botonPantallaCompleta.title = 'Pantalla completa (F)';
-document.body.appendChild(botonPantallaCompleta);
+gameContainer.appendChild(botonPantallaCompleta);
 
-botonPantallaCompleta.addEventListener('click', () => {
-    game.scale.startFullscreen();
+botonPantallaCompleta.addEventListener('click', () => 
+{
+	if(!pantallaCompleta) game.scale.startFullscreen();
+	else game.scale.stopFullscreen();
 });
 
-window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        game.scale.stopFullscreen();
-    }
+window.addEventListener('keydown', (e) => 
+{
+	if(e.key === 'f' || e.key === 'F') game.scale.startFullscreen();
+});
+
+document.addEventListener('fullscreenchange', () => {
+	if (document.fullscreenElement) 
+	{
+		botonPantallaCompleta.textContent = '✕';
+		pantallaCompleta = true;
+	} else 
+	{
+		botonPantallaCompleta.textContent = '⛶';
+		pantallaCompleta = false;
+	}
 });
 
 // preload - método de las escenas donde se pueden cargar los recursos que necesitaremos

@@ -113,9 +113,9 @@ body
 #btn-fullscreen 
 {
   position: absolute;
-  bottom: -37px;
-  right: 1375px; 
-  z-index: 1000;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;               /* por encima del canvas de Phaser */
   width: 44px;
   height: 44px;
   border: none;
