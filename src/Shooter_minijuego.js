@@ -303,7 +303,7 @@ export default class Shooter_minijuego extends Phaser.Scene
                 nuevoEnemigo = new Shooter_civil(this, randomCoorX, 200);
                 nuevoEnemigo.vida = 1;
 
-                nuevoEnemigo.setDisplaySize(250, 200);
+                nuevoEnemigo.setDisplaySize(200, 250);
                 nuevoEnemigo.setInteractive();
 
                 nuevoEnemigo.on('pointerdown', (pointer) =>
