@@ -63,9 +63,12 @@ export default class Pesca_minijuego extends Phaser.Scene
 
         //Crear Vidas
         this.vidas = [];
-        this.vidas.push(this.add.image(670, 60, 'vida').setDisplaySize(75, 75).setDepth(1));
-        this.vidas.push(this.add.image(770, 60, 'vida').setDisplaySize(75, 75).setDepth(1));
-        this.vidas.push(this.add.image(870, 60, 'vida').setDisplaySize(75, 75).setDepth(1));
+        this.pos = 0;
+        for (let i = 0; i < this.maxfallos; i++)
+        {
+            this.vidas.push(this.add.image(670 + this.pos, 60, 'vida').setDisplaySize(75, 75).setDepth(1));
+            this.pos+= 100;
+        }
 
         
         //Crear pez
@@ -100,14 +103,14 @@ export default class Pesca_minijuego extends Phaser.Scene
         this.boton.setVisible(false);
 
         this.boton.on('pointerover', () => {
-            boton.setStyle({
+            this.boton.setStyle({
                 color: '#ffffff',
                 backgroundColor: '#2274d7'
             });
         });
 
         this.boton.on('pointerout', () => {
-            boton.setStyle({
+            this.boton.setStyle({
                 color: '#000000',
                 backgroundColor: '#ffffff'
             });
