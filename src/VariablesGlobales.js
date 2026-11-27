@@ -1,4 +1,4 @@
 export default class VariablesGlobales
 {
-    static ModoInfierno = true;
+    static ModoInfierno = false;
 }

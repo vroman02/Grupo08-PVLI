@@ -1,3 +1,4 @@
+import VariablesGlobales from "./VariablesGlobales.js";
 export default class Menu extends Phaser.Scene 
 {
     // Nombre de la escena para el SceneManager
@@ -11,6 +12,9 @@ export default class Menu extends Phaser.Scene
 
         //fuente
         this.loadFont('Isometra', 'assets/fonts/Isometra-Regular.ttf');
+
+        //Fondo
+        this.load.image('Fondo', 'assets/backgrounds/FondoMenu.jpg');
 
         //esto es para cargar imágenes y recursos
         this.load.video('logo-vivo3D','assets/menu/logo3D.webm');
@@ -39,9 +43,10 @@ export default class Menu extends Phaser.Scene
 
         console.log(Phaser.VERSION);
         //fondo amarillo para que destaque
-        this.cameras.main.setBackgroundColor('#ffcece');
+        //this.cameras.main.setBackgroundColor('#ffcece');
 
-
+        const fondo = this.add.image(480, 270, 'Fondo');
+        fondo.setDisplaySize(960, 540);
 
         //logo del juego
         const logo = this.add.video(40, 40, 'logo-vivo3D');
@@ -123,41 +128,48 @@ export default class Menu extends Phaser.Scene
 
 
         
-        //BOTON DE SALIR////////////
-        /*
-        let botonSalir = this.add.text(80, 450, 'SALIR', {
-        fontSize: '30px',
+        //BOTON DE ACTIVAR MODO INFIERNO////////////
+        let botonModoInfierno = this.add.text(0, 400, 'MODO INFIERNO: NO', {
+        fontSize: '20px',
         fontFamily: 'Isometra',
         color: '#000000',
         backgroundColor: '#d722bc',
-        padding: { x: 30, y: 15 }
+        padding: { x: 30, y: 15 },
+        align: 'center',
+        wordWrap: { width: 450 }
         });
 
-        botonSalir.setOrigin(0.5);
-        //botonSalir.setInteractive({ useHandCursor: true });
-        botonSalir.setInteractive( new Phaser.Geom.Rectangle(0, 0, boton.width, boton.height),Phaser.Geom.Rectangle.Contains);
+        botonModoInfierno.setInteractive({ useHandCursor: true });
 
-        botonSalir.on('pointerover', () => {
-            botonSalir.setStyle({
+        botonModoInfierno.on('pointerover', () => {
+            botonModoInfierno.setStyle({
                 color: '#ffffff',
                 backgroundColor: '#ed1170'
             });
         });
 
-        botonSalir.on('pointerout', () => {
-                botonSalir.setStyle({
+        botonModoInfierno.on('pointerout', () => {
+                botonModoInfierno.setStyle({
                     color: '#000000',
                     backgroundColor: '#ffffff'
                 });
             });
 
         //salir
-        botonSalir.on('pointerdown', () => {
-                //console.log('Has pulsado SALIR');
-                this.scene.start('escena-prueba');
-
+        botonModoInfierno.on('pointerdown', () => 
+        {
+            if(!VariablesGlobales.ModoInfierno)
+            {
+                VariablesGlobales.ModoInfierno = true;
+                botonModoInfierno.setText('MODO INFIERNO: SI');
+            }
+            else
+            {
+                VariablesGlobales.ModoInfierno = false;
+                botonModoInfierno.setText('MODO INFIERNO: NO');
+            }
+            console.log(`MODO INFIERNO ACTIVO: ${VariablesGlobales.ModoInfierno}`);
         });
-        */
         
         //BOTON DE CREDITOS////////////
 

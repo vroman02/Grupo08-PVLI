@@ -1,3 +1,4 @@
+import VariablesGlobales from "./VariablesGlobales.js";
 export default class Shooter_civil extends Phaser.GameObjects.Image
 {
     constructor(scene, x, y)
@@ -14,7 +15,8 @@ export default class Shooter_civil extends Phaser.GameObjects.Image
         this.topeAncho = 700;
         this.topeAlto  = 900;
         this.haLlegado = false;
-        this.daño = 10;
+        if(VariablesGlobales.ModoInfierno) this.daño = 20;
+        else this.daño = 10;
     }
 
     preload()

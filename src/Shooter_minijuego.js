@@ -3,6 +3,7 @@ import Shooter_shieldEnemy from './Shooter_shieldEnemy.js';
 import Shooter_zigzagEnemy from './Shooter_zigzagEnemy.js';
 import Shooter_civil from './Shooter_civil.js';
 import mira from'./mira.js';
+import VariablesGlobales from "./VariablesGlobales.js";
 export default class Shooter_minijuego extends Phaser.Scene 
 {
 // Nombre de la escena para el SceneManager
@@ -11,6 +12,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         super({ key: 'shooter-minigame' });
 
         this.cooldownDisparo = 250;
+        this.tiempoDeSpawneo = 1500;
     }
 
     init()
@@ -24,6 +26,14 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.contadorEscudos = 0;
         this.contadorZigzag = 0;
         this.contadorCivil = 0;
+        this.maxCivil = 1;
+        this.tiempoDeSpawneo = 1500;
+
+        if(VariablesGlobales.ModoInfierno)
+        {
+            this.tiempoDeSpawneo = 1000;
+            this.maxCivil = 5;
+        }
     }
 
     preload()
@@ -74,7 +84,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.mira.setDepth(110); 
         this.input.setDefaultCursor('none');
 
-        this.numEnemigos = Phaser.Math.Between(5, 15);
+        this.numEnemigos = Phaser.Math.Between(10, 15);
         console.log(this.numEnemigos);
         this.listaEnemigos = [];
         this.contadorEnemigos = 0;
@@ -83,7 +93,6 @@ export default class Shooter_minijuego extends Phaser.Scene
         this.contadorEscudos = 0;
         this.maxEscudos = 2;
         this.maxZigzag = 1; 
-        this.maxCivil = 1;
 
         //Crear animación
         if(!this.anims.exists('disparar'))
@@ -117,7 +126,7 @@ export default class Shooter_minijuego extends Phaser.Scene
         
         //Contador
         this.time.addEvent({
-            delay: 1500,
+            delay: this.tiempoDeSpawneo,
             callback: this.generaEnemigo,
             callbackScope: this,
             loop: true
@@ -206,7 +215,14 @@ export default class Shooter_minijuego extends Phaser.Scene
         {
             let randomCoorX = Phaser.Math.Between(100, 800);
             let randomCoorY = Phaser.Math.Between(150, 400);
-            let enemigoElegido = Phaser.Math.Between(0, 6); //Aumentar cuando haya más enemigos, el enemigo común tiene más probabilidad
+            let enemigoElegido;
+
+            if(VariablesGlobales.ModoInfierno)
+            {
+                enemigoElegido = Phaser.Math.Between(0, 10); //Probabilidad de civil más alta
+
+            }
+            else enemigoElegido = Phaser.Math.Between(0, 6);
 
             if(enemigoElegido == 4 && this.contadorEscudos >= this.maxEscudos)
             {
@@ -217,8 +233,9 @@ export default class Shooter_minijuego extends Phaser.Scene
             {
                 enemigoElegido = 1;
             }
-            if(enemigoElegido == 6 && this.contadorCivil >= this.maxCivil)
+            if(enemigoElegido >= 6 && this.contadorCivil >= this.maxCivil)
             {
+                console.log("Civil no spawneado");
                 enemigoElegido = 1;
             }
 
@@ -298,13 +315,20 @@ export default class Shooter_minijuego extends Phaser.Scene
                     this.contadorZigzag--;
                 });
             }
-            else if(enemigoElegido == 6)
+            else if(enemigoElegido >= 6)
             {
                 nuevoEnemigo = new Shooter_civil(this, randomCoorX, 200);
                 nuevoEnemigo.vida = 1;
 
                 nuevoEnemigo.setDisplaySize(200, 250);
                 nuevoEnemigo.setInteractive();
+                nuevoEnemigo.setDepth(40);
+
+                this.contadorCivil++;
+                nuevoEnemigo.once('destroy', () => 
+                {
+                    this.contadorCivil--;
+                });
 
                 nuevoEnemigo.on('pointerdown', (pointer) =>
                 {
