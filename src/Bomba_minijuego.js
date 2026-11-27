@@ -1,3 +1,28 @@
+//PISTAS: Map <pista, cable>. La pista indica el cable que NO se debe cortar: si se corta, explota y sale el comic
+//Se escoge una al azar al empezar. Hay 3 pistas por cable. Ambientacion: eres un agente de inteligencia
+//japones dentro de un edificio de Shibuya (Tokio)
+const PISTAS = new Map([
+    //Rojo
+    ['El circulo en el centro de la bandera de tu pais', 'rojo'],
+    ['El color del extintor que cuelga en el pasillo del edificio', 'rojo'],
+    ['El color de la tinta del sello hanko con el que firmas los documentos', 'rojo'],
+
+    //Amarillo
+    ['El color de la cinta con la que la policia acordona una zona peligrosa', 'amarillo'],
+    ['El color de las notas adhesivas pegadas en tu monitor', 'amarillo'],
+    ['El color de la luz del semaforo que avisa de que va a cambiar', 'amarillo'],
+
+    //Verde
+    ['El color del hombrecillo que corre en el cartel de salida de emergencia', 'verde'],
+    ['El color del te matcha que te sirven en las reuniones', 'verde'],
+    ['El color del wasabi que lleva el sushi', 'verde'],
+
+    //Azul
+    ['El color del uniforme de la policia japonesa', 'azul'],
+    ['El color de los planos del edificio que estudiaste', 'azul'],
+    ['El color del mar que rodea el pais que proteges', 'azul']
+]);
+
 export default class Bomba_minijuego extends Phaser.Scene 
 {
 // Nombre de la escena para el SceneManager
@@ -59,6 +84,10 @@ export default class Bomba_minijuego extends Phaser.Scene
         const bombaY0 = bomba.y - BOMBA_H / 2;
 
         const texCables = this.textures.get('cables');
+
+        //Para ganar hay que cortar TODOS los cables menos el de la pista
+        let cortesSeguros = 0;
+        const totalSeguros = cablesData.length - 1;
  
         for (let i = 0; i < cablesData.length; i++) {
             const c = cablesData[i];
@@ -87,9 +116,15 @@ export default class Bomba_minijuego extends Phaser.Scene
                 cable.setData('cortado', true);
                 cable.disableInteractive();
 
-                //De momento el cable rojo es el "malo": al cortarlo se pierde (sustituye al rectangulo rojo de prueba)
-                if (c.color === 'rojo') {
+                //Si se corta el cable asociado a la pista en el Map, la bomba explota y sale el comic
+                //Cualquier otro cable es seguro: se gana al cortar todos los seguros
+                if (c.color === this.cableCorrecto) {
                     this.perder();
+                } else {
+                    cortesSeguros++;
+                    if (cortesSeguros === totalSeguros) {
+                        this.ganar();
+                    }
                 }
             });
         }
@@ -97,6 +132,10 @@ export default class Bomba_minijuego extends Phaser.Scene
         //Hasta que baje la pista no se puede empezar a jugar
         this.juegoActivo = false;
         this.perdido = false;
+
+        //Se escoge una pista al azar: GetRandom devuelve una pareja [pista, cable]
+        const [textoPista, cableCorrecto] = Phaser.Utils.Array.GetRandom([...PISTAS]);
+        this.cableCorrecto = cableCorrecto;
 
         //Pista: al empezar se ve en el centro. Con ENTER baja en linea recta (sin aceleracion)
         //Va pegada al borde INFERIOR de la pantalla (los brazos salen por abajo) como en el boceto
@@ -106,7 +145,31 @@ export default class Bomba_minijuego extends Phaser.Scene
         papel.setScale(ESCALA_PAPEL);
 
         //SetDepth es para poner cosas por encima
-        papel.setDepth(5);
+        //El texto de la pista va sobre el papel, DENTRO del hueco libre (sin tapar las manos).
+        //HUECO = rectangulo libre medido en pixeles de la imagen PistasBomba.png (593x280): x/y = esquina sup-izq
+        const HUECO = { x: 204, y: 26, w: 198, h: 200 };
+        const hx = papel.x - papel.displayWidth / 2 + (HUECO.x + HUECO.w / 2) * ESCALA_PAPEL;
+        const hy = papel.y - papel.displayHeight + (HUECO.y + HUECO.h / 2) * ESCALA_PAPEL;
+
+        const texto = this.add.text(hx, hy, textoPista, {
+            fontFamily: 'Isometra',
+            fontSize: '24px',
+            color: '#2b1d0e',
+            align: 'center',
+            wordWrap: { width: HUECO.w * ESCALA_PAPEL }
+        });
+        texto.setOrigin(0.5);
+
+        //Si la pista es larga y no cabe en el hueco se reduce la letra hasta que quepa
+        let tamTexto = 24;
+        while (texto.height > HUECO.h * ESCALA_PAPEL && tamTexto > 12) {
+            tamTexto--;
+            texto.setFontSize(tamTexto);
+        }
+
+        //Papel y texto van juntos en un contenedor para que bajen a la vez
+        const grupoPista = this.add.container(0, 0, [papel, texto]);
+        grupoPista.setDepth(5);
 
         //Tijeras: frame 1 (abiertas) y frame 2 (cerradas), recortes del sprite sheet
         //hx/hy = punto de las mandibulas (fraccion 0-1 del frame) que queda justo en la punta del raton
@@ -137,14 +200,14 @@ export default class Bomba_minijuego extends Phaser.Scene
         // Si se pulsa el enter la pista baja y desaparece; despues se activa el juego y las tijeras. Hecho con IA, claude para que quede bonito
         this.input.keyboard.once('keydown-ENTER', () => {
             this.tweens.add({
-                targets: papel,
+                targets: grupoPista,
 
                 //Bajada
-                y: H + papel.displayHeight,
+                y: papel.displayHeight,
                 duration: 500,
                 ease: 'Linear',
                 onComplete: () => {
-                    papel.destroy();
+                    grupoPista.destroy();
                     this.juegoActivo = true;
                     this.input.setDefaultCursor('none');     //se oculta la flechita
                     tijeras.setVisible(true);
@@ -205,6 +268,18 @@ export default class Bomba_minijuego extends Phaser.Scene
         }
     }
 
+    //VICTORIA: de momento solo se para el juego y se vuelve al selector (PLACEHOLDER, cambiar por lo que corresponda)
+    ganar()
+    {
+        this.juegoActivo = false;
+        this.input.setDefaultCursor('default');
+        this.tijeras.setVisible(false);
+
+        this.time.delayedCall(800, () => {
+            this.scene.start('selector-minigames');
+        });
+    }
+
     //DERROTA: se ven las dos paginas de manga una detras de otra
     perder()
     {
@@ -235,8 +310,9 @@ export default class Bomba_minijuego extends Phaser.Scene
         aviso.setDepth(23);
         aviso.setVisible(false);
 
-        //Velocidad del scroll de las paginas: milisegundos por pixel (MAS ALTO = MAS LENTO)
-        const MS_POR_PIXEL = 14;
+        //Velocidad del scroll automatico de cada pagina: milisegundos por pixel (MAS ALTO = MAS LENTO)
+        //[pagina 1, pagina 2]
+        const MS_POR_PIXEL = [14, 26];
 
         const paginas = ['manga1', 'manga2'];
         let actual = 0;
@@ -269,7 +345,7 @@ export default class Bomba_minijuego extends Phaser.Scene
             this.tweens.add({
                 targets: paginaImg,
                 y: yFinal,
-                duration: recorrido * MS_POR_PIXEL,
+                duration: recorrido * MS_POR_PIXEL[i],
                 delay: 800,
                 ease: 'Sine.easeInOut',
                 onComplete: () => {
@@ -298,11 +374,22 @@ export default class Bomba_minijuego extends Phaser.Scene
         };
 
         negro.on('pointerdown', avanzar);
+
+        //RUEDA DEL RATON: se puede mover la pagina a mano (al usarla se cancela el scroll automatico)
+        this.input.on('wheel', (pointer, objetos, dx, dy) => {
+            if (!paginaImg) return;
+
+            this.tweens.killTweensOf(paginaImg);
+            paginaImg.y = Phaser.Math.Clamp(paginaImg.y - dy, -recorrido, 0);
+
+            //Si se llega al final de la pagina ya se puede pasar a la siguiente
+            const alFinal = Math.abs(paginaImg.y - yFinal) < 2;
+            if (alFinal) paginaImg.y = yFinal;
+            leida = alFinal;
+            aviso.setVisible(alFinal);
+        });
         this.input.keyboard.on('keydown-ENTER', avanzar);
 
         mostrarPagina(0);
     }
-
-
-
 }
