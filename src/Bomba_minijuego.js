@@ -23,6 +23,9 @@ const PISTAS = new Map([
     ['El color del mar que rodea el pais que proteges', 'azul']
 ]);
 
+//TIEMPO para desactivar la bomba, en SEGUNDOS (empieza a contar cuando baja la pista). En modo Infierno deberia ser menor
+const TIEMPO_TOTAL = 30;
+
 export default class Bomba_minijuego extends Phaser.Scene 
 {
 // Nombre de la escena para el SceneManager
@@ -132,6 +135,27 @@ export default class Bomba_minijuego extends Phaser.Scene
         //Hasta que baje la pista no se puede empezar a jugar
         this.juegoActivo = false;
         this.perdido = false;
+
+        //TIMER en la pantalla verde de la bomba (PANTALLA = medida sobre la imagen de 800x600: x 329-419, y 240-290)
+        this.tiempoRestante = TIEMPO_TOTAL;
+        const PANTALLA = { x: 329, y: 240, w: 91, h: 51 };
+        const timerX = bombaX0 + (PANTALLA.x + PANTALLA.w / 2) * ESCALA;
+        const timerY = bombaY0 + (PANTALLA.y + PANTALLA.h / 2) * ESCALA;
+
+        this.textoTimer = this.add.text(timerX, timerY, this.formatoTiempo(this.tiempoRestante), {
+            fontFamily: 'Isometra',
+            fontSize: '34px',
+            color: '#2a2a10'
+        });
+        this.textoTimer.setOrigin(0.5);
+        this.textoTimer.setDepth(2);
+
+        //Se reduce la letra hasta que quepa dentro de la pantalla
+        let tamTimer = 34;
+        while ((this.textoTimer.width > PANTALLA.w * ESCALA * 0.85 || this.textoTimer.height > PANTALLA.h * ESCALA * 0.85) && tamTimer > 10) {
+            tamTimer--;
+            this.textoTimer.setFontSize(tamTimer);
+        }
 
         //Se escoge una pista al azar: GetRandom devuelve una pareja [pista, cable]
         const [textoPista, cableCorrecto] = Phaser.Utils.Array.GetRandom([...PISTAS]);
@@ -259,13 +283,35 @@ export default class Bomba_minijuego extends Phaser.Scene
         });
     }
 
-    update()
+    update(time, delta)
     {
         //Las tijeras siguen al raton
         if (this.tijeras && this.tijeras.visible) {
             const p = this.input.activePointer;
             this.tijeras.setPosition(p.x, p.y);
         }
+
+        //Cuenta atras: solo corre mientras se juega (no durante la pista ni despues de ganar/perder)
+        if (this.juegoActivo) {
+            this.tiempoRestante -= delta / 1000;
+
+            const t = this.formatoTiempo(this.tiempoRestante);
+            if (this.textoTimer.text !== t) this.textoTimer.setText(t);
+
+            //Se acaba el tiempo -> explota
+            if (this.tiempoRestante <= 0) {
+                this.perder();
+            }
+        }
+    }
+
+    //Segundos -> "MM:SS"
+    formatoTiempo(segundos)
+    {
+        const total = Math.max(0, Math.ceil(segundos));
+        const min = Math.floor(total / 60);
+        const seg = total % 60;
+        return String(min).padStart(2, '0') + ':' + String(seg).padStart(2, '0');
     }
 
     //VICTORIA: de momento solo se para el juego y se vuelve al selector (PLACEHOLDER, cambiar por lo que corresponda)
